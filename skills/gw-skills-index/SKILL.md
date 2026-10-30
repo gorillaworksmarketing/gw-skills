@@ -1,9 +1,13 @@
 ---
 name: gw-skills-index
-description: Use at the START of every session by every Gorilla Works bot: the master index of all GW skills, when to use each, and which bot uses it. Check it first, then load and reference the matching skills. Use it even if the request doesn't name a skill.
+description: >-
+  Use at the START of every session by every Gorilla Works bot: the master index
+  of all GW skills, when to use each, and which bot uses it. Check it first,
+  then load and reference the matching skills. Use it even if the request
+  doesn't name a skill.
 ---
 # GW skills index
-**Standing rules:** (1) At session start, check this index and reference matching skills. (2) New training files keep arriving in `cold-email/` and `lead-gen/`; at the start of each session add each new file to the matching skill (cold-email-copy, cold-email-deliverability, cold-email-lead-research, gw-newsletter, gw-lead-generation) and its blueprint. Merge; no blueprint per source. (3) Bots never send or post; Brennan approves. (4) SEO/GEO fundamentals live in blueprints/blog.md. (5) Keep each SKILL.md under about 3,500 characters; overflow goes in blueprints/.
+**Standing rules:** (1) At session start, check this index and reference matching skills. (2) New training files keep arriving in `cold-email/` and `lead-gen/`; at the start of each session add each new file to the matching skill (cold-email-copy, cold-email-deliverability, cold-email-lead-research, gw-newsletter, gw-lead-generation) and its blueprint. Merge; no blueprint per source. (3) Bots never send or post; Brennan approves. (4) SEO/GEO fundamentals live in blueprints/blog.md. (5) Keep each SKILL.md under about 3,500 characters; overflow goes in blueprints/. (6) Source of truth: private GitHub repo gorillaworksmarketing/gw-skills, `skills/<slug>/SKILL.md`. Read skills there; GW Skill Builder pushes every change.
 
 ## Shared (all bots)
 - `gw-content-rules`: any GW copy; the mandatory rules and the AEO/FAQ pattern.
