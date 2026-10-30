@@ -1,28 +1,37 @@
 ---
 name: gw-newsletter
-description: Use when drafting or editing a Gorilla Works newsletter issue (weekly LinkedIn newsletter, blog-to-newsletter, welcome email, or a nurture send to "not now" leads). One idea, 200-300 words, one CTA, a PS, subject and preview text. For GW Social Copywriter/Editor, GW Blog Copywriter/Editor, and GW Email Copywriter. Use it even if the request doesn't name the skill.
+description: >-
+  Use when drafting or editing a single Gorilla Works newsletter issue (weekly
+  LinkedIn newsletter, email newsletter, or a blog-to-newsletter cut). One
+  tactical idea, 200-300 words, one CTA, a P.S., subject and preheader. For GW
+  Social, Blog, and Email Copywriters and Editors. Sequences (welcome, nurture,
+  re-engagement) use gw-email-marketing. Use it even if the request just says
+  "write this week's issue".
 ---
-# GW newsletter
-Detail: blueprints/newsletter.md. Apply `gw-content-rules`, `gw-claims-guardrails`, `gw-qa-gate`. No em dashes, no hashtags. Drafts only; Brennan approves every send. Vendor stats are never cited.
+# GW newsletter (one issue)
+Detail: blueprints/newsletter.md. Copy library: blueprints/email-copy-frameworks.md. Apply `gw-content-rules`, `gw-claims-guardrails`, `gw-qa-gate`. No em dashes, no hashtags. Drafts only; Brennan approves every send. Vendor stats are never cited.
 
-## Bulletproof issue
-1. **One idea:** one specific tactic a fencing or roofing owner can use today. Not a roundup. Topics come from Google PAA and real campaign problems, cut to one idea.
-2. **Length:** 200-300 words (under 250 ideal). Stop at 200 if it fits. Short sentences, plain words, no "hope you're well" opener.
-3. **Mix:** about 90% value, 5% CTA. **One CTA, one link,** with a natural segue from the topic into the offer, placed early.
-4. **PS line:** a secondary nudge or CTA (e.g. demo; up to $500 off the first campaign once approved).
-5. **Subject and preview:** write 3 subject options plus the preview text (first ~150 characters). Test one-word vs short as A/B only.
-6. **Process:** voice-riff, then draft (ask for the offer), then the Editor humanizes and runs `gw-qa-gate`.
-7. **Link:** UTM per research/utm-link-strategy.md (utm_campaign `<industry>_<type>`, utm_term slug), logged in research/link-log.csv.
+## Why one idea
+Owners read this between jobs. One tactic they can use this week earns the next open; a roundup gets skimmed and forgotten. Each issue does one job [Corey Haines `emails`: one email, one job].
+
+## Steps
+1. **One idea:** one direct mail tactic a fence or roofing owner can use today (fencing in about half of issues, per team/industry-mix.md). Source from Google PAA and real campaign questions; cut to one.
+2. **Goal line first:** what the reader should do after reading, and how we'll know (reply or demo signup by UTM).
+3. **Shape:** a reward line first (a one-line tip or quote), then the tactic in 200-300 words (about 200 ideal). Plain words, no "hope you're well" opener. Mobile-check it.
+4. **Mix:** about 90% value. **One CTA, one link,** written for this issue's content, with a natural segue from the tip.
+5. **P.S.:** the secondary nudge (demo, or "up to $500 off the first campaign" where approved). P.S. lines get read.
+6. **Subject and preheader:** keep a recognizable subject series; 3 options under about 50 characters (clear, then curious; no pitch words); a preheader of 90-140 characters written as a second hook, never "View in browser". Sender name stays "Brennan Ursu". One-word vs short subjects are A/B only.
+7. **Process:** voice-riff, then draft (ask for the offer), then the Editor runs `cold-email-editing` sweeps (tone and AI tells) and `gw-qa-gate`.
+8. **Link:** UTM per research/utm-link-strategy.md (utm_campaign `<industry>_<type>`, utm_term slug), logged in research/link-log.csv.
 
 ## System
-- **Weekly,** same day and format; batch-write several issues; quality beats a fixed date.
-- **Reply-gated welcome (Ed Sturm example, training 5b):** plain text, from a person, no images. Open with "I saw you signed up", then "QQ - quick question", then lettered options (A-D plus E) Something else) and "Just hit reply with a letter." Our version: "Which best describes you: A) fence company B) roofing/home services C) other trade D) B2B E) something else?" Replies also warm the sender and tag the segment; log each letter to the contact. Signature links: 2-3 best articles only.
-- **Segment** by trade, role, size.
-- **List hygiene:** easy unsubscribe, opt-out line and postal address, "click to stay" for non-openers after 3 months, archive the rest.
-- **Nurture sends:** new blog articles and direct mail tips to "not now" leads, with no new ask.
-- **SMART goal** per quarter with Brennan, judged by replies and demo signups by UTM, not opens.
-- **Anchor text:** vary anchors across syndicated and backlinked links; ratios in the blueprint.
+- **Weekly,** same day and format; batch several issues; quality beats a fixed date.
+- **Segment** by trade, role, size, using the welcome letter answers (`gw-email-marketing`).
+- **Hygiene:** easy unsubscribe, opt-out line and Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033. Non-engaged after 3 months go to the re-engagement sequence in `gw-email-marketing`.
+- **Measure:** replies, clicks to demo, demo signups by UTM decide; unsubscribes and complaints are guardrails; opens are not used. The list is small, so test topics and offers before subject tweaks.
+- **SMART goal** per quarter with Brennan.
 
-Weekly learning loop with GW Analytics (replies, clicks, demo signups by UTM; top and bottom 20%).
+## Learning loop
+Weekly with GW Analytics (replies, clicks, demo signups by UTM; top and bottom 20% of issues). Log changes in the blueprint changelog.
 
-Skills to reference: `gw-linkedin-post`, `gw-blog-to-social`, `longform-seo-article`, `gw-lead-generation` (one CTA, front-loaded hook, clear not clever, reading-level check).
+Related: `gw-email-marketing` (welcome, nurture), `gw-blog-to-social`, `longform-seo-article`, `gw-lead-generation` (clear not clever, reading-level check). Anchor-text ratios now live in `link-building`.

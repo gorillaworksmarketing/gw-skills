@@ -1,22 +1,32 @@
 ---
 name: ai-search-visibility
-description: Use to get Gorilla Works found, accurately described, and cited by AI answers (Google AI Overviews, ChatGPT, Perplexity, Gemini). Covers GEO vs SEO, the answer-first quotable format, the Graphite playbook, the monthly six-gap check, entities/schema, misinformation fixes, mention tiers, experiments, and AI measurement. Use it whenever AEO, GEO, AI Overviews, or brand mentions come up, even if the request just asks how to show up in ChatGPT.
+description: >-
+  Use to get Gorilla Works found, accurately described, cited, and recommended
+  by AI answers (Google AI Overviews, ChatGPT, Perplexity, Gemini). Covers the
+  visibility ladder, answer-first format, the six-gap check, entities, accuracy
+  fixes, mentions, and measurement. Use it whenever AEO, GEO, AI Overviews, or
+  brand mentions come up, even if the request just asks how to show up in
+  ChatGPT.
 ---
 # AI search visibility
-Details: blueprints/blog.md (AEO and GEO sections). Stats: research/stat-log-pending.md (attribute). Base rule: helpful-first quality, written for the real reader.
-**GEO vs SEO:** SEO ranks in results; GEO gets us named and cited in AI answers. Same core: a trusted page that clearly answers a real question. AIs crawl, store, and pick sources like Google.
+Details: blueprints/blog.md (AEO and GEO sections). Stats: research/stat-log-pending.md (attribute). Base rule: helpful-first quality for the real reader.
+**GEO vs SEO:** SEO ranks pages; GEO gets us named in AI answers. Same core: a trusted page that clearly answers a real question. Google says no special AI markup or files are needed and warns against writing separate content for AI.
+
+## The ladder
+Retrieved, then cited (our page is a source), then mentioned (our name appears), then **recommended** (on the shortlist). Citations come from useful pages; recommendations come mostly from what the rest of the web says. Test: if an AI ignored our site, would reviews, directories, press, and forums still put us on the list?
 
 ## Steps
-1. **Questions:** turn money terms (ours and competitors') into questions; add sales/support/Reddit questions. Filters: "do we deserve to show up?", then "can AI fully satisfy it?" (if yes, aim for a mention inside the answer).
-2. **Cheap answer tracker:** ask each question several times, in variants, on 3 surfaces (ChatGPT, Perplexity, Google AIO). Log share of voice, average position, cited domains, and **accuracy/sentiment**.
-3. **Monthly check:** classify the **six gaps** (visibility, narrative, topic, format, web mentions, demand) and plan **fix / build / influence**. Quarterly competitor audit.
-4. **Pages:** match the cited page type and answer every follow-up. **Quotable format:** answer first under every heading, headings are the real questions, lists and small tables, each chunk self-contained; entities and one approved fact nobody else has (`longform-seo-article`).
-5. **Entities and defense:** list the branded entities and approved brand-named frameworks. Keep facts identical on Wikidata, Grokipedia (never paid indexing), GBP, Bing Places, Yelp, Apple Maps, LinkedIn, Crunchbase, directories. Answer misinformation with an **official, specific FAQ/help center** first, then request corrections.
-6. **Technical (recommend to Brennan):** SSR/prerendering (raw HTML is empty today); sitemap in **Bing Webmaster Tools**; **Organization** (with sameAs) and **Article** schema; never block search/index bots (GPTBot, ClaudeBot) in robots.txt; consider llms.txt; redirect hallucinated 404s.
-7. **Mentions, three tiers:** Tier 1 editorial/listicles, expert quotes, and unlinked-mention reclaims (via `link-building`); Tier 2 genuine Reddit/Quora answers on cited threads (`reddit-comment`); Tier 3 own YouTube/LinkedIn. **Outreach is draft-only; Brennan approves every send. No paid placements for now (Brennan, Oct 14).**
-8. **Experiment:** test vs. control question sets (e.g. 100/100), 2 weeks before/after with GW Analytics; reproduce before promoting a rule.
-8b. **Semrush handoff:** log any backlink data seen in backlinks/semrush-sightings.md.
-9. **Freshness:** refresh top and sleeper pages meaningfully; verify any citation on 3 different days.
-10. **Measure (GW Analytics):** GEO = whether AIs name us for key questions over time (step 2); the GA4 "AI traffic" channel regex; training vs. citation bots in the logs; **lead → SQL → closed-won by channel**; and the "How did you hear about us?" field with AI options on /book-demo.
+1. **Questions:** money terms (ours and competitors') as questions, plus sales, cold-email, Reddit questions. Filters: "do we deserve to show up?", then "can AI fully answer it?" (if yes, aim for a mention).
+2. **Tracker:** run each question 3-5 times on ChatGPT, Perplexity, and Google AIO. Log rate with sample size ("named 2/5"), position, cited domains, framing. One run is an anecdote.
+3. **Monthly six-gap check** (visibility, narrative, topic, format, web mentions, demand): plan fix, build, or influence. Quarterly competitor audit.
+4. **Pages:** match the cited page type; answer first under real-question headings; small tables; one approved fact nobody else has (`longform-seo-article`).
+5. **Accuracy ledger:** log each claim an AI makes about us (accurate, stale, false, missing qualifier), its likely source, and severity (price or service errors first). Fix our own page first (plain, dated fact), then request corrections.
+6. **Entities:** identical facts and NAP on GBP, Bing Places, Yelp, Apple Maps, LinkedIn, Crunchbase, Wikidata, Grokipedia (never paid indexing), directories.
+7. **Technical (recommend to Brennan):** SSR or prerendering (raw HTML is empty today); sitemap in Bing Webmaster Tools; Organization (sameAs) and Article schema; allow search bots (OAI-SearchBot, Claude-SearchBot, PerplexityBot) and decide training bots (GPTBot, ClaudeBot, Google-Extended) separately; consider llms.txt; redirect hallucinated 404s.
+8. **Mentions, three tiers:** Tier 1 editorial lists, expert quotes, unlinked-mention reclaims (`link-building`); Tier 2 genuine Reddit/Quora answers on cited threads (`reddit-comment`); Tier 3 own LinkedIn and YouTube. Outreach is draft-only; Brennan approves sends. No paid placements.
+9. **Experiment:** test vs. control question sets, 2 weeks before and after, with GW Analytics; reproduce before promoting a rule.
+10. **Freshness:** real refreshes; verify a citation on 3 different days.
+11. **Measure:** naming rate over time; GA4 "AI traffic" regex; bot logs; lead to closed-won by channel; "How did you hear about us?" with AI options on /book-demo. Log Semrush backlink sightings in backlinks/semrush-sightings.md.
 
-Skills to reference: `gw-lead-generation` (leading vs lagging, response time, conversion by UTM).
+## Learning loop
+Monthly tracker diff plus the weekly blog loop; log in blueprints/blog.md changelog.

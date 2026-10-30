@@ -12,7 +12,7 @@ Why: one invented or misattributed number can sink trust in the brand and hand t
 
 ## Steps
 1. **Collect the claim.** Write down the exact number, what it measures, and where you saw it (URL, pull date in PT).
-2. **Trace it to the original.** Follow citations back to the publisher that produced the data (USPS Household Mail Survey, USPS Postal Facts, ANA, Census, BLS), and open that page or PDF yourself. Competitor reports and blogs are leads, not sources.
+2. **Trace it to the original.** Weigh evidence in this order: official or government data, controlled studies, large vendor datasets (S-tier at best), then anecdotes. Follow citations back to the publisher that produced the data (USPS Household Mail Survey, USPS Postal Facts, ANA, Census, BLS), and open that page or PDF yourself. Competitor reports and blogs are leads, not sources.
 3. **Tier it.**
    - **Tier 1 (verified):** you opened the primary source and the number matches. Usable.
    - **Tier 2 (secondary):** a reputable outlet reports the number but the primary source can't be opened. Use it only with caution and say so.
@@ -31,5 +31,8 @@ Why: one invented or misattributed number can sink trust in the brand and hand t
 - Invent, round up, or approximate a number.
 - Link to or credit a competitor. It sends them traffic and authority.
 - Present one client's result as typical.
+- Turn a study's percentage into a forecast for a client or a trade. A number from another market, year, or sample stays attributed to its context.
 
 Skills to reference: `gw-lead-generation` (vendor training stats are S-tier, never cited).
+
+Learning loop: when a stat is retired or corrected, note it in the stat log so every skill that cited the ID can be checked.

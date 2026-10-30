@@ -12,6 +12,8 @@ Why: competitors have already tested topics and angles. We reuse the *ideas*, ne
 
 ## Steps
 1. **Read for ideas only.** For each page, note the topic, angle, tactic, audience, and any stat along with the citation it gives.
+1b. **Gap grid per topic:** what every page says (expected), what most say (common), what only one says (distinctive), and what none answer (uncovered). Uncovered and distinctive items become our information-gain lines for briefs.
+1c. **Voice of customer:** from competitor reviews, FAQs, and comments, log pains, objections, and the exact words owners use into the VOC bank (`gw-lead-generation`).
 2. **Rewrite from scratch.** Restate each concept in our own voice and positioning; don't paraphrase sentence by sentence. Never reuse their charts or images.
 3. **Strip the competitor out.** No links, no credit, no "according to X". Run every stat through stat-sourcing-and-verification. Anything you can trace only to the competitor gets flagged and normally dropped.
 4. **Balance by the industry mix** in team/industry-mix.md (as of Oct 23, 2026: about 50% fencing, the rest rotating across HVAC, roofing, siding, electrical, plumbing, other home services and B2B). Always re-read that file, since the mix changes.

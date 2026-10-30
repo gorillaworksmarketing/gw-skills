@@ -13,7 +13,7 @@ Platform rules: blueprints/x.md; patterns: blueprints/swipe/x.md; editor brief: 
 Rewrite toward **LinkedIn's posting style**, while keeping X skills and platform rules:
 - Sound like Brennan: analytical, confident, blunt, talking to one trade owner.
 - Open with a clear sentence (topic in the first line), not a lone "15%." or "5%." unless the number *is* the story.
-- Prefer the **"If I ran an [trade] company as a marketing professional, this is how I'd scale"** format when it fits — concrete steps, not vibes.
+- Prefer the **"If I ran an [trade] company as a marketing professional, this is how I'd scale"** format when it fits: concrete steps, not vibes.
 - Complete thoughts, varied rhythm, blank lines between beats. Cut template PAIPS and the repeated "No list needed… / Free demo. DM us. / 🦍" closer unless it's a deliberate lead-gen post.
 - Soft CTAs on most days (value first); URL or "DM us" only when the slot is lead-gen (~25%).
 - Fail drafts that feel like a viral-hack shell with a direct-mail sticker on top.
@@ -23,10 +23,12 @@ Rewrite toward **LinkedIn's posting style**, while keeping X skills and platform
 2. **Body:** short rhythmic sentences, blank line between thoughts; specific HOW; lists use • or numbered steps. For "If I ran…" posts, 3–5 concrete scale moves.
 3. **Close:** punchy two-sentence takeaway (LinkedIn-style), then at most one CTA on lead-gen days.
 4. **X rules:** spell out numbers ($620,000, not $620K); say "X", never "Twitter"; no hashtags; no drugs, alcohol, COVID, swearing, or engagement-group talk; threads use capitalized header titles without punctuation, no numbered tweets, 4–6 relevant tags.
-5. **Humanize:** AI-pattern sweep (em-dashes, delve/landscape/unlock/elevate, "not X but Y", hedging, uniform rhythm).
+5. **Humanize:** AI-pattern sweep (em-dashes, delve/landscape/unlock/elevate, "not X but Y", hedging, uniform rhythm) plus social tells: engagement bait ("Agree?", "Thoughts?"), manufactured vulnerability, emoji bullets.
 6. **Replies** (from `social-reply`): under 240 characters, value first, no pitch; soft DM CTA ok (~75% pure value).
 7. **Rulings:** stats need no source in the post but must be logged (V/S); prices only "as low as $0.78" / "under $1", no stamp comparison; Real Great Roofing exact quote only and never as the lead; no banned self-ranking lines.
 8. **Links:** per research/utm-link-strategy.md; log in research/link-log.csv.
 9. Output final copy, change log, and `gw-qa-gate` result. Never post.
 
 Skills to reference: `gw-lead-generation`, `gw-linkedin-editor` (voice/format cues).
+
+Learning loop: weekly with GW Analytics (blueprints/x.md); log repeat fixes there.

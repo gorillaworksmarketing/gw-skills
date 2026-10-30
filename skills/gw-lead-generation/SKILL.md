@@ -1,29 +1,41 @@
 ---
 name: gw-lead-generation
-description: Use when any Gorilla Works bot plans, writes, researches, edits, or measures anything meant to generate leads or demo signups: offers, lead magnets, hooks, pitch structure, referrals, events, nurture, pricing logic, or test design. Shared by all GW bots. Free tools only; no paid ads. Use it even if the request doesn't name the skill.
+description: >-
+  Use when any Gorilla Works bot plans, writes, researches, edits, or measures
+  anything meant to generate leads or demo signups: offers, hooks, pitches,
+  referrals, events, discovery calls, buyer psychology, or test design. Shared
+  by all GW bots. Free tools only; no paid ads. Use it even if the request
+  doesn't name the skill.
 ---
 # GW lead generation (shared)
-Detail: blueprints/lead-generation.md. Sources are vendor training: never cite their stats. Apply `gw-content-rules`, `gw-claims-guardrails`. Goal: site traffic, brand awareness, demo signups. Bots never send or post.
-**Needs Brennan's approval:** offers, guarantees, bonuses, scarcity, giveaways, free-work offers, price changes. Standing offer: up to $500 off the first campaign. Approved proof only.
+Detail: blueprints/lead-generation.md. Never cite vendor stats. Apply `gw-content-rules`, `gw-claims-guardrails`. Goal: traffic, awareness, demo signups. Bots never send or post.
+**Needs Brennan's approval:** offers, guarantees, bonuses, scarcity, giveaways, free work, price changes. Approved offers: up to $500 off the first campaign, plus the four cold-email test arms (blueprints/cold-email.md). Approved proof only.
 
 ## Principles
-1. Self-reinforcing loop: customers, results, reviews and referrals, more customers. Give value first (sample, audit, list preview); never lead with "book a call."
-2. No leads means our offer or process, not the market. Core four: warm, cold, content (ads off). Pick one and go all in.
-3. **Offer formula:** dream outcome x likelihood, divided by time x effort. Hit outcome, proof, speed, done-for-you ease.
-4. **Warm outreach:** catch up, ask who else has the problem, ask for a review and referral, request an intro.
-5. **Referral engine:** a real reason to refer (approval), assumptive "who else do you know?" at every check-in, ask at the wow moment.
-6. **Events:** free channel only (Chamber, trade groups, meetups); Research finds local trade events and groups.
-7. **Lead magnets:** reveal a problem, free sample, or one step; do not solve the core problem. Name it by the result (number + outcome + timeframe; how to X without Y). CTA: clear not clever, exact next action, an honest reason to act. Research finds the magnet problem in PAA, groups, reviews.
-8. **Growth levers:** clear not clever (3rd-5th grade reading level, trade analogies); hook = Proof + Promise + Plan; 70/20/10 (copy winners / adjacent / new); batch ~50 hooks (40 proven, 10 new); people need reminding more than teaching.
-9. **Awareness levels** (unaware to most aware): match the message. Know the top-20% customers' traits (Brennan's data; never invent).
-10. **Pitch:** promise, story, old way vs new way, top 3 concerns (think / why wrong / what's right / proof), offer, FAQ. FAQ-first: answer repeated questions in order of frequency, as content. One conversion point: the demo page with a UTM. Risk-reversal wording only if approved.
-11. **Constraint first,** then scale. Pricing logic is internal; every price move needs approval. Speed to lead: reply within minutes.
-12. **Kaleidoscope:** reuse winners in new formats, platforms, trades.
-13. **17-step selling** (AIDA, headline, PS) for mail and landing copy; see blueprint.
-14. **Nurture loop:** cold reply becomes warm; "not now" gets useful articles (`gw-newsletter`); after results ask for review and referral.
-15. **Mindset (internal only):** focus on one channel, consistency, persistence. Never in published content.
+1. **Loop:** customers, results, reviews and referrals, more customers. Give value first: lead with a free tangible offer; the 15-minute call is how they claim it, never the opener [V7].
+2. **No leads means our offer or process.** Core four: warm, cold, content (ads off). One channel, all in.
+3. **Value equation:** dream outcome x likelihood, divided by time x effort. Offer first: test offers before copy (first test: offer arms A-D).
+4. **Warm and referrals:** ask who else has the problem, at the wow moment, with a real reason (approval).
+5. **Events:** free only (Chamber, trade groups, meetups).
+6. **Lead magnets:** use `gw-lead-magnets`.
+7. **Clear not clever:** 3rd-5th grade (cold email 7th max), outcome not deliverable (more jobs, not AI); hook = Proof + Promise + Plan; 70/20/10.
+8. **Awareness:** match the message to the level; sell problems the niche already knows. Top-20% traits from Brennan's data only.
+9. **Voice of customer:** mine reviews, calls, groups, replies for pains, triggers, outcomes, exact words. About 5 data points make a pattern; tag confidence.
+10. **Psychology, ethically:** reciprocity, small first yes, real proof, gentle loss framing, mere exposure. Never fake scarcity, deadlines, or familiarity.
+11. **Pitch:** promise, story, old vs new, top 3 concerns, offer, FAQ (17 steps in blueprint). One conversion point per piece: demo page with UTM, or the 15-minute claim call in cold email.
+12. **Discovery call (Brennan):** thanks, 3 relevant things, "tell me about your business and challenges, if that's okay." Let them talk.
+13. **Constraint first,** then scale. Speed to lead: positive replies answered within 2 minutes (reply agent pending Brennan's approval; until then drafts).
+14. **Kaleidoscope:** reuse winners in new formats and trades.
+15. **Nurture:** "not now" and signups go to `gw-email-marketing`.
+16. **Mindset (internal only):** focus, consistency, persistence.
 
-## Measure
-Leading (replies, response time, clicks, demo requests) vs lagging (demos, revenue). LTV:CAC on gross profit once Brennan shares numbers. Judge by **UTM demo signups** (utm_campaign `<industry>_<type>`), not impressions. One variable per test, hypothesis first. Weekly learning loop with GW Analytics.
+## Test and measure
+- Hypothesis first: "Because [evidence], we believe [change] will cause [outcome] for [segment]; we'll know when [metric] moves." One variable, a full cycle, no peeking.
+- Rank by ICE. Small numbers show only big swings: offers first; never call a winner on a tiny sample.
+- Leading (replies, response time, booked calls) vs lagging (demos, revenue). Judge by **UTM demo signups** and booked calls, not impressions. LTV:CAC once Brennan shares numbers.
+- **Recurring loops** need a cadence, acts-when rule, self-check, stop rule, human checkpoint.
 
-Skills to reference: `cold-email-copy`, `gw-newsletter`, `social-reply`, `gw-qa-gate`.
+## Learning loop
+Weekly with GW Analytics; log in the blueprint changelog.
+
+Related: `cold-email-copy`, `gw-lead-magnets`, `social-reply`, `gw-qa-gate`.

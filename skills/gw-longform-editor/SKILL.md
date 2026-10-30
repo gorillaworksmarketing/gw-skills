@@ -1,25 +1,34 @@
 ---
 name: gw-longform-editor
-description: Use when editing a Gorilla Works long-form draft or framework (blog, Medium, Substack) into the final publish-ready version, with AEO direct answer, stronger hook, humanized prose, demo CTA, verified links and stats, target word count, and the QA gate. This is the GW Blog Editor's core skill (blog-edit-qa). Use it even if the request doesn't name the skill.
+description: >-
+  Use when editing a Gorilla Works long-form draft or framework (blog, Medium,
+  Substack) into the final publish-ready version, or refreshing a page that
+  already ranks: AEO direct answer, stronger hook, Seven Sweeps, AI-tell
+  removal, demo CTA, verified links and stats, and the QA gate. The GW Blog
+  Editor's core skill. Use it even if the request just says "edit this post".
 ---
 # GW long-form editor
-Inputs: the draft plus its brief and platform blueprint. Apply `gw-content-rules` and `gw-claims-guardrails`, then `gw-qa-gate`. Examples: blog/drafts/2026-10-15/.
+Inputs: draft, brief, platform blueprint. Apply `gw-content-rules`, `gw-claims-guardrails`, then `gw-qa-gate`. Examples: blog/drafts/2026-10-15/.
+
+## First, diagnose
+Save the incoming draft as `<name>.orig.md`. Then decide: (A) generic or AI-sounding, so rebuild from the brief; (B) real voice with problems, so edit line by line; (C) a point fix, so touch only that. If a sentence is specific, true, and sounds like Brennan, leave it alone.
 
 ## Steps
-1. **Keep the original:** save the incoming draft as `<name>.orig.md` before editing.
-2. **AEO direct answer up top:** a 40-60-word answer, consensus first, US/state scope; each H2 question answered in its first 40-60 words.
-3. **Stronger hook:** 3 headline variants, pick the best (the blog title stays the exact question; no H1 in the body), then sharpen the first 2 sentences.
-4. **AI-pattern sweep** (team/editor-brief.md): em-dashes, "delve/landscape/unlock/elevate", rule-of-three padding, "not X but Y", generic openers and closers, hedging, uniform rhythm, filler, summary lines closing every section.
-5. **Craft:** cut adverbs, show don't tell, one reader, 2-3 sentence paragraphs, no keyword stuffing or repetition.
-6. **Demo CTA:** "Book a free demo" linking gorillaworksmarketing.com/book-demo near the top and at the end. Off-site pieces (Medium/Substack in-body links) get UTMs; blog internal links stay clean.
-7. **Links (required):** verify every internal link resolves (open it; use the trailing-slash URL to avoid 301 hops). Build any UTM link per research/utm-link-strategy.md (utm_source=<platform>, utm_campaign=<industry>_<type> (e.g. fencing_faq), utm_term=<article slug>, lowercase; see the UPDATE section) and log every link in research/link-log.csv.
-8. **No unverified stats:** each number matches a V/S stat-log ID or an approved fact; prices only "as low as $0.78" / "under $1"; cut the rest.
-9. **Length:** cover the topic completely; treat the brief's range as a guide, never pad (per Ahrefs, most cited pages are under 1,000 words, S-AHR8) [JUDGMENT; Brennan to confirm vs. the old target].
-9b. **AEO structure:** BLUF in every section; atomic, standalone H2s; entity-rich, simple declarative sentences; TL;DR and TOC; lists/comparisons where they fit.
-9b2. **Checks:** information gain vs. the top results; the "search over" test; 5-10 in-body internal links; about a 5th-grade reading level. A human edit is required; no fully automated AI content.
-9c. **Freshness:** sleeper or top pages get meaningful updates, not date changes; flag posts older than 30 days in the top set for a refresh request.
-10. **Structure:** clear H2/H3s, ✅ checklists, FAQ, Sources; platform format (the blog has no images or HTML).
-10b. **Publishing path** (blog/publishing-path.md): website first; Medium via "Import a story" with the Published URL (sets the canonical); Substack repost with the canonical URL set to the Published URL plus "Originally published at <link>". Only after the Published URL exists; in-body links get UTMs; log every URL in research/link-log.csv.
-11. **Output:** the final file, a short change log (including word count and link check results), and the `gw-qa-gate` result.
+1. **AEO up top:** a 40-60-word answer, consensus first, US/state scope; each H2 question answered in its first 40-60 words.
+2. **Hook:** 3 headline variants (the blog title stays the exact question); sharpen the first 2 sentences.
+3. **Seven Sweeps,** one pass each: clarity; voice (Brennan, plain); so what (every section tied to a fence or roofing owner's leads); prove it (claims backed or cut); specificity (could a competitor publish this line? then sharpen it); emotion (their real pain, no drama); zero risk (the CTA feels easy).
+4. **AI-tell sweep** (team/editor-brief.md, `gw-content-rules`): em dashes; "delve/landscape/unlock/elevate"; contrast reveals; negation lists; colon reveals; self-answered questions; threes padding; generic openers and tidy closers; wisdom-shaped lines; uniform rhythm; summary lines ending every section.
+5. **Craft:** cut adverbs and filler, one reader, 2-3 sentence paragraphs, no keyword stuffing.
+6. **Info gain:** confirm the brief's information-gain line made it in; check against the top results; run the "search over" test.
+7. **Demo CTA:** "Book a free demo" (gorillaworksmarketing.com/book-demo) near the top and at the end.
+8. **Links:** open every internal link (trailing-slash URL). Off-site links get UTMs per research/utm-link-strategy.md (utm_source=<platform>, utm_campaign=<industry>_<type>, utm_term=<slug>); log all in research/link-log.csv. 5-10 in-body internal links.
+9. **Stats:** each number matches a V/S stat-log ID or approved fact; prices only "as low as $0.78" / "under $1"; claims that can't be backed get `[NEED: ...]` or are cut.
+10. **Length:** cover the topic fully; never pad [JUDGMENT; Brennan to confirm vs. the old target].
+11. **Structure:** answer-first sections that stand alone, TL;DR, TOC, ✅ checklists, FAQ, Sources; platform format (blog: no images or HTML). About a 5th-grade reading level. A human edit is required.
+12. **Refresh edits:** for a page that ranks, add the missing section and update stale facts; keep what works; no date-only changes. Record position and CTR, then wait 3-4 weeks.
+13. **Score** 1-10 as a fence owner, an SEO reviewer, and Brennan; ship at 7+ each and 8+ average.
+14. **Publishing path** (blog/publishing-path.md) as in `longform-seo-article`.
+15. **Output:** final file, change log (word count, link check, scores), and the `gw-qa-gate` result.
 
-Skills to reference: `gw-lead-generation` (clear not clever, one CTA, reading-level check, front-loaded hook).
+## Learning loop
+Weekly (blueprints/blog.md): log repeat fixes so briefs and drafts improve.
