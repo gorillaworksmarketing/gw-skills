@@ -17,7 +17,7 @@ Generic or AI-sounding drafts go back with notes; good drafts in Brennan's voice
 ## Pass 1: hard fails (any one = FAIL, list the fix)
 - A hook without a source URL, or one that is private-feeling or sensitive. Open each URL.
 - An offer not worded exactly as one of the four arms (A-D in cold-email.md), or two arms in one sequence. Sample postcard, list preview, teardown, audit, or video offers are unapproved.
-- Any other claim, number, or proof not approved (Real Great Roofing's exact quote only). No stamp comparison, guarantee, ROI promise. Write `[NEED: ...]` instead of softening.
+- Any other claim, number, or proof not approved (Real Great Roofing's exact quote only). No per-mailer price ($0.78, under $1), stamp comparison, guarantee, ROI promise. Write `[NEED: ...]` instead of softening.
 - Email 1 names the deliverable or jargon (AI, data modeling, 200+ variables, targeting) instead of the outcome (more jobs).
 - A problem the niche isn't already aware of, or one we made up.
 - Missing opt-out line or postal address (Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033). Hyperlinked company name.

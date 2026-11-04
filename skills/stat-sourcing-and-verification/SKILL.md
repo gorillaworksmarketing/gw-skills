@@ -20,7 +20,7 @@ Why: one invented or misattributed number can sink trust in the brand and hand t
 4. **Log it in the stat bank** in the team's research location, using a citable ID so the claims-guardrail and QA skills can reference it:
    `| ID | Stat | Original source (name + URL) | Date verified (PT) | Tier |`
    Use V1, V2… for verified stats, S1… for secondary, and F1… for flagged. Never reuse or renumber an ID; retire one by marking it Retired. Keep the source on file even when the post won't name it.
-5. **Check the claim rules** in the knowledge base's source of truth: no ROI guarantees, approved price wording only, and approved client results only.
+5. **Check the claim rules** in the knowledge base's source of truth: no ROI guarantees, no per-mailer price, and approved client results only.
 
 ## Answering a stat request from a copywriter or another bot
 - Return only Tier 1 items, plus Tier 2 items clearly labeled: the ID, the claim and number, and the source name.

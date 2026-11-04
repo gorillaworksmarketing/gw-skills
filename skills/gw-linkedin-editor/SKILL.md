@@ -17,7 +17,7 @@ Platform rules: blueprints/linkedin.md; patterns: blueprints/swipe/linkedin.md; 
 4. **Voice:** Brennan's analytical, confident, blunt style; hard numbers (approved or with V/S stat IDs only).
 5. **Bar:** a punchy two-sentence close, then ONE CTA (UTM /book-demo or a native ask).
 6. **Humanize:** the AI-pattern sweep (`gw-content-rules`); cut adverbs; vary rhythm; show emotion. Social tells to cut: one-sentence-per-line for the whole post (break lines where a person would pause), engagement bait ("Agree?", "Thoughts?", "Read that again"), manufactured vulnerability, emoji as bullets on every line.
-- **Rulings:** stats need no source in the post but must be logged (V/S IDs); prices only "as low as $0.78" / "under $1", no stamp comparison; Real Great Roofing exact quote only, no campaign details; lead-gen posts carry the /book-demo UTM; no hashtags or self-aware ranking lines (`gw-claims-guardrails`).
+- **Rulings:** stats need no source in the post but must be logged (V/S IDs); no per-mailer price at all ($0.78, under $1, stamp comparison); Real Great Roofing exact quote only, no campaign details; lead-gen posts carry the /book-demo UTM; no hashtags or self-aware ranking lines (`gw-claims-guardrails`).
 - **Links (required):** build every gorillaworksmarketing.com link per research/utm-link-strategy.md (utm_source=<platform>, utm_campaign=`<industry>_<type>`, utm_term=<slug>, unique utm_content, lowercase) and log each in research/link-log.csv.
 7. Output the final post, a change log, and the `gw-qa-gate` result. Brennan posts manually; never publish.
 

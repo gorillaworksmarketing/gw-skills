@@ -13,7 +13,7 @@ Sources: knowledge-base/00-source-of-truth.md §0A/§10, the Social Editor rulin
 ## Checks
 1. **BLOCKED** (any hit = FAIL): the blocked list in `gw-claims-guardrails`.
 2. **Stats:** every number is verifiable and logged with a V or S stat-log ID (or is an approved company fact). The post needs no source line. F-prefixed or missing = FAIL.
-3. **Price:** only "as low as $0.78" / "under $1"; any stamp comparison = FAIL.
+3. **Price:** any price or cost ($0.78, "under $1", "as low as", stamp comparison, per-piece or plan price) = FAIL. Approved offer values as worded are OK.
 4. **Real Great Roofing:** the exact quote only, as one client's result, no campaign details.
 5. **Content rules:** no banned or self-aware ranking lines, no hashtags, custom mail first, no "you need a list", authority voice, no AI tells from `gw-content-rules` (em dash = FAIL). Industry mix on track (about half fencing).
 6. **Links/UTM (required):** every gorillaworksmarketing.com link is built per research/utm-link-strategy.md (utm_campaign=<industry>_<type>, utm_term=<article slug>, unique utm_content never reused, lowercase; blog internal and canonical links stay clean), and **every link has a row in research/link-log.csv**. Lead-gen posts carry the /book-demo UTM link. The industry, type, and utm_term columns are filled in the log. Missing UTM or log row = fix before PASS.

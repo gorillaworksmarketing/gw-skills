@@ -22,7 +22,7 @@ Save the incoming draft as `<name>.orig.md`. Then decide: (A) generic or AI-soun
 6. **Info gain:** confirm the brief's information-gain line made it in; check against the top results; run the "search over" test.
 7. **Demo CTA:** "Book a free demo" (gorillaworksmarketing.com/book-demo) near the top and at the end.
 8. **Links:** open every internal link (trailing-slash URL). Off-site links get UTMs per research/utm-link-strategy.md (utm_source=<platform>, utm_campaign=<industry>_<type>, utm_term=<slug>); log all in research/link-log.csv. 5-10 in-body internal links.
-9. **Stats:** each number matches a V/S stat-log ID or approved fact; prices only "as low as $0.78" / "under $1"; claims that can't be backed get `[NEED: ...]` or are cut.
+9. **Stats:** each number matches a V/S stat-log ID or approved fact; no per-mailer price at all ($0.78, under $1, stamp comparison); claims that can't be backed get `[NEED: ...]` or are cut.
 10. **Length:** cover the topic fully; never pad [JUDGMENT; Brennan to confirm vs. the old target].
 11. **Structure:** answer-first sections that stand alone, TL;DR, TOC, ✅ checklists, FAQ, Sources; platform format (blog: no images or HTML). About a 5th-grade reading level. A human edit is required.
 12. **Refresh edits:** for a page that ranks, add the missing section and update stale facts; keep what works; no date-only changes. Record position and CTR, then wait 3-4 weeks.

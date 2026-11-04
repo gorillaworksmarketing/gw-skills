@@ -25,7 +25,7 @@ Rewrite toward **LinkedIn's posting style**, while keeping X skills and platform
 4. **X rules:** spell out numbers ($620,000, not $620K); say "X", never "Twitter"; no hashtags; no drugs, alcohol, COVID, swearing, or engagement-group talk; threads use capitalized header titles without punctuation, no numbered tweets, 4–6 relevant tags.
 5. **Humanize:** AI-pattern sweep (em-dashes, delve/landscape/unlock/elevate, "not X but Y", hedging, uniform rhythm) plus social tells: engagement bait ("Agree?", "Thoughts?"), manufactured vulnerability, emoji bullets.
 6. **Replies** (from `social-reply`): under 240 characters, value first, no pitch; soft DM CTA ok (~75% pure value).
-7. **Rulings:** stats need no source in the post but must be logged (V/S); prices only "as low as $0.78" / "under $1", no stamp comparison; Real Great Roofing exact quote only and never as the lead; no banned self-ranking lines.
+7. **Rulings:** stats need no source in the post but must be logged (V/S); no per-mailer price at all ($0.78, under $1, stamp comparison); Real Great Roofing exact quote only and never as the lead; no banned self-ranking lines.
 8. **Links:** per research/utm-link-strategy.md; log in research/link-log.csv.
 9. Output final copy, change log, and `gw-qa-gate` result. Never post.
 

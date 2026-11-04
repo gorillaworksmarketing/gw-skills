@@ -30,7 +30,7 @@ Flow: offer, they reply "yes", they claim it by booking a 15-minute call. First 
 5. **Gate it right:** blog stays open; the magnet is an upgrade. In cold email, claim by reply, never a link in email 1. A form asks one qualifying question (trade, area).
 6. **CTA:** the exact next action and an honest reason to act now. Deadlines or capacity limits must be real and approved.
 7. **Next step:** the 15-minute claim call, or a demo link with UTM per research/utm-link-strategy.md, logged in research/link-log.csv.
-8. **Claims:** approved proof only; prices only "as low as $0.78" or "under $1"; stated values only as Brennan worded them.
+8. **Claims:** approved proof only; no per-mailer price at all ($0.78, under $1, stamp comparison); stated values only as Brennan worded them.
 
 ## Output
 A one-page proposal: problem and evidence, stage, two names, gating, CTA, next step, what Brennan must approve, and the success measure (yes replies, booked calls, demo signups by UTM).
