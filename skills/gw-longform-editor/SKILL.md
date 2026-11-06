@@ -11,7 +11,7 @@ description: >-
 Inputs: draft, brief, platform blueprint. Apply `gw-content-rules`, `gw-claims-guardrails`, then `gw-qa-gate`. Examples: blog/drafts/2026-10-15/.
 
 ## First, diagnose
-Save the incoming draft as `<name>.orig.md`. Then decide: (A) generic or AI-sounding, so rebuild from the brief; (B) real voice with problems, so edit line by line; (C) a point fix, so touch only that. If a sentence is specific, true, and sounds like Brennan, leave it alone.
+Save the incoming draft as `<name>.orig.md`. Run the coherence check (12b) first; a miss means (A). Then decide: (A) generic or AI-sounding, so rebuild from the brief; (B) real voice with problems, so edit line by line; (C) a point fix, so touch only that. If a sentence is specific, true, and sounds like Brennan, leave it alone.
 
 ## Steps
 1. **AEO up top:** a 40-60-word answer, consensus first, US/state scope; each H2 question answered in its first 40-60 words.
