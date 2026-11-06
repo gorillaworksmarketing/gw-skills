@@ -18,7 +18,8 @@ Platform rules: blueprints/linkedin.md; patterns: blueprints/swipe/linkedin.md. 
 6. **Bar idea and one CTA:** the UTM /book-demo link for lead-gen, or a native ask ("Comment ROUTE").
 6b. Fencing is half of all posts; vary the angle so fencing posts don't repeat. Testimonial video ideas follow blueprints/linkedin.md (any client name needs Brennan's OK).
 6c. **Hook fuel:** fill any hook formula with a specific fact, number, or story; no engagement bait ("Agree?"), no manufactured vulnerability.
-7. Output: slot, angle, stage, opening line, 3 points, proof + IDs, bar idea, CTA.
+6d. **Coherence check (required, Nov 6 2026):** write the main point in one sentence first, then read the framework top to bottom as the target owner. Each line follows from the one before; no contradicting its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
+7. Output: main point (one sentence), slot, angle, stage, opening line, 3 points, proof + IDs, bar idea, CTA.
 
 **Links (required):** build every gorillaworksmarketing.com link per research/utm-link-strategy.md (utm_source=<platform>, utm_campaign=`<industry>_<type>`, utm_term=<slug>, unique utm_content, lowercase) and log each in research/link-log.csv.
 
