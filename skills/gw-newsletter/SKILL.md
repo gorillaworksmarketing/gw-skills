@@ -21,6 +21,7 @@ Owners read this between jobs. One tactic they can use this week earns the next 
 4. **Mix:** about 90% value. **One CTA, one link,** written for this issue's content, with a natural segue from the tip.
 5. **P.S.:** the secondary nudge (demo, or "up to $500 off the first campaign" where approved). P.S. lines get read.
 6. **Subject and preheader:** keep a recognizable subject series; 3 options under about 50 characters (clear, then curious; no pitch words); a preheader of 90-140 characters written as a second hook, never "View in browser". Sender name stays "Brennan Ursu". One-word vs short subjects are A/B only.
+6b. **Coherence check (required, all content, Nov 6 2026):** read it top to bottom as the target owner. Each line follows from the one before; it never contradicts its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); the main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
 7. **Process:** voice-riff, then draft (ask for the offer), then the Editor runs `cold-email-editing` sweeps (tone and AI tells) and `gw-qa-gate`.
 8. **Link:** UTM per research/utm-link-strategy.md (utm_campaign `<industry>_<type>`, utm_term slug), logged in research/link-log.csv.
 

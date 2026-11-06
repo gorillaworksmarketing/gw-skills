@@ -18,6 +18,7 @@ The writer can only add something new if the brief names it. A brief that says w
 - Target keyword/question + source tag (`PAA` / `PAA-candidate`); volume/KD or `n/a`; secondary keywords.
 - **Intent and stage** (read from the SERP), industry (50% fencing per team/industry-mix.md).
 - **SERP study:** what ranks (Reddit, listicles, homepages, video, AIO, PAA), dominant page type and components, mixed intent → majority format or the round-up backdoor (blueprints/blog.md). List every subtopic.
+- **Main point (one sentence, required):** the single takeaway every section serves; the outline must not contradict it, and use plain words with no jargon (coherence rule, `gw-content-rules`, Nov 6 2026).
 - **Information gain:** one sentence on what this post adds that the top three lack (approved fact, fence-specific example, template, clearer answer). Required.
 - **Format** (post, list, best-X, comparison, review); word range as a guide only [JUDGMENT].
 - **Piece type:** standard, "<competitor> alternative for <industry>", three-way listicle, or **refresh** (for pages ranking about 8-20: name the missing section and stale facts; keep what ranks).

@@ -35,6 +35,7 @@ Em dashes; contrast reveals ("it's not X, it's Y"); negation lists ("no X, no Y"
 - Mix: about 75% value / 25% lead-gen (Oct 19); soft CTAs are fine.
 - No hashtags.
 - **AEO/FAQ pattern:** question headings, answer in the first sentence, sections that stand alone; FAQ answers 1-3 sentences, approved facts only.
+- **Coherence check (required, all content, Nov 6 2026):** read it top to bottom as the target owner. Each line follows from the one before; it never contradicts its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); the main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
 - Never invent data (`gw-claims-guardrails`). Goal: traffic, awareness, demo signups.
 
 ## Open question (owner)

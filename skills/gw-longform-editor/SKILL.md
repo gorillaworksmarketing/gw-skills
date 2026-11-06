@@ -26,6 +26,7 @@ Save the incoming draft as `<name>.orig.md`. Then decide: (A) generic or AI-soun
 10. **Length:** cover the topic fully; never pad [JUDGMENT; Brennan to confirm vs. the old target].
 11. **Structure:** answer-first sections that stand alone, TL;DR, TOC, ✅ checklists, FAQ, Sources; platform format (blog: no images or HTML). About a 5th-grade reading level. A human edit is required.
 12. **Refresh edits:** for a page that ranks, add the missing section and update stale facts; keep what works; no date-only changes. Record position and CTR, then wait 3-4 weeks.
+12b. **Coherence check (required, all content, Nov 6 2026):** read it top to bottom as the target owner. Each line follows from the one before; it never contradicts its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); the main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
 13. **Score** 1-10 as a fence owner, an SEO reviewer, and Brennan; ship at 7+ each and 8+ average.
 14. **Publishing path** (blog/publishing-path.md) as in `longform-seo-article`.
 15. **Output:** final file, change log (word count, link check, scores), and the `gw-qa-gate` result.
