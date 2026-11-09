@@ -35,3 +35,4 @@ The shared private skill library for Gorilla Works Marketing's GW bots. Bots sho
 | [social-platform-research-brief](skills/social-platform-research-brief/SKILL.md) | >- |
 | [social-reply](skills/social-reply/SKILL.md) | >- |
 | [stat-sourcing-and-verification](skills/stat-sourcing-and-verification/SKILL.md) | >- |
+| [video-research](skills/video-research/SKILL.md) | >- |

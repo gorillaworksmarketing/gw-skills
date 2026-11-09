@@ -20,6 +20,7 @@ description: >-
 ## Blog and long-form (GW Blog Research, Copywriter, Editor)
 - `blog-keyword-research`: Research. PAA topics by intent.
 - `blog-brief-writing`: Research/Copywriter. Briefs and refresh briefs.
+- `video-research`: Video Research bot / Blog Research. Video transcripts into notes and info-gain briefs.
 - `longform-seo-article`: Copywriter. Blog, Medium, Substack drafts.
 - `gw-longform-editor`: Editor. Final edit, sweeps, links, QA.
 - `ai-search-visibility`: GEO: get named, cited, recommended in AI answers.
