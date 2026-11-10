@@ -16,7 +16,7 @@ An owner who said "not now" or signed up is worth ten strangers, and stays warm 
 
 ## Steps
 1. **Confirm permission.** Opted in, asked for info, or agreed to a check-in. If not, it belongs in `cold-email-copy`.
-2. **Write the brief:** goal, segment (trade, fencing first; role; stage), trigger, key messages, offer, proof, success measure, exit conditions. Ask Brennan for anything blank.
+2. **Write the brief:** goal, segment (trade per team/industry-mix.md; role; stage), trigger, key messages, offer, proof, success measure, exit conditions. Ask Brennan for anything blank.
 3. **Pick the sequence** from the blueprint: welcome (sell the value of staying subscribed, then the reply-gated letter question), "not now" nurture (month 1 tip, month 3 mention, month 5 check-in), said yes but no call booked (proposal), demo no-show, reactivation (test on 10-15% of the list first), client onboarding, results and referral.
 4. **Draft each email:** a reward line first; subject under about 50 characters plus one challenger; preheader 90-140 characters as a second hook; body 50-125 words for notes, 150-300 for teaching; one CTA; a P.S. for the secondary nudge; footer with the opt-out and Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033.
 5. **Keep the mix:** about 75% value, 25% ask. Teaching emails carry one direct mail tip a fence owner can use this week.

@@ -14,7 +14,7 @@ Detail: blueprints/cold-email.md (Lead research). Free public sources only. Neve
 The Copywriter is only as personal as your facts. Wrong, stale, or private-feeling facts cost trust and replies, so deliver fewer, verified, dated facts and leave the angle to the Copywriter.
 
 ## Find
-1. **Mix:** about half fencing (team/industry-mix.md), then roofing, other home services, B2B. **One niche per list** [V7]; never mix trades.
+1. **Mix:** roofing first (cold outreach stays roofing-first), then other trades per team/industry-mix.md. **One niche per list** [V7]; never mix trades.
 2. **Sources:** Google Maps and WA directories (look up one by one, never bulk-scrape), company sites, GBP and public reviews, public LinkedIn professional content, local news, podcasts, trade and chamber lists, public permits. No logins, no private accounts.
 3. **Signals (dated):** new location or service area, permits, hiring, new owner or role, recent public post, review surge or few reviews, no ads, website status (none, social only, weak, solid). Filter on real break points (crew size, area, role) and run the cheapest filter first [V5]. Check CRM for prior contact.
 4. **Lookalikes:** from best clients (Real Great Roofing) and positive repliers' traits [V4].
