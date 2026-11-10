@@ -20,17 +20,17 @@ A keyword or PAA question (`blog-keyword-research`, Google Trends), pasted YouTu
 2. **Discover** (keyword runs): 3-5 search variants (references/niches.md), `discover.py ... --max 15`, or a watch-list. Pick 5-8.
 3. **Transcribe (Brennan, Nov 10):** YouTube goes through the TubeAlfred connector: free yt-dlp metadata for views (`youtube_video_get`, which costs a credit, only as fallback), then `youtube_video_transcript` for picks that pass. About 50 free a month: never re-fetch a library video; log credits in library/tubealfred-usage.md; stop at 50. TikTok and Instagram: `fetch_transcript.py`. Pasted links start here.
 4. **Extract** each transcript per templates/extraction_prompt.md, then run `save_notes.py`. Paraphrase only; checkable numbers go in claims_to_verify.
-5. **Brief:** pick the 3-5 strongest notes and fill the `blog-brief-writing` template. Its information-gain line comes from the notes; add the fresh-material table and Sources table from templates/blog_brief.md. Save to blog/briefs/<date>/ and hand off to GW Blog Copywriter, then `gw-longform-editor`.
-6. **Report:** videos used, blocks hit, and where notes and brief are saved.
+5. **Brief:** most videos teach a tactic, not a trade: if it's sound, apply it to every industry and adapt it to direct mail. Pick the 3-5 strongest notes and fill the `blog-brief-writing` template. Its information-gain line comes from the notes; add the fresh-material table and Sources table from templates/blog_brief.md. Save to blog/briefs/<date>/ and hand off to GW Blog Copywriter, then `gw-longform-editor`.
+6. **Report:** videos used, blocks hit, save paths.
 
 ## Quality bar
 **Required (Brennan, Nov 10):** YouTube 15,000+ views; TikTok and Instagram 1,000+. Every video under 2 years old; anything about AI under 3 months. Check both before transcribing (yt-dlp or `discover.py`); fails or unknown = skip.
-Prefer practitioners, specifics (offers, response rates, mistakes, objections), and ideas two independent videos back up (else flag single-source). Skip empty agency ads and clips under 20 seconds.
+Prefer practitioners, specifics (offers, response rates, mistakes, objections), and ideas two independent videos back up (else flag single-source). Skip empty ads and clips under 20s.
 
 ## Hard rules
 1. **Never copy.** Ideas in our own words with the Gorilla Works angle; quotes under 20 words, attributed, rare; never republish transcripts.
 2. **Credit and link** the creator for any specific idea or number.
-3. **Verify** every creator number via `stat-sourcing-and-verification` (V/S stat IDs). An unverified number is cut or worded as "some owners report", never stated as fact.
+3. **Verify** every creator number via `stat-sourcing-and-verification` (V/S stat IDs). An unverified number is cut, never hedged (`gw-fact-check`).
 4. **GW rules apply** (`gw-content-rules`, `gw-claims-guardrails`): no price or cost, even a creator's quoted mailer cost; custom direct mail first; only what Gorilla Works really does; no invented results. Missing GW data becomes `[NEEDS GORILLA WORKS DATA: ...]`.
 5. **Coherence:** the brief's main point fits in one sentence and the outline never contradicts it (`gw-qa-gate` check 9).
 6. **No evasion:** at a login wall, captcha, or rate limit, stop on that source and report. Never log into Brennan's accounts; proxies or cookies only if Brennan sets them up.

@@ -15,7 +15,7 @@ Google and AI engines pick pages that answer the question fastest and add someth
 
 ## Steps
 1. **Info-gain check:** reread the brief's information-gain line. If you can't deliver it, stop and ask.
-1b. **Research inputs (required, Nov 10):** build from the brief's Blog Research (PAA, SERP, keywords) and Video Research notes, not memory. A brief without them goes back to GW Blog Research.
+1b. **Research inputs (required, Nov 10):** build from the brief's Blog Research (PAA, SERP) and Video Research notes (preferred; any video fits any trade: judge if sound, adapt its tactic to direct mail), not memory. Missing = back to GW Blog Research.
 2. **Match the format** the SERP study chose. Cover the topic fully; word ranges are guides [JUDGMENT].
 3. **Title:** the exact question (blog: no H1 in the body). SEO title query-first, about 60 chars; meta 140-160 chars.
 4. **BLUF:** a 40-60-word direct answer up top (consensus first, US/WA scope), and the answer first in every section.
@@ -27,7 +27,7 @@ Google and AI engines pick pages that answer the question fastest and add someth
 10. **Citable assets:** an official FAQ with exact approved facts, X-vs-Y sections, brand-named frameworks (Brennan-approved names only).
 10b. **Coherence (required):** each line follows from the last, never contradicts itself, stats in plain words, no jargon, main point fits one sentence; a miss = rewrite (`gw-qa-gate` 9).
 10c. **Fact check (required, Nov 10):** run `gw-fact-check`; every claim, quote, example, and link traced to a real source, or cut. Attach the claim table.
-11. **Clear not clever:** about a 5th-grade reading level; pass the "is the search over?" test. Avoid the AI tells listed in `gw-content-rules`.
+11. **Clear not clever:** about a 5th-grade reading level; pass the "is the search over?" test. No AI tells (`gw-content-rules`).
 12. **Cluster links:** 5-10 in-body internal links, incl. the money page (e.g. /industries/fencing) and siblings.
 13. **CTA:** "Book a free demo" (/book-demo) near the top and at the end; FAQ, then Sources. Optional content upgrade (`gw-lead-magnets`, approved only). Every number has a stat-log ID; third-party stats are attributed.
 14. **Publishing path** (blog/publishing-path.md): website first; Medium "Import a story" with the Published URL; Substack with canonical set plus "Originally published at <link>". Off-site links get UTMs (research/utm-link-strategy.md), logged in research/link-log.csv.

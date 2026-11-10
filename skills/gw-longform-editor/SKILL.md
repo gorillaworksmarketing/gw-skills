@@ -19,7 +19,7 @@ Save the incoming draft as `<name>.orig.md`. Run the coherence check (12b) first
 3. **Seven Sweeps,** one pass each: clarity; voice (Brennan, plain); so what (every section tied to a fence or roofing owner's leads); prove it (claims backed or cut); specificity (could a competitor publish this line? then sharpen it); emotion (their real pain, no drama); zero risk (the CTA feels easy).
 4. **AI-tell sweep** (team/editor-brief.md, `gw-content-rules`): em dashes; "delve/landscape/unlock/elevate"; contrast reveals; negation lists; colon reveals; self-answered questions; threes padding; generic openers and tidy closers; wisdom-shaped lines; uniform rhythm; summary lines ending every section.
 5. **Craft:** cut adverbs and filler, one reader, 2-3 sentence paragraphs, no keyword stuffing.
-6. **Info gain and research:** confirm the brief's information-gain line and its research (Blog Research PAA/SERP, Video Research notes) made it in; missing = back to the writer; check against the top results; run the "search over" test.
+6. **Info gain and research:** confirm the brief's information-gain line and its research (Blog Research PAA/SERP, Video Research notes, tactics adapted to direct mail) made it in; missing = back to the writer; check against the top results; run the "search over" test.
 7. **Demo CTA:** "Book a free demo" (gorillaworksmarketing.com/book-demo) near the top and at the end.
 8. **Links:** open every internal link (trailing-slash URL). Off-site links get UTMs per research/utm-link-strategy.md, logged in research/link-log.csv. 5-10 in-body internal links.
 9b. **Fact check (required, Nov 10):** rerun `gw-fact-check` step 4 yourself; every claim, quote, example, and link traced to a real source, or cut.
