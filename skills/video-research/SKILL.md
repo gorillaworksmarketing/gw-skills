@@ -10,10 +10,10 @@ description: >-
 ---
 # GW video research
 What owners and marketers say in videos is mostly written nowhere, so we mine it for information gain; transcripts are source material, never the post.
-Toolkit: store `tools/video-research/` (scripts, templates, references; commands in RUN.md). The shared library of transcripts and notes is its `library/`.
+Toolkit: store `tools/video-research/` (commands in RUN.md); shared library in its `library/`.
 
 ## Inputs
-A keyword or People Also Ask (PAA) question (from `blog-keyword-research` or Google Trends), pasted YouTube, TikTok or Instagram links, or a niche to build up (roofing, HVAC, B2B, direct mail lead; fencing small; team/industry-mix.md).
+A keyword or PAA question (`blog-keyword-research`, Google Trends), pasted YouTube, TikTok or Instagram links, or a niche to build up (roofing, HVAC, B2B, direct mail lead; fencing small; team/industry-mix.md).
 
 ## Steps
 1. **Library first:** `library_search.py "<keyword>" --niche <n>`. If there are 3+ relevant notes, go to step 5.
@@ -24,8 +24,8 @@ A keyword or People Also Ask (PAA) question (from `blog-keyword-research` or Goo
 6. **Report:** videos used, blocks hit, and where notes and brief are saved.
 
 ## Quality bar
-**Required views:** YouTube 7,000+ (Brennan, Nov 10); TikTok and Instagram 1,000+. Check before transcribing (yt-dlp or `discover.py`); under or unknown = skip.
-Prefer practitioners, specifics (offers, response rates, mistakes, objections), videos under 18 months old, and ideas two independent videos back up (else flag single-source). Skip empty agency ads, clips under 20 seconds or without speech.
+**Required (Brennan, Nov 10):** YouTube 15,000+ views; TikTok and Instagram 1,000+. Every video under 2 years old; anything about AI under 3 months. Check both before transcribing (yt-dlp or `discover.py`); fails or unknown = skip.
+Prefer practitioners, specifics (offers, response rates, mistakes, objections), and ideas two independent videos back up (else flag single-source). Skip empty agency ads and clips under 20 seconds.
 
 ## Hard rules
 1. **Never copy.** Ideas in our own words with the Gorilla Works angle; quotes under 20 words, attributed, rare; never republish transcripts.
