@@ -31,12 +31,12 @@ Em dashes; contrast reveals ("it's not X, it's Y"); negation lists ("no X, no Y"
 ## Always
 - Lead-gen posts carry the UTM-tagged /book-demo link; descriptive anchors, no "click here".
 - **Links (required):** build per research/utm-link-strategy.md (utm_source=<platform>, utm_medium=format, utm_campaign=`<industry>_<type>`, utm_term=<slug>, unique utm_content, lowercase; blog internal and canonical links stay clean) and log each in research/link-log.csv.
-- **Industry mix (Nov 10, team/industry-mix.md; replaces Oct 23 50% fencing):** blog, social, and research lead with general direct mail, roofing, HVAC, and B2B direct mail; fencing stays at a small share (blog max 3/week). Cold outreach stays roofing-first. Track daily. New trades use utm industry home-services.
+- **Industry mix (Nov 10, team/industry-mix.md; replaces Oct 23 50% fencing):** blog, social, and research lead with general direct mail, roofing, HVAC, and B2B direct mail; fencing stays at a small share (blog max 3/week). Cold outreach stays roofing-first. New trades use utm industry home-services.
 - Mix: about 75% value / 25% lead-gen (Oct 19); soft CTAs are fine.
 - No hashtags.
 - **AEO/FAQ pattern:** question headings, answer in the first sentence, sections that stand alone; FAQ answers 1-3 sentences, approved facts only.
-- **Coherence check (required, all content, Nov 6 2026):** read it top to bottom as the target owner. Each line follows from the one before; it never contradicts its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); the main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
-- Never invent data (`gw-claims-guardrails`). Goal: traffic, awareness, demo signups.
+- **Coherence check (required, all content, Nov 6 2026):** read it top to bottom as the target owner. Each line follows from the one before; it never contradicts its own advice; stats in plain words; no jargon ("map the first reminder drop"); the main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
+- **No made-up facts (required, Nov 10):** run `gw-fact-check` on every piece; unverified = cut or [NEED], never hedged. Goal: traffic, awareness, demo signups.
 
 ## Open question (owner)
 Ranked-list disclosure: rules say none, an older memory says disclose. Use none and flag until Brennan decides.

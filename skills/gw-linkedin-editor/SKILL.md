@@ -27,3 +27,5 @@ Skills to reference: `gw-lead-generation` (lead-magnet naming and CTA rules, cle
 Oct 19 checks: 75% value / 25% lead-gen mix; 200-280 words; no offer hook on the company page; no Real Great Roofing quote as the lead; li-p1 "51%" hook retired; log hook A/B in Notion and -a/-b on utm_content. Replies: ~75% pure value, soft CTA or "shoot me a DM" ok; fail drafts that force a URL on every reply.
 
 Learning loop: weekly with GW Analytics (blueprints/linkedin.md); log repeat fixes there.
+
+**Fact check (required, Nov 10):** run `gw-fact-check`; every claim, quote, example, and link traced to a real source, or cut.

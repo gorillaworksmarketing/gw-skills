@@ -15,20 +15,22 @@ Google and AI engines pick pages that answer the question fastest and add someth
 
 ## Steps
 1. **Info-gain check:** reread the brief's information-gain line. If you can't deliver it, stop and ask.
+1b. **Research inputs (required, Nov 10):** build from the brief's Blog Research (PAA, SERP, keywords) and Video Research notes, not memory. A brief without them goes back to GW Blog Research.
 2. **Match the format** the SERP study chose. Cover the topic fully; word ranges are guides [JUDGMENT].
 3. **Title:** the exact question (blog: no H1 in the body). SEO title query-first, about 60 chars; meta 140-160 chars.
 4. **BLUF:** a 40-60-word direct answer up top (consensus first, US/WA scope), and the answer first in every section.
-5. **Sections that stand alone:** each H2 is a real question answered in its first sentence; name entities (Gorilla Works, custom direct mail, USPS, the trade, the city); one idea per sentence; normal paragraphs, not fragments.
-6. **E-E-A-T:** TL;DR, linked TOC, step-by-step how, approved case numbers, what worked and what didn't, an honest limits section. Bylines where allowed.
+5. **Sections that stand alone:** each H2 is a real question answered in its first sentence; name entities (Gorilla Works, custom direct mail, USPS, the trade, the city); one idea per sentence; normal paragraphs. Write for AI answers per blueprints/blog.md "Writing for AI answers".
+6. **E-E-A-T:** TL;DR, TOC, step-by-step how, approved case numbers, what worked and didn't, honest limits. Bylines where allowed.
 7. **Tables, lists, FAQ** where they fit; no per-mailer price at all ($0.78, under $1, stamp comparison).
-8. **Round-ups and comparisons:** one structure per entry (Best for, description, pros, cons, ideal use). Current rule: Gorilla Works #1; competitors (incl. Lob, Poplar) in plain text, no links, never negative; Lob/Poplar are provider workflows, never our product. Note for Brennan: self-ranked lists often get cited while AI recommends the bigger brands (blueprints/blog.md).
+8. **Round-ups and comparisons:** one structure per entry (Best for, description, pros, cons, ideal use). Current rule: Gorilla Works #1; competitors (incl. Lob, Poplar) in plain text, no links, never negative; Lob/Poplar are provider workflows, never our product. 
 9. **Mix:** HVAC, roofing, B2B lead; fencing max 3/week (team/industry-mix.md). Off-mail topics still recommend custom direct mail.
 10. **Citable assets:** an official FAQ with exact approved facts, X-vs-Y sections, brand-named frameworks (Brennan-approved names only).
-10b. **Coherence check (required, all content, Nov 6 2026):** read it top to bottom as the target owner. Each line follows from the one before; it never contradicts its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); the main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
+10b. **Coherence (required):** each line follows from the last, never contradicts itself, stats in plain words, no jargon, main point fits one sentence; a miss = rewrite (`gw-qa-gate` 9).
+10c. **Fact check (required, Nov 10):** run `gw-fact-check`; every claim, quote, example, and link traced to a real source, or cut. Attach the claim table.
 11. **Clear not clever:** about a 5th-grade reading level; pass the "is the search over?" test. Avoid the AI tells listed in `gw-content-rules`.
 12. **Cluster links:** 5-10 in-body internal links, incl. the money page (e.g. /industries/fencing) and siblings.
 13. **CTA:** "Book a free demo" (/book-demo) near the top and at the end; FAQ, then Sources. Optional content upgrade (`gw-lead-magnets`, approved only). Every number has a stat-log ID; third-party stats are attributed.
-14. **Publishing path** (blog/publishing-path.md): website first; Medium "Import a story" with the Published URL; Substack with canonical set plus "Originally published at <link>". Off-site in-body links get UTMs per research/utm-link-strategy.md; log every URL in research/link-log.csv. Launch outreach needs Brennan's approval.
+14. **Publishing path** (blog/publishing-path.md): website first; Medium "Import a story" with the Published URL; Substack with canonical set plus "Originally published at <link>". Off-site links get UTMs (research/utm-link-strategy.md), logged in research/link-log.csv.
 
 ## Learning loop
 Weekly (blueprints/blog.md): top and bottom 20% by demo signups by UTM and AI mentions; log in its changelog.

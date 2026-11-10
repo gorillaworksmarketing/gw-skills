@@ -36,3 +36,5 @@ Owners read this between jobs. One tactic they can use this week earns the next 
 Weekly with GW Analytics (replies, clicks, demo signups by UTM; top and bottom 20% of issues). Log changes in the blueprint changelog.
 
 Related: `gw-email-marketing` (welcome, nurture), `gw-blog-to-social`, `longform-seo-article`, `gw-lead-generation` (clear not clever, reading-level check). Anchor-text ratios now live in `link-building`.
+
+**Fact check (required, Nov 10):** run `gw-fact-check`; every claim, quote, example, and link traced to a real source, or cut.

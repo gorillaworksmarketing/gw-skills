@@ -12,6 +12,7 @@ description: >-
 ## Shared (all bots)
 - `gw-content-rules`: any GW copy; the mandatory rules and the AEO/FAQ pattern.
 - `gw-claims-guardrails`: any claim, price, testimonial, or competitor mention.
+- `gw-fact-check`: every piece, writer and editor. Claim table; nothing invented.
 - `gw-qa-gate`: the final pass/fail before approval.
 - `gw-lead-generation`: anything meant to generate leads or demos.
 - `gw-lead-magnets`: proposing or writing a lead magnet or front-end offer (approval first).

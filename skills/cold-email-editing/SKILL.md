@@ -49,3 +49,5 @@ Edited email, change log, four scores, PASS or FAIL, held leads. Brennan approve
 
 ## Learning loop
 Weekly: log repeat fixes in blueprints/cold-email.md. Compare scores to real positive replies and booked calls; if they disagree, recalibrate and note it in the changelog.
+
+**Fact check (required, Nov 10):** run `gw-fact-check`; every claim, quote, example, and link traced to a real source, or cut.

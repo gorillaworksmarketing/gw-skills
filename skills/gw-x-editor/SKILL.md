@@ -33,3 +33,5 @@ Rewrite toward **LinkedIn's posting style**, while keeping X skills and platform
 Skills to reference: `gw-lead-generation`, `gw-linkedin-editor` (voice/format cues).
 
 Learning loop: weekly with GW Analytics (blueprints/x.md); log repeat fixes there.
+
+**Fact check (required, Nov 10):** run `gw-fact-check`; every claim, quote, example, and link traced to a real source, or cut.
