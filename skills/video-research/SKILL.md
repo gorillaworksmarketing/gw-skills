@@ -18,14 +18,14 @@ A keyword or People Also Ask (PAA) question (from `blog-keyword-research` or Goo
 ## Steps
 1. **Library first:** `library_search.py "<keyword>" --niche <n>`. If there are 3+ relevant notes, go to step 5.
 2. **Discover** (keyword runs): 3-5 search variants (references/niches.md), `discover.py ... --max 15`, or a watch-list. Pick 5-8 videos; don't transcribe everything.
-3. **Transcribe:** `fetch_transcript.py URL...` (captions first, then local Whisper). Pasted links start here.
+3. **Transcribe (Brennan, Nov 10):** YouTube goes through the TubeAlfred connector: `youtube_video_get` (views, channel, date), then `youtube_video_transcript` only for picks that pass the bar. About 50 free transcripts a month, so never fetch one the library already has; log each in library/tubealfred-log.md and stop when the month's 50 are used. TikTok and Instagram: `fetch_transcript.py`. Pasted links start here.
 4. **Extract** each transcript per templates/extraction_prompt.md, then run `save_notes.py`. Paraphrase only; checkable numbers go in claims_to_verify.
 5. **Brief:** pick the 3-5 strongest notes and fill the `blog-brief-writing` template. Its information-gain line comes from the notes; add the fresh-material table and Sources table from templates/blog_brief.md. Save to blog/briefs/<date>/ and hand off to GW Blog Copywriter, then `gw-longform-editor`.
 6. **Report:** videos found and used, blocks hit (login wall, captcha, IP), and where the notes and brief are saved.
 
 ## Quality bar
-**Required (Brennan, Nov 9 2026):** at least 1,000 views on YouTube, TikTok, and Instagram. `discover.py` enforces it; for pasted links check `view_count` in the transcript JSON (under 1,000 or unknown = skip).
-Prefer practitioners (owners, marketers with real campaigns), specifics (offers, response rates, mistakes, objections), videos under 18 months old, and ideas that two independent videos back up (otherwise flag as single-source). Skip agency ads with no substance, clips under 20 seconds or without speech, and languages you can't summarize.
+**Required (Brennan, Nov 9 2026):** at least 1,000 views on YouTube, TikTok, and Instagram. Check views before transcribing (`youtube_video_get` or `discover.py`); under 1,000 or unknown = skip.
+Prefer practitioners, specifics (offers, response rates, mistakes, objections), videos under 18 months old, and ideas two independent videos back up (else flag single-source). Skip empty agency ads, clips under 20 seconds or without speech.
 
 ## Hard rules
 1. **Never copy.** Ideas in our own words with the Gorilla Works angle; quotes under 20 words, attributed, rare; never republish transcripts.
@@ -33,9 +33,9 @@ Prefer practitioners (owners, marketers with real campaigns), specifics (offers,
 3. **Verify** every creator number via `stat-sourcing-and-verification` (V/S stat IDs). An unverified number is cut or worded as "some owners report", never stated as fact.
 4. **GW rules apply** (`gw-content-rules`, `gw-claims-guardrails`): no price or cost, even a creator's quoted mailer cost; custom direct mail first; only what Gorilla Works really does; no invented results. Missing GW data becomes `[NEEDS GORILLA WORKS DATA: ...]`.
 5. **Coherence:** the brief's main point fits in one sentence and the outline never contradicts it (`gw-qa-gate` check 9).
-6. **No evasion:** at a login wall, captcha, or rate limit, stop on that source and report. Never log into Brennan's accounts; proxies or cookies only if Brennan sets them up. Keep volume low. Lead Research gets the box first.
+6. **No evasion:** at a login wall, captcha, or rate limit, stop on that source and report. Never log into Brennan's accounts; proxies or cookies only if Brennan sets them up.
 7. **Privacy:** no private individuals' names or details, only the creator's.
-8. Free tools only; anything paid (API keys, scrapers) goes on the "later" list for Brennan.
+8. Free tools only (TubeAlfred's free tier included); paid upgrades go on the "later" list.
 
 ## Learning loop
 Weekly, log in blueprints/blog.md how many creator claims failed verification per niche and which briefs' posts ranked or got cited. Prune the watch-list.
