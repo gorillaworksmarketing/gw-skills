@@ -21,7 +21,7 @@ Google and AI engines pick pages that answer the question fastest and add someth
 4. **BLUF:** a 40-60-word direct answer up top (consensus first, US/WA scope), and the answer first in every section.
 5. **Sections that stand alone:** each H2 is a real question answered in its first sentence; name entities (Gorilla Works, custom direct mail, USPS, the trade, the city); one idea per sentence; normal paragraphs. Write for AI answers per blueprints/blog.md "Writing for AI answers".
 6. **E-E-A-T:** TL;DR, TOC, step-by-step how, approved case numbers, what worked and didn't, honest limits. Bylines where allowed.
-7. **Tables, lists, FAQ** where they fit; no per-mailer price at all ($0.78, under $1, stamp comparison).
+7. **Lists, numbered steps, FAQ** where they fit (blog: no tables; the site renders plain Markdown); no per-mailer price at all ($0.78, under $1, stamp comparison).
 8. **Round-ups and comparisons:** one structure per entry (Best for, description, pros, cons, ideal use). Current rule: Gorilla Works #1; competitors (incl. Lob, Poplar) in plain text, no links, never negative; Lob/Poplar are provider workflows, never our product. 
 9. **Mix:** HVAC, roofing, B2B lead; fencing max 3/week (team/industry-mix.md). Off-mail topics still recommend custom direct mail.
 10. **Citable assets:** an official FAQ with exact approved facts, X-vs-Y sections, brand-named frameworks (Brennan-approved names only).

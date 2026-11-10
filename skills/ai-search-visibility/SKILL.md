@@ -19,7 +19,7 @@ Retrieved, then cited (our page is a source), then mentioned (our name appears),
 1. **Questions:** money terms (ours and competitors') as questions, plus sales, cold-email, Reddit questions. Filters: "do we deserve to show up?", then "can AI fully answer it?" (if yes, aim for a mention).
 2. **Tracker:** run each question 3-5 times on ChatGPT, Perplexity, and Google AIO. Log rate with sample size ("named 2/5"), position, cited domains, framing. One run is an anecdote.
 3. **Monthly six-gap check** (visibility, narrative, topic, format, web mentions, demand): plan fix, build, or influence. Quarterly competitor audit.
-4. **Pages:** match the cited page type; answer first under real-question headings; small tables; one approved fact nobody else has (`longform-seo-article`).
+4. **Pages:** match the cited page type; answer first under real-question headings; short X-vs-Y lists (no tables on the blog); one approved fact nobody else has (`longform-seo-article`).
 5. **Accuracy ledger:** log each claim an AI makes about us (accurate, stale, false, missing qualifier), its likely source, and severity (price or service errors first). Fix our own page first (plain, dated fact), then request corrections.
 6. **Entities:** identical facts and NAP on GBP, Bing Places, Yelp, Apple Maps, LinkedIn, Crunchbase, Wikidata, Grokipedia (never paid indexing), directories.
 7. **Technical (recommend to Brennan):** SSR or prerendering (raw HTML is empty today); sitemap in Bing Webmaster Tools; Organization (sameAs) and Article schema; allow search bots (OAI-SearchBot, Claude-SearchBot, PerplexityBot) and decide training bots (GPTBot, ClaudeBot, Google-Extended) separately; consider llms.txt; redirect hallucinated 404s.
