@@ -9,7 +9,7 @@ description: >-
   notes and a blog brief. Use it even if 'transcribe' is never said.
 ---
 # GW video research
-Blog posts that repeat what already ranks don't rank. What owners and marketers *say* in videos is mostly not written down anywhere, so we mine it for information gain. The transcript is source material, never the post.
+What owners and marketers *say* in videos is mostly not written anywhere, so we mine it for information gain. The transcript is source material, never the post.
 Toolkit: store `tools/video-research/` (scripts, templates, references; commands in RUN.md). The shared library of transcripts and notes is its `library/`.
 
 ## Inputs
@@ -24,7 +24,8 @@ A keyword or People Also Ask (PAA) question (from `blog-keyword-research` or Goo
 6. **Report:** videos found and used, blocks hit (login wall, captcha, IP), and where the notes and brief are saved.
 
 ## Quality bar
-Prefer practitioners (owners, estimators, marketers with real campaigns), specifics (offers, response rates, mistakes, objections), videos under 18 months old, and ideas that two independent videos back up (otherwise flag as single-source). Skip agency ads with no substance, clips under 20 seconds or without speech, and languages you can't summarize reliably.
+**Required (Brennan, Nov 9 2026):** at least 1,000 views on YouTube, TikTok, and Instagram. `discover.py` enforces it; for pasted links check `view_count` in the transcript JSON (under 1,000 or unknown = skip).
+Prefer practitioners (owners, marketers with real campaigns), specifics (offers, response rates, mistakes, objections), videos under 18 months old, and ideas that two independent videos back up (otherwise flag as single-source). Skip agency ads with no substance, clips under 20 seconds or without speech, and languages you can't summarize.
 
 ## Hard rules
 1. **Never copy.** Ideas in our own words with the Gorilla Works angle; quotes under 20 words, attributed, rare; never republish transcripts.
@@ -32,9 +33,9 @@ Prefer practitioners (owners, estimators, marketers with real campaigns), specif
 3. **Verify** every creator number via `stat-sourcing-and-verification` (V/S stat IDs). An unverified number is cut or worded as "some owners report", never stated as fact.
 4. **GW rules apply** (`gw-content-rules`, `gw-claims-guardrails`): no price or cost, even a creator's quoted mailer cost; custom direct mail first; only what Gorilla Works really does; no invented results. Missing GW data becomes `[NEEDS GORILLA WORKS DATA: ...]`.
 5. **Coherence:** the brief's main point fits in one sentence and the outline never contradicts it (`gw-qa-gate` check 9).
-6. **No evasion:** at a login wall, captcha, or rate limit, stop on that source and report. Never log into Brennan's accounts; proxies or cookies only if Brennan sets them up. Keep volume low. Respect the box priority (Lead Research first).
+6. **No evasion:** at a login wall, captcha, or rate limit, stop on that source and report. Never log into Brennan's accounts; proxies or cookies only if Brennan sets them up. Keep volume low. Lead Research gets the box first.
 7. **Privacy:** no private individuals' names or details, only the creator's.
 8. Free tools only; anything paid (API keys, scrapers) goes on the "later" list for Brennan.
 
 ## Learning loop
-Weekly, log in blueprints/blog.md how many creator claims failed verification per niche and which briefs' posts ranked or got cited. Drop weak creators from the watch-list and add strong ones.
+Weekly, log in blueprints/blog.md how many creator claims failed verification per niche and which briefs' posts ranked or got cited. Prune the watch-list.
