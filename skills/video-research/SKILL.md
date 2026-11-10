@@ -18,7 +18,7 @@ A keyword or People Also Ask (PAA) question (from `blog-keyword-research` or Goo
 ## Steps
 1. **Library first:** `library_search.py "<keyword>" --niche <n>`. If there are 3+ relevant notes, go to step 5.
 2. **Discover** (keyword runs): 3-5 search variants (references/niches.md), `discover.py ... --max 15`, or a watch-list. Pick 5-8.
-3. **Transcribe (Brennan, Nov 10):** YouTube goes through the TubeAlfred connector: free yt-dlp metadata for views (`youtube_video_get` only if yt-dlp can't read them; it costs a credit), then `youtube_video_transcript` for picks that pass. About 50 free a month: never re-fetch a library video; log credits in library/tubealfred-usage.md; stop at 50. TikTok and Instagram: `fetch_transcript.py`. Pasted links start here.
+3. **Transcribe (Brennan, Nov 10):** YouTube goes through the TubeAlfred connector: free yt-dlp metadata for views (`youtube_video_get`, which costs a credit, only as fallback), then `youtube_video_transcript` for picks that pass. About 50 free a month: never re-fetch a library video; log credits in library/tubealfred-usage.md; stop at 50. TikTok and Instagram: `fetch_transcript.py`. Pasted links start here.
 4. **Extract** each transcript per templates/extraction_prompt.md, then run `save_notes.py`. Paraphrase only; checkable numbers go in claims_to_verify.
 5. **Brief:** pick the 3-5 strongest notes and fill the `blog-brief-writing` template. Its information-gain line comes from the notes; add the fresh-material table and Sources table from templates/blog_brief.md. Save to blog/briefs/<date>/ and hand off to GW Blog Copywriter, then `gw-longform-editor`.
 6. **Report:** videos used, blocks hit, and where notes and brief are saved.
