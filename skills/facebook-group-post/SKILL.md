@@ -11,7 +11,7 @@ Group list and rules: blueprints/facebook-groups.md. Community research comes fr
 
 ## Steps
 1. **Pick the group** from the blueprint's ranked list and confirm its rules (find/offer allowed, or no pitching at all).
-2. **Angle:** an operator story, money math, or a mail tactic (e.g. mailing neighbors of a finished job). Fencing is half of all posts, with fencing contractor groups included (team/industry-mix.md). Value posts by default; offers only where allowed.
+2. **Angle:** an operator story, money math, or a mail tactic (e.g. mailing neighbors of a finished job). Lead with general direct mail, roofing, HVAC, and B2B; fencing (including fencing contractor groups) is a small share (team/industry-mix.md, Nov 10). Value posts by default; offers only where allowed.
 3. **Draft** short paragraphs, one reader, no hashtags, real numbers only (stat-log IDs); end with a real question you want answered (not bait like "Thoughts?" or "Agree?").
 4. **Links:** only where allowed, one UTM link (`utm_source=facebook`), logged in research/link-log.csv.
 5. No identical text across groups or platforms; vary every version.

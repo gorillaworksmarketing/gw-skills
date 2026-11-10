@@ -16,7 +16,7 @@ Match **LinkedIn's voice more**, while still using X skills and X constraints:
 - Complete thoughts. Short lines and blank lines are fine; avoid staccato PAIPS that reads like a template.
 - Drop the rote closer stack ("No list needed… / Free demo. DM us. / 🦍") unless the post is explicitly lead-gen that day.
 - Keep X limits: originals can be longer when the idea needs it (aim under ~120 or over ~250 chars; middle is weakest); replies stay under 240 chars.
-- Still: no hashtags, no banned lines, no invented stats, custom direct mail first, industry mix per team/industry-mix.md (50% fencing; about 1 in every 2 posts), 75% value / 25% lead-gen, ~50% daily volume until Brennan says otherwise.
+- Still: no hashtags, no banned lines, no invented stats, custom direct mail first, industry mix per team/industry-mix.md (Nov 10: direct mail, roofing, HVAC, B2B lead; fencing small), 75% value / 25% lead-gen, ~50% daily volume until Brennan says otherwise.
 
 ## Preferred original formats (rotate)
 1. **"If I ran an [trade] company as a marketing professional, this is how I'd scale"**: owner favorite (Oct 19). Walk through 3–5 concrete moves (list, offer, neighbor mail, tracking, timing). Trade fills the blank (HVAC, roofing, fence, plumber, electrician, siding, etc.).
@@ -25,7 +25,7 @@ Match **LinkedIn's voice more**, while still using X skills and X constraints:
 4. Number-led is allowed when the number is the point, not every post.
 
 ## Steps
-1. **Pick the idea:** from the brief, viral-post finder, handoffs, or a blog cut-down via `gw-blog-to-social`. Industry mix: 50% fencing (team/industry-mix.md, Oct 23).
+1. **Pick the idea:** from the brief, viral-post finder, handoffs, or a blog cut-down via `gw-blog-to-social`. Industry mix per team/industry-mix.md (Nov 10).
 2. **Framework:** prefer the "If I ran…" scale play, 1-3-1, list, myth-bust, or light PAIPS (problem → why it hurts → what to do), not rigid PAIPS every time.
 3. **Hook options (3):** keyword-led sentence, counter-intuitive, or audience call-out; plain language. Number-led only when it earns the open.
 4. **Key points:** specific HOW and WHAT; each number with its stat-log ID (V/S).

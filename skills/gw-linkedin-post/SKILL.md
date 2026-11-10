@@ -11,12 +11,12 @@ Platform rules: blueprints/linkedin.md; patterns: blueprints/swipe/linkedin.md. 
 
 ## Steps
 1. **Slot:** personal (2 a day) or company page (at least 1 a day, in Brennan's voice, a different angle from the same day's personal posts); Pulse is 1 a week on a BOFU keyword.
-2. **Idea:** industry mix per team/industry-mix.md (Oct 23: 50% fencing, about 1 in every 2 posts; the rest rotates HVAC, roofing, siding, electrical, plumbing, landscaping, windows/doors, home services, B2B), the 75% value / 25% lead-gen mix, and blog cut-downs via `gw-blog-to-social`.
+2. **Idea:** industry mix per team/industry-mix.md (Nov 10: lead with general direct mail, roofing, HVAC, B2B; fencing a small share), the 75% value / 25% lead-gen mix, and blog cut-downs via `gw-blog-to-social`.
 3. **Keyword-led opening** (after the @Gorilla Works Marketing mention): what the post is about, in plain words.
 4. **Structure:** 1-3-1 (hook, 3 points, CTA), AIDA, or a numbered list with mini-headers; tag the awareness stage.
 5. **Proof:** an approved fact or a V/S stat with its ID (Real Great Roofing line exactly as approved).
 6. **Bar idea and one CTA:** the UTM /book-demo link for lead-gen, or a native ask ("Comment ROUTE").
-6b. Fencing is half of all posts; vary the angle so fencing posts don't repeat. Testimonial video ideas follow blueprints/linkedin.md (any client name needs Brennan's OK).
+6b. Vary angles across trades so posts don't repeat. Testimonial video ideas follow blueprints/linkedin.md (any client name needs Brennan's OK).
 6c. **Hook fuel:** fill any hook formula with a specific fact, number, or story; no engagement bait ("Agree?"), no manufactured vulnerability.
 6d. **Coherence check (required, Nov 6 2026):** write the main point in one sentence first, then read the framework top to bottom as the target owner. Each line follows from the one before; no contradicting its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
 7. Output: main point (one sentence), slot, angle, stage, opening line, 3 points, proof + IDs, bar idea, CTA.

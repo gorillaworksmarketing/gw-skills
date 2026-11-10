@@ -14,7 +14,7 @@ Platform rules: blueprints/blog.md. Backlog: blog/keyword-backlog.md.
 A fence owner searching "how to get more fence leads" may book a demo; a homeowner searching "fence cost" never will. We pick questions our buyers ask, where we have something to add, near topics we already own.
 
 ## Steps
-1. **Seed by the mix:** 50% of topics are fencing (team/industry-mix.md, Oct 23): fence-company marketing questions ("how to get more fence leads", "fence company marketing ideas"), even when the answer isn't mail; the rest rotates roofing, HVAC, siding, electrical, plumbing, landscaping, windows/doors, home services, B2B. Add questions and objections from team/handoffs.md, cold-email replies, and sales notes. For seeds, ask an AI for 10 short seeds plus modifiers, then expand in Semrush.
+1. **Seed by the mix (team/industry-mix.md, Nov 10):** lead with HVAC, roofing, and B2B direct mail questions, general direct mail as support; fencing max 3 posts/week (e.g. "how to get more fence leads"). Add questions and objections from team/handoffs.md, cold-email replies, and sales notes. For seeds, ask an AI for 10 short seeds plus modifiers, then expand in Semrush.
 2. **Harvest PAA** from a live SERP. Tag `PAA` (read live) or `PAA-candidate` (confirm live before writing).
 3. **Tag the buyer stage by modifier:** awareness (what is, how to), consideration (best, vs, alternatives), decision (cost, pricing, reviews), implementation (template, examples). Traffic light: green (wants our solution), yellow (maybe later), red (never buys).
 4. **Qualify:**

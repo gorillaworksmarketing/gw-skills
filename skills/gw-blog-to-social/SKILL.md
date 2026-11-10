@@ -16,7 +16,7 @@ Sources: team/team-structure.md, blog/blog-rules.md (Syndication), blueprints/li
    - **LinkedIn:** 3 posts with different angles (via `gw-linkedin-post`); each stands alone and links the blog URL with UTM tags.
    - **X:** short posts and/or one thread (via `gw-x-post`); link the blog URL where it fits.
 4. Each cut-down must stand alone and be tailored to its platform: no identical text across platforms. Rebuild the hook for each (a specific fact, number, or story from the post), not a summary of the article.
-4b. Keep the industry mix (50% fencing) across the week's cut-downs.
+4b. Keep the industry mix (Nov 10: direct mail, roofing, HVAC, B2B lead; fencing small) across the week's cut-downs.
 5. Send them to `gw-linkedin-editor` / `gw-x-editor`, and mark the handoff row as "cut".
 6. Reverse direction: log top social posts and reader questions back into handoffs.md as blog topic ideas.
 

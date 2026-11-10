@@ -31,7 +31,7 @@ Em dashes; contrast reveals ("it's not X, it's Y"); negation lists ("no X, no Y"
 ## Always
 - Lead-gen posts carry the UTM-tagged /book-demo link; descriptive anchors, no "click here".
 - **Links (required):** build per research/utm-link-strategy.md (utm_source=<platform>, utm_medium=format, utm_campaign=`<industry>_<type>`, utm_term=<slug>, unique utm_content, lowercase; blog internal and canonical links stay clean) and log each in research/link-log.csv.
-- **Industry mix (Oct 23, team/industry-mix.md):** 50% of all content on every platform is fencing (about 1 in any 2 pieces). The rest rotates HVAC, roofing, siding, electrical, plumbing, landscaping, windows/doors, home services, B2B. Track daily. New trades use utm industry home-services.
+- **Industry mix (Nov 10, team/industry-mix.md; replaces Oct 23 50% fencing):** blog, social, and research lead with general direct mail, roofing, HVAC, and B2B direct mail; fencing stays at a small share (blog max 3/week). Cold outreach stays roofing-first. Track daily. New trades use utm industry home-services.
 - Mix: about 75% value / 25% lead-gen (Oct 19); soft CTAs are fine.
 - No hashtags.
 - **AEO/FAQ pattern:** question headings, answer in the first sentence, sections that stand alone; FAQ answers 1-3 sentences, approved facts only.

@@ -16,7 +16,7 @@ The writer can only add something new if the brief names it. A brief that says w
 ## Brief template
 - **Title (= site H1, the question word for word)**, slug (lowercase, hyphenated, unique), 2 alternative SEO titles. SEO title pattern by page type: how-to "How to [task]"; list "[N] [things] for [trade]"; comparison "[A] vs [B]: [deciding difference]"; cost "[thing] cost for [trade]". Query first, about 60 characters or fewer; use a year or number only if the page delivers it.
 - Target keyword/question + source tag (`PAA` / `PAA-candidate`); volume/KD or `n/a`; secondary keywords.
-- **Intent and stage** (read from the SERP), industry (50% fencing per team/industry-mix.md).
+- **Intent and stage** (read from the SERP), industry (HVAC, roofing, B2B lead; fencing max 3/week, per team/industry-mix.md).
 - **SERP study:** what ranks (Reddit, listicles, homepages, video, AIO, PAA), dominant page type and components, mixed intent → majority format or the round-up backdoor (blueprints/blog.md). List every subtopic.
 - **Main point (one sentence, required):** the single takeaway every section serves; the outline must not contradict it, and use plain words with no jargon (coherence rule, `gw-content-rules`, Nov 6 2026).
 - **Information gain:** one sentence on what this post adds that the top three lack (approved fact, fence-specific example, template, clearer answer). Required.

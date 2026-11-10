@@ -13,7 +13,7 @@ What owners and marketers *say* in videos is mostly not written anywhere, so we 
 Toolkit: store `tools/video-research/` (scripts, templates, references; commands in RUN.md). The shared library of transcripts and notes is its `library/`.
 
 ## Inputs
-A keyword or People Also Ask (PAA) question (from `blog-keyword-research` or Google Trends), pasted YouTube, TikTok or Instagram links, or a niche to build up (fencing first, about half of runs; then roofing, HVAC, other home services, direct mail).
+A keyword or People Also Ask (PAA) question (from `blog-keyword-research` or Google Trends), pasted YouTube, TikTok or Instagram links, or a niche to build up (roofing, HVAC, B2B, direct mail lead; fencing small; team/industry-mix.md).
 
 ## Steps
 1. **Library first:** `library_search.py "<keyword>" --niche <n>`. If there are 3+ relevant notes, go to step 5.

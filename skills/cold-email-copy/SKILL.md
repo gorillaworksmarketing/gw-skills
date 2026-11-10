@@ -3,7 +3,7 @@ name: cold-email-copy
 description: >-
   Use whenever GW Email Copywriter writes a Gorilla Works cold email: first
   touch, subject line, follow-up sequence, objection reply, or A/B offer variant
-  (fencing first, roofing next). Built on Brennan's cold-email training and
+  (roofing first, then other trades). Built on Brennan's cold-email training and
   videos. Email only, no LinkedIn. Use it even if the request just says "write
   the emails for these leads".
 ---

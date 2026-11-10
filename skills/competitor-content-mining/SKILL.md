@@ -16,7 +16,7 @@ Why: competitors have already tested topics and angles. We reuse the *ideas*, ne
 1c. **Voice of customer:** from competitor reviews, FAQs, and comments, log pains, objections, and the exact words owners use into the VOC bank (`gw-lead-generation`).
 2. **Rewrite from scratch.** Restate each concept in our own voice and positioning; don't paraphrase sentence by sentence. Never reuse their charts or images.
 3. **Strip the competitor out.** No links, no credit, no "according to X". Run every stat through stat-sourcing-and-verification. Anything you can trace only to the competitor gets flagged and normally dropped.
-4. **Balance by the industry mix** in team/industry-mix.md (as of Oct 23, 2026: about 50% fencing, the rest rotating across HVAC, roofing, siding, electrical, plumbing, other home services and B2B). Always re-read that file, since the mix changes.
+4. **Balance by the industry mix** in team/industry-mix.md (as of Nov 10, 2026: general direct mail, roofing, HVAC, and B2B lead; fencing a small share). Always re-read that file, since the mix changes.
 5. **Output.**
    - **Tactics:** one kebab-case file per tactic in the tactics library, in its README format. Fields: Tactic; Source (who, where, date, never invented); What it is (2-4 sentences); Use for; Example adapted for us (must pass the QA rules); Status (Idea/Testing/Proven/Retired).
    - **Article outlines:** working title, angle, 5-7 sections, verified stats with their original sources (by stat ID), and the industry served. Save to the research folder with a dated filename.
