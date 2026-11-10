@@ -21,11 +21,11 @@ A keyword or PAA question (`blog-keyword-research`, Google Trends), pasted YouTu
 3. **Transcribe (Brennan, Nov 10):** YouTube goes through the TubeAlfred connector: free yt-dlp metadata for views (`youtube_video_get`, which costs a credit, only as fallback), then `youtube_video_transcript` for picks that pass. About 50 free a month: never re-fetch a library video; log credits in library/tubealfred-usage.md; stop at 50. TikTok and Instagram: `fetch_transcript.py`. Pasted links start here.
 4. **Extract** each transcript per templates/extraction_prompt.md, then run `save_notes.py`. Paraphrase only; checkable numbers go in claims_to_verify.
 5. **Brief:** most videos teach a tactic, not a trade: if it's sound, apply it to every industry and adapt it to direct mail. Pick the 3-5 strongest notes and fill the `blog-brief-writing` template. Its information-gain line comes from the notes; add the fresh-material table and Sources table from templates/blog_brief.md. Save to blog/briefs/<date>/ and hand off to GW Blog Copywriter, then `gw-longform-editor`.
-6. **Report:** videos used, blocks hit, save paths.
+6. **Report:** videos used, blocks, save paths.
 
 ## Quality bar
-**Required (Brennan, Nov 10):** YouTube 15,000+ views; TikTok and Instagram 1,000+. Every video under 2 years old; anything about AI under 3 months. Check both before transcribing (yt-dlp or `discover.py`); fails or unknown = skip.
-Prefer practitioners, specifics (offers, response rates, mistakes, objections), and ideas two independent videos back up (else flag single-source). Skip empty ads and clips under 20s.
+**Required (Brennan, Nov 10):** YouTube 15,000+ views; TikTok and Instagram 1,000+. Every video over 9 minutes and under 2 years old; anything about AI under 3 months. Check all before transcribing (yt-dlp or `discover.py`); fails or unknown = skip.
+Prefer practitioners, specifics (offers, response rates, mistakes, objections), and ideas two independent videos back up (else flag single-source). Skip empty ads.
 
 ## Hard rules
 1. **Never copy.** Ideas in our own words with the Gorilla Works angle; quotes under 20 words, attributed, rare; never republish transcripts.
