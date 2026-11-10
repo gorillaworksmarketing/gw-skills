@@ -9,7 +9,7 @@ description: >-
   notes and a blog brief. Use it even if 'transcribe' is never said.
 ---
 # GW video research
-What owners and marketers *say* in videos is mostly not written anywhere, so we mine it for information gain. The transcript is source material, never the post.
+What owners and marketers say in videos is mostly written nowhere, so we mine it for information gain; transcripts are source material, never the post.
 Toolkit: store `tools/video-research/` (scripts, templates, references; commands in RUN.md). The shared library of transcripts and notes is its `library/`.
 
 ## Inputs
@@ -17,14 +17,14 @@ A keyword or People Also Ask (PAA) question (from `blog-keyword-research` or Goo
 
 ## Steps
 1. **Library first:** `library_search.py "<keyword>" --niche <n>`. If there are 3+ relevant notes, go to step 5.
-2. **Discover** (keyword runs): 3-5 search variants (references/niches.md), `discover.py ... --max 15`, or a watch-list. Pick 5-8 videos; don't transcribe everything.
-3. **Transcribe (Brennan, Nov 10):** YouTube goes through the TubeAlfred connector: `youtube_video_get` (views, channel, date), then `youtube_video_transcript` only for picks that pass the bar. About 50 free transcripts a month, so never fetch one the library already has; log each in library/tubealfred-log.md and stop when the month's 50 are used. TikTok and Instagram: `fetch_transcript.py`. Pasted links start here.
+2. **Discover** (keyword runs): 3-5 search variants (references/niches.md), `discover.py ... --max 15`, or a watch-list. Pick 5-8.
+3. **Transcribe (Brennan, Nov 10):** YouTube goes through the TubeAlfred connector: `youtube_video_get` (views, channel, date), then `youtube_video_transcript` only for picks that pass the bar. About 50 free a month: never re-fetch a library video; log each in library/tubealfred-log.md; stop at 50. TikTok and Instagram: `fetch_transcript.py`. Pasted links start here.
 4. **Extract** each transcript per templates/extraction_prompt.md, then run `save_notes.py`. Paraphrase only; checkable numbers go in claims_to_verify.
 5. **Brief:** pick the 3-5 strongest notes and fill the `blog-brief-writing` template. Its information-gain line comes from the notes; add the fresh-material table and Sources table from templates/blog_brief.md. Save to blog/briefs/<date>/ and hand off to GW Blog Copywriter, then `gw-longform-editor`.
-6. **Report:** videos found and used, blocks hit (login wall, captcha, IP), and where the notes and brief are saved.
+6. **Report:** videos used, blocks hit, and where notes and brief are saved.
 
 ## Quality bar
-**Required (Brennan, Nov 9 2026):** at least 1,000 views on YouTube, TikTok, and Instagram. Check views before transcribing (`youtube_video_get` or `discover.py`); under 1,000 or unknown = skip.
+**Required views:** YouTube 7,000+ (Brennan, Nov 10); TikTok and Instagram 1,000+. Check before transcribing (`youtube_video_get` or `discover.py`); under or unknown = skip.
 Prefer practitioners, specifics (offers, response rates, mistakes, objections), videos under 18 months old, and ideas two independent videos back up (else flag single-source). Skip empty agency ads, clips under 20 seconds or without speech.
 
 ## Hard rules
