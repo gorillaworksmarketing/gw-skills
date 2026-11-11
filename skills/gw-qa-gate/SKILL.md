@@ -8,32 +8,27 @@ description: >-
   the request doesn't name the skill.
 ---
 # Gorilla Works QA gate
-Sources: knowledge-base/00-source-of-truth.md §0A/§10, the Social Editor rulings (Oct 14 2026), `gw-content-rules`, `gw-claims-guardrails`, research/utm-link-strategy.md, and the platform blueprint.
+Sources: knowledge-base/00-source-of-truth.md §0A/§10, Social Editor rulings (Oct 14 2026), `gw-content-rules`, `gw-claims-guardrails`, research/utm-link-strategy.md, platform blueprint.
 
 ## Checks
 1. **BLOCKED** (any hit = FAIL): the blocked list in `gw-claims-guardrails`.
-2b. **No made-up facts (required, Nov 10):** the `gw-fact-check` claim table is attached and every row is verified or cut. Any invented or unverified claim, quote, fake-real example, or broken link = FAIL.
-2. **Stats:** every number is verifiable and logged with a V or S stat-log ID (or is an approved company fact). The post needs no source line. F-prefixed or missing = FAIL.
-3. **Price:** any price or cost ($0.78, "under $1", "as low as", stamp comparison, per-piece or plan price) = FAIL. Approved offer values as worded are OK.
-4. **Real Great Roofing:** the exact quote only, as one client's result, no campaign details.
-5. **Content rules:** no banned or self-aware ranking lines, no hashtags, custom mail first, no "you need a list", authority voice, no AI tells from `gw-content-rules` (em dash = FAIL). Mix per team/industry-mix.md.
-6. **Links/UTM (required):** every gorillaworksmarketing.com link is built per research/utm-link-strategy.md (utm_campaign=<industry>_<type>, utm_term=<article slug>, unique utm_content never reused, lowercase; blog internal and canonical links stay clean), and **every link has a row in research/link-log.csv**. Lead-gen posts carry the /book-demo UTM link. Missing UTM or log row = fix before PASS.
-7. **Platform format:** LinkedIn @Gorilla Works Marketing mention at the top; X replies under 240 characters, spelled-out numbers, "X" not "Twitter"; Reddit self-promo limits; no identical text across platforms; blueprint length and structure.
-7b. **Long-form:** information gain, the "search over" test, 5+ (ideally 10) in-body internal links, about a 5th-grade reading level, and proof of a human edit (fully automated AI content = FAIL).
-7c. **Email:** honest subject (no fake Re:/Fwd:), sender is Brennan, opt-out line and Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033 present, one ask, no link in a cold first email, hooks have source URLs. Cold and nurture emails must already carry a `cold-email-editing` PASS.
-8. **Confidentiality:** no client data or internals.
-9. **Coherence (required, Nov 6 2026):** read it top to bottom as the target owner. Each line follows from the one before; it never contradicts its own advice; stats in plain words; no jargon ("map the first reminder drop"); the main point fits in one sentence. Any miss = FAIL: rewrite from the main point, don't polish.
+2b. **No made-up facts (Nov 10):** `gw-fact-check` claim table attached, every row verified or cut. Invented or unverified claim, quote, example, or broken link = FAIL.
+2. **Stats:** every number verifiable, logged with a V or S stat-log ID (or an approved company fact); no source line needed. F-prefixed or missing = FAIL.
+3. **Price:** any price or cost ($0.78, "under $1", "as low as", stamp comparison, per-piece or plan price) = FAIL. Approved offer values as worded are OK (not in roofing cold email).
+4. **Real Great Roofing:** the exact quote only, one client's result, no campaign details. "Thousands of other customers" = FAIL.
+5. **Content rules:** no banned or self-aware ranking lines, hashtags, or "you need a list"; custom mail first; authority voice; no AI tells (`gw-content-rules`; em dash = FAIL). Mix per team/industry-mix.md.
+6. **Links/UTM:** every gorillaworksmarketing.com link built per research/utm-link-strategy.md (utm_campaign=<industry>_<type>, utm_term=<slug>, unique utm_content, lowercase; blog internal and canonical links clean), and **every link has a row in research/link-log.csv**. Lead-gen posts carry the /book-demo UTM link. Missing UTM or row = fix first. Roofing cold-email CTA URL: used exactly as the row gives it (UTM: ask Brennan).
+7. **Platform format:** LinkedIn @Gorilla Works Marketing mention on top; X replies under 240 characters, spelled-out numbers, "X" not "Twitter"; Reddit self-promo limits; no identical text across platforms; blueprint length and structure.
+7b. **Long-form:** information gain, "search over" test, 5+ (ideally 10) internal links, about 5th-grade level, proof of a human edit (fully automated AI = FAIL).
+7c. **Email:** honest subject (no fake Re:/Fwd:), sender Brennan, one ask, sourced hooks. **Roofing cold email** (landing-page format, blueprints/cold-email.md): slots in order; only ask is the CTA `See my page -> ` + Prospect Page URL or `{{page_link}}`, never invented. Opt-out and Kirkland address are in Brennan's fixed Ember footer, not this copy; unconfirmed footer = flag Brennan. Other emails carry an opt-out line and Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033. Cold and nurture emails need a `cold-email-editing` PASS.
+8. **Confidential:** no client data or internals.
+9. **Coherence (Nov 6):** read it top to bottom as the target owner. Each line follows the last; no self-contradiction; stats in plain words; no jargon; main point fits one sentence. Any miss = FAIL: rewrite, don't polish.
 
 ## Output
-- PASS or FAIL
-- Each issue: rule, quote, fix
-- Stat IDs and link-log rows used
-- Open questions for Brennan
+PASS or FAIL; each issue (rule, quote, fix); stat IDs and link-log rows used; open questions for Brennan.
 
-Log the decision for the QA Decision Log; Brennan's edits become lessons in the rules file. **Never publish.** Brennan is the only approver.
+Log it in the QA Decision Log; Brennan's edits become lessons. **Never publish.** Brennan is the only approver. See `gw-skills-index`, `cold-email-editing`.
 
-Skills to reference: `gw-skills-index`, `cold-email-editing`.
+Oct 19: FAIL a utm_source not matching the platform; utm_campaign industries not in the UTM strategy (HVAC and new trades use home-services); reuse of the li-p1 "51%" hook; replies forcing a URL every time (~75% pure value). Flag banned-line hits in LIVE copy to Brennan. Mix 75% value / 25% lead-gen.
 
-Oct 19 gate additions: fail any link whose utm_source does not match the platform; fail utm_campaign industries not listed in research/utm-link-strategy.md (HVAC and other new trades use home-services); fail any reuse of the li-p1 "51%" hook; fail replies that force a URL every time (~75% pure value). Also flag banned-line hits in LIVE copy to Brennan. Mix 75% value / 25% lead-gen.
-
-Learning loop: weekly, recurring FAIL reasons go back to the writer skills and the QA Decision Log.
+Learning loop: weekly, recurring FAIL reasons go to the writer skills and the QA Decision Log.

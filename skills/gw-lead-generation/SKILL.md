@@ -22,7 +22,7 @@ Detail: blueprints/lead-generation.md. Never cite vendor stats. Apply `gw-conten
 8. **Awareness:** match the message to the level; sell problems the niche already knows. Top-20% traits from Brennan's data only.
 9. **Voice of customer:** mine reviews, calls, groups, replies for pains, triggers, outcomes, exact words. About 5 data points make a pattern; tag confidence.
 10. **Psychology, ethically:** reciprocity, small first yes, real proof, gentle loss framing, mere exposure. Never fake scarcity, deadlines, or familiarity.
-11. **Pitch:** promise, story, old vs new, top 3 concerns, offer, FAQ (17 steps in blueprint). One conversion point per piece: demo page with UTM, or the 15-minute claim call in cold email.
+11. **Pitch:** promise, story, old vs new, top 3 concerns, offer, FAQ (17 steps in blueprint). One conversion point per piece: demo page with UTM, or in cold email the 15-minute claim call (roofing: the personal page click, Nov 11).
 12. **Discovery call (Brennan):** thanks, 3 relevant things, "tell me about your business and challenges, if that's okay." Let them talk.
 13. **Constraint first,** then scale. Speed to lead: positive replies answered within 2 minutes (reply agent pending Brennan's approval; until then drafts).
 14. **Kaleidoscope:** reuse winners in new formats and trades.

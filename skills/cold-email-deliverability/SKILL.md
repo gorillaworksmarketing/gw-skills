@@ -17,7 +17,8 @@ One burned domain costs months, so stop-loss beats any meeting target and volume
 1. **Secondary sending domain**, forwarded to the main site. hello@gorillaworksmarketing.com is never used for cold email.
 2. **SPF, DKIM, DMARC** verified (MxToolbox, Google Admin Toolbox CheckMX). Add Google Postmaster Tools.
 3. **Two mailboxes** to start; scale by adding mailboxes (2-3 per domain), not volume.
-4. **Content defaults:** plain text, no link or image in email 1, company name in the signature not hyperlinked [V6], open and click tracking off, word-level spintax, about 125 words or fewer, opt-out line plus Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033.
+4. **Content defaults:** plain text, no link or image in email 1 (roofing excepted, below), company name in the signature not hyperlinked [V6], open and click tracking off, word-level spintax, about 125 words or fewer, opt-out line plus Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033.
+4b. **Roofing landing-page email (Brennan, Nov 11 2026):** Brennan's Ember template carries the HTML, the one page-link button, and the fixed footer (opt-out and address); the bots' copy adds neither. Watch placement and replies after the switch.
 5. Never bulk-send cold from a CRM or marketing tool (HubSpot-type) [V5].
 
 ## Warm-up ramp (team.md)

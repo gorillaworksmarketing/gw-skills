@@ -2,52 +2,54 @@
 name: cold-email-editing
 description: >-
   Use whenever GW Email Editor reviews, edits, scores, or approves a Gorilla
-  Works cold email, follow-up, objection reply, positive-reply draft, or nurture
-  email before it goes to Brennan. Runs hard fails, Seven Sweeps for email,
-  AI-tell removal, CAN-SPAM, offer-arm and claims checks, and a 1-10 panel
-  score, then outputs PASS or FAIL with a change log. Use it even if the request
-  just says "check these emails".
+  Works cold email (including the roofing landing-page email), follow-up,
+  objection reply, positive-reply draft, or nurture email before it goes to
+  Brennan. Runs hard fails, the slot checklist, Seven Sweeps for email, AI-tell
+  removal, claims and fact checks, and a 1-10 panel score, then outputs PASS or
+  FAIL with a change log. Use it even if the request just says "check these
+  emails".
 ---
 # Cold email editing (GW Email Editor)
-Scorecard: blueprints/email-copy-frameworks.md §14 (AI tells §11, CTA §7, follow-ups §8). Rules and offer test: blueprints/cold-email.md. Apply `gw-claims-guardrails`, then `gw-qa-gate`. The editor never sends.
+Roofing format spec and examples: blueprints/cold-email.md. Scorecard: blueprints/email-copy-frameworks.md §14 (AI tells §11). Apply `gw-claims-guardrails`, `gw-fact-check`, then `gw-qa-gate`. The editor never sends.
 
 ## How to think about it
-Generic or AI-sounding drafts go back with notes; good drafts in Brennan's voice get line edits only. If a line is specific, true, and sounds like Brennan, leave it.
+Each email has one job: get the owner to click to their personal page. Specific, true, Brennan's voice: leave it. Generic or AI-sounding: back with notes.
 
 ## Pass 1: hard fails (any one = FAIL, list the fix)
-- A hook without a source URL, or one that is private-feeling or sensitive. Open each URL.
-- An offer not worded exactly as one of the four arms (A-D in cold-email.md), or two arms in one sequence. Sample postcard, list preview, teardown, audit, or video offers are unapproved.
-- Any other claim, number, or proof not approved (Real Great Roofing's exact quote only). No per-mailer price ($0.78, under $1), stamp comparison, guarantee, ROI promise. Write `[NEED: ...]` instead of softening.
-- Email 1 names the deliverable or jargon (AI, data modeling, 200+ variables, targeting) instead of the outcome (more jobs).
-- A problem the niche isn't already aware of, or one we made up.
-- Missing opt-out line or postal address (Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033). Hyperlinked company name.
-- Misleading or fake Re:/Fwd: subject. Any link in email 1. More than one ask. Any em dash.
+- Labeled lines missing, out of order, misspelled, or extra: Subject, Preview, Eyebrow, Headline, Review quote, Review name, Body paragraph 1, Body paragraph 2, Proof line, CTA. Any greeting, checklist, channel strip, signature, or footer written in the copy (Ember has them).
+- **Review quote:** open its source. Not word for word, not labeled as a Google review, reworded, typo-fixed, merged, or cut other than with "...". Not 5 stars, older than about 6 months, or no proof of stars and date. Mentions price, cost, or money. Reviewer name not exact.
+- Eyebrow doesn't match the Review Count and Rating properties (rating 1 decimal).
+- A company fact with no source or not matching it.
+- Proof line not exactly `Real Great Roofing: "$90,000 in leads from just one mail drop."`, or campaign details or other stats added.
+- Any other dollar amount or price word: $0.78, "under $1", stamp comparison, "$750 value", "$500 off". Guarantees, ROI promises. Write `[NEED: ...]`.
+- "Thousands of other customers" or any unapproved claim.
+- CTA not `See my page -> ` + the row's Prospect Page URL or `{{page_link}}`. An invented or edited URL, a google.com/url wrapper, or a second ask (call booking, "reply yes").
+- Fake Re:/Fwd: subject, urgency, pitch words. Any em dash, hashtag.
+- Status set to Send, or workflow fields touched. No `gw-fact-check` claim table.
 
-## Pass 2: Seven Sweeps for email
-1. **Clarity:** one idea; 7th-grade level or lower; scannable on a phone.
+## Pass 2: slot checks
+Subject is short with the company name. Preview one line under 90 characters, about the page. Headline 3-8 words, this company only. Body paragraph 1 is 25-40 words: one or two verified details, then nearby homes that need the same work. Body paragraph 2 is the spec's fixed sentence with the short company name.
+
+## Pass 3: Seven Sweeps for email
+1. **Clarity:** 7th-grade level; scannable on a phone.
 2. **Voice:** Brennan, peer to peer.
-3. **So what:** every line ties to their jobs or money.
+3. **So what:** each slot ties to their jobs.
 4. **Prove it:** each claim backed or cut.
-5. **Specificity:** swap in another company's name; if it still works, the hook is thin.
-6. **Emotion:** their real pain in one line.
-7. **Zero risk:** "yes" claims a free thing via a 15-minute call; "no" is easy.
-
-## Pass 3: AI tells and mechanics
-Remove §11 patterns ("quick question", "just checking in", contrast reveals, tidy closers). Check: subject and opener pair; about 125 words or fewer; spintax natural; follow-ups stand alone; 3-4 touches (email 3 new thread); only the hook line varies; one niche per list. **Visual format pending from Brennan;** plain text until then.
-
-## Positive-reply drafts
-Thanks, the claimed offer named, two times for the 15-minute call. Nothing else promised. Drafted within 2 minutes; no auto-send until Brennan approves the reply agent.
+5. **Specificity:** swap in another company's name; if it still works, the headline or body is thin.
+6. **Coherence:** read all slots in template order; each makes sense next to the last.
+7. **One click:** the page is the only next step.
 
 ## Pass 4: panel score
-1-10 as the busy fence owner, a deliverability reviewer, a copywriter, and Brennan. PASS needs every score 7+ and an average of 8+. Note why the lowest is low.
+1-10 as the busy roofing owner, a deliverability reviewer, a copywriter, and Brennan. PASS needs every score 7+ and an average of 8+. Note why the lowest is low.
 
-## Test hygiene
-One variable changed and the hypothesis written. Offer arms first. Flag any call on tiny samples (blueprint minimums).
+## Final copy
+Put it in **Edited Email Copy**, same labeled layout. Holding a row: keep its Status. Never set Status = Send.
+
+## Follow-ups and replies
+Roofing follow-ups and positive-reply text are PENDING Brennan (spec covers email 1). Replies stay drafts; no auto-send until he approves the reply agent. Other trades: legacy offer-arm checks in the blueprint.
 
 ## Output
-Edited email, change log, four scores, PASS or FAIL, held leads. Brennan approves every send.
+Edited copy, change log, claim table, four scores, PASS or FAIL, held rows with reasons.
 
 ## Learning loop
-Weekly: log repeat fixes in blueprints/cold-email.md. Compare scores to real positive replies and booked calls; if they disagree, recalibrate and note it in the changelog.
-
-**Fact check (required, Nov 10):** run `gw-fact-check`; every claim, quote, example, and link traced to a real source, or cut.
+Weekly: log repeat fixes in blueprints/cold-email.md. Compare scores to real page clicks and positive replies; if they disagree, recalibrate and note it in the changelog.

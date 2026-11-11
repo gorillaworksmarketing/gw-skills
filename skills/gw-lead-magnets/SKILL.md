@@ -19,7 +19,7 @@ A) Free landing page for direct mail ($750 value) + up to $500 in free spend
 B) Free page on your website specific to direct mail ($750 value) + up to $500 off
 C) Up to $500 off first campaign
 D) Build a free targeted lead list ($500 value)
-Flow: offer, they reply "yes", they claim it by booking a 15-minute call. First test is A vs B vs C vs D.
+Flow: offer, they reply "yes", they claim it by booking a 15-minute call. First test is A vs B vs C vs D. **Roofing cold email (Nov 11 2026):** superseded by the landing-page format (one click to the prospect's personal page; no arms, offer amounts, or call ask; blueprints/cold-email.md).
 **Not approved:** sample postcard, list preview, mail teardown, audit, 90-second video. Don't offer them.
 
 ## Steps for a new magnet (proposal only)
@@ -27,9 +27,9 @@ Flow: offer, they reply "yes", they claim it by booking a 15-minute call. First 
 2. **Match the stage:** checklist for problem-aware; the arms above for solution-aware; arm C for ready buyers.
 3. **Test it:** tangible, under 10 minutes to use, can't be Googled, leaves them wanting the next step.
 4. **Name it by the result,** not the format or deliverable. Two names for an A/B.
-5. **Gate it right:** blog stays open; the magnet is an upgrade. In cold email, claim by reply, never a link in email 1. A form asks one qualifying question (trade, area).
+5. **Gate it right:** blog stays open; the magnet is an upgrade. In cold email (non-roofing), claim by reply, never a link in email 1; roofing links to the personal page. A form asks one qualifying question (trade, area).
 6. **CTA:** the exact next action and an honest reason to act now. Deadlines or capacity limits must be real and approved.
-7. **Next step:** the 15-minute claim call, or a demo link with UTM per research/utm-link-strategy.md, logged in research/link-log.csv.
+7. **Next step:** the 15-minute claim call (roofing cold email: the personal page click), or a demo link with UTM per research/utm-link-strategy.md, logged in research/link-log.csv.
 8. **Claims:** approved proof only; no per-mailer price at all ($0.78, under $1, stamp comparison); stated values only as Brennan worded them.
 
 ## Output

@@ -1,47 +1,47 @@
 ---
 name: cold-email-copy
 description: >-
-  Use whenever GW Email Copywriter writes a Gorilla Works cold email: first
-  touch, subject line, follow-up sequence, objection reply, or A/B offer variant
-  (roofing first, then other trades). Built on Brennan's cold-email training and
-  videos. Email only, no LinkedIn. Use it even if the request just says "write
-  the emails for these leads".
+  Use whenever GW Email Copywriter writes a Gorilla Works cold email: the
+  roofing landing-page email (personal page click), subject and preview,
+  follow-ups, or objection replies (roofing first, then other trades). Built on
+  Brennan's format spec, cold-email training and videos. Email only, no
+  LinkedIn. Use it even if the request just says "write the emails for these
+  leads".
 ---
 # Cold email copy (GW Email Copywriter)
-Library: blueprints/email-copy-frameworks.md. Rules, offer test: blueprints/cold-email.md. Videos: cold-email/brennan-video-notes.md. Apply `gw-content-rules`, `gw-claims-guardrails`; hand drafts to `cold-email-editing`. Bots draft; Brennan sends.
+Full spec, examples, history: blueprints/cold-email.md (roofing landing-page format). Apply `gw-content-rules`, `gw-claims-guardrails`, `gw-fact-check`; hand drafts to `cold-email-editing`. Bots draft; Brennan sends.
 
-## Why it works this way
-An owner on a phone decides in two lines and cares about jobs and money, not how we do it. So: a verified fact, a problem they already know, a free thing they'd pay for, an easy "yes".
+## Goal (roofing, every lead)
+One job: get the owner to click through to the personal landing page built for their company. No call booking, no "reply yes", no offer dollar amounts. Brennan owns the Ember HTML; you write only the copy. Never write the greeting, "Inside your page" checklist, channel strip, signature, or footer/opt-out (fixed in Ember).
 
 ## Before writing
-1. Brief from `cold-email-lead-research`: 3-5 hooks with source URL and date. **No hook: hold the lead.**
-2. Goal (§1). **One niche per list**; never mix trades.
-3. Know the lead's **offer arm** (A-D, cold-email.md). One arm per lead; never mix.
-4. **Visual format: PENDING from Brennan.** Plain text until he sends it.
+Brief from `cold-email-lead-research` with sourced hooks. **No hook or no usable Google review: hold the row and say why.**
 
-## The flow (Brennan, Oct 30)
-Free tangible offer, they reply "yes", they claim it by booking a **15-minute call**. The call is the claim, not the pitch.
+## Where it goes
+Notion **Email Copy** (Cold Leads – Roofing), plain text, one labeled line per slot, in this order, spelled exactly:
+Subject: / Preview: / Eyebrow: / Headline: / Review quote: / Review name: / Body paragraph 1: / Body paragraph 2: / Proof line: / CTA:
 
-## First email
-1. **Subject** (§3): ultra-personal; short versions are challengers. No fake Re:, pitch words, urgency.
-2. **Opener = preview:** the verified detail, plain.
-3. **Problem they already know,** in their words (slow phone after a job wraps). Never invent one.
-4. **Outcome, not deliverable:** "more fence jobs from the homes near your last ones." Never say AI, data modeling, 200+ variables, or targeting in email 1.
-5. **Offer, exact arm wording:** (A) free landing page for direct mail ($750 value) + up to $500 in free spend; (B) free page on your website specific to direct mail ($750 value) + up to $500 off; (C) up to $500 off first campaign; (D) build a free targeted lead list ($500 value). Nothing else (no sample, teardown, video).
-6. **Proof:** Real Great Roofing's exact quote, optional.
-7. **One ask, claim the offer:** "Want it? Reply yes and I'll send two times for a quick 15-minute call to set it up." No link in email 1.
-8. **Footer:** Brennan Ursu; Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033; opt-out line. Company name not hyperlinked.
-9. **Static template:** only the hook line changes per lead. Spintax per §10, never on hook, proof, offer, address.
-7th-grade reading level or lower, short scannable lines, about 75-125 words. No AI tells (§11), no em dashes.
+## Slot rules
+1. **Subject:** short, company name in it ("Built a page for Titan Roofing"). No fake Re:, urgency, pitch words.
+2. **Preview:** one line, under 90 characters, about the page. Default: "Your Google reviews, a sample mailer and the homes near your recent roofs."
+3. **Eyebrow:** "<Review Count> Google reviews at <Rating, 1 decimal>", matching the row's properties.
+4. **Headline:** 3-8 words, this company only, from a verified hook.
+5. **Review quote:** a real Google review of this company, word for word, from the row, its page body, or the company site where labeled as Google. Shorten only with "..."; never reword, fix typos, or merge reviews. 20 words or fewer. 5 stars, about 6 months old or newer, with proof of stars and date. Skip any review that mentions price, cost, or money.
+6. **Review name:** exactly as the source shows it.
+7. **Body paragraph 1:** 25-40 words. One or two verified company details, then a line tying it to nearby homes that need the same work.
+8. **Body paragraph 2:** the spec's fixed sentence, only the short company name changes (blueprint).
+9. **Proof line:** always exactly `Real Great Roofing: "$90,000 in leads from just one mail drop."` One client's result; no campaign details, no other stats.
+10. **CTA:** `See my page -> ` + the row's Prospect Page URL, else `{{page_link}}`. Never invent or edit a URL; no google.com/url wrappers.
 
-## Follow-ups (§8)
-Touch 2 at 46-48h, same thread: short nudge plus context cut from email 1. Touch 3, new thread: held-back hook, a different known problem, same arm, "want it?" Optional touch 4 closes the loop, no guilt. Any reply stops it.
+## Hard rules
+- No price or cost wording: no $0.78, "under $1", stamp comparisons, "$750 value", "$500 off". The only dollar figure is the proof line (approved quote).
+- Never write "thousands of other customers" (not approved).
+- No hashtags, em dashes, AI tells. 7th-grade level.
+- Draft only. Never set Status = Send or touch Ember send settings. Set Editing; touch no other workflow fields.
+- Coherence check in template order. Attach a `gw-fact-check` claim table: count, rating, quote source (stars, date), each company fact, proof line.
 
-## Replies (§9)
-Classify; draft from the objection bank. A **"yes" is drafted within 2 minutes**: thanks, two times for the 15-minute call. Auto-send only after Brennan approves the reply agent. "Not now" goes to `gw-email-marketing`; unsubscribes are suppressed.
-
-## Output
-Per lead: arm, subjects, sequence, spintax, hooks with URLs, word count, grade. Then to the Editor.
+## Follow-ups and replies
+The spec covers email 1 only. Roofing follow-ups and positive-reply text: PENDING Brennan; ask before drafting. Replies are drafts; no auto-send until Brennan approves the reply agent. Other trades: legacy offer-arm flow (blueprint) until Brennan extends this format.
 
 ## Learning loop
-Weekly with GW Analytics (blueprints/cold-email.md loop): positive replies and booked calls by arm, problem, hook, trade. Log changes in its changelog.
+Weekly with GW Analytics (blueprints/cold-email.md loop): page clicks and positive replies by headline type, hook, and review choice; Editor fixes. Log changes in its changelog.
