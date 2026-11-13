@@ -26,7 +26,7 @@ Subject: / Preview: / Eyebrow: / Headline: / Review quote: / Review name: / Body
 2. **Preview:** one line, under 90 characters. Default: "Your Google reviews, a sample mailer and the homes near your recent roofs."
 3. **Eyebrow:** "<Review Count> Google reviews at <Rating, 1 decimal>", matching the row's properties.
 4. **Headline:** 3-8 words, from a verified hook.
-5. **Review quote:** a line from the row's **Reviews** field (5 stars, about 6 months or newer, no price, screenshot proof; Nov 13), word for word. Shorten only with "..."; never reword, fix typos, or merge. 20 words or fewer.
+5. **Review quote:** only from a line in the row's **Reviews** field (Google Maps reviews only; Nov 13), word for word. Shorten only with "..."; never reword, fix typos, or merge. 20 words or fewer.
 6. **Review name:** exactly as the source shows it.
 7. **Body paragraph 1:** 25-40 words. One or two verified company details, then a line tying it to nearby homes that need the same work.
 8. **Body paragraph 2:** the spec's fixed sentence, only the short company name changes (blueprint).

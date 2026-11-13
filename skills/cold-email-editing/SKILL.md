@@ -10,20 +10,20 @@ description: >-
   emails".
 ---
 # Cold email editing (GW Email Editor)
-Roofing format spec and examples: blueprints/cold-email.md. Scorecard: blueprints/email-copy-frameworks.md §14 (AI tells §11). Apply `gw-claims-guardrails`, `gw-fact-check`, then `gw-qa-gate`. The editor never sends.
+Spec: blueprints/cold-email.md. Scorecard: blueprints/email-copy-frameworks.md §14 (AI tells §11). Apply `gw-claims-guardrails`, `gw-fact-check`, then `gw-qa-gate`. The editor never sends.
 
 ## How to think about it
-Each email has one job: get the owner to click to their personal page. Specific and true: leave it. Generic or AI-sounding: back with notes.
+One job: a click to their personal page. Specific and true: leave it. Generic or AI-sounding: back with notes.
 
 ## Pass 1: hard fails (any one = FAIL, list the fix)
-- Labeled lines missing, out of order, misspelled, or extra: Subject, Preview, Eyebrow, Headline, Review quote, Review name, Body paragraph 1, Body paragraph 2, Proof line, CTA. Any greeting, checklist, channel strip, signature, or footer written in the copy (Ember has them).
-- **Review quote:** not from a **Reviews** field line (Nov 13), or not matching it and its screenshot word for word (cuts only with "..."). Not 5 stars, older than about 6 months, or mentions price. Reviewer name not exact. Reviews says NO QUALIFYING REVIEW: hold.
-- Eyebrow doesn't match the Review Count and Rating properties (rating 1 decimal).
+- Labeled lines missing, out of order, misspelled, or extra (Subject, Preview, Eyebrow, Headline, Review quote, Review name, Body paragraph 1-2, Proof line, CTA). Any greeting, checklist, channel strip, signature, or footer in the copy (Ember has them).
+- **Review quote:** not from a **Reviews** field line (Google Maps only), or not matching it and its screenshot word for word (cuts only with "..."). Screenshot listing name not the row's company. Not 5 stars, older than about 6 months, or mentions price. Reviewer name not exact. NO QUALIFYING REVIEW: hold.
+- Eyebrow matches neither the row's Review Count and Rating nor the live Maps values in the Reviews capture (rating 1 decimal). If those differ, note it; stale row numbers alone don't fail.
 - A company fact unsourced or not matching.
-- Proof line not exactly `Real Great Roofing: "$90,000 in leads from just one mail drop."`, or campaign details or other stats added.
+- Proof line not exactly `Real Great Roofing: "$90,000 in leads from just one mail drop."`, or details or stats added.
 - Any other dollar amount or price word: $0.78, "under $1", stamp comparison, "$750 value", "$500 off". Guarantees, ROI promises. Write `[NEED: ...]`.
 - "Thousands of other customers" or any unapproved claim.
-- CTA not `See my page -> ` + the row's Prospect Page URL or `{{page_link}}`. An invented or edited URL, a google.com/url wrapper, or a second ask (call booking, "reply yes").
+- CTA not `See my page -> ` + the row's Prospect Page URL or `{{page_link}}`. Invented or edited URL, google.com/url wrapper, or a second ask (call, "reply yes").
 - Fake Re:/Fwd: subject, urgency, pitch words. Any em dash, hashtag.
 - Status set to Send, or workflow fields touched. No `gw-fact-check` claim table.
 
@@ -40,10 +40,10 @@ Subject short with the company name. Preview one line under 90 characters. Headl
 7. **One click:** the page is the only next step.
 
 ## Pass 4: panel score
-1-10 as the busy roofing owner, a deliverability reviewer, a copywriter, and Brennan. PASS: every score 7+, average 8+. Note why the lowest is low.
+1-10 as a roofing owner, a deliverability reviewer, a copywriter, and Brennan. PASS: every score 7+, average 8+. Note why the lowest is low.
 
 ## Final copy
-Put it in **Edited Email Copy**, same labeled layout. Holding a row: keep its Status. Never set Status = Send.
+**Edited Email Copy**, same labeled layout. Holding a row: keep its Status. Never set Status = Send.
 
 ## 1-day rule (Nov 13)
 Ready for Summary rows are edited within 1 day unless they fail. Every run report lists rows past 1 day and why. Grok Bot checks daily and fixes stalls with the step's owner.
@@ -55,4 +55,4 @@ Roofing follow-ups and positive-reply text: PENDING Brennan. Replies stay drafts
 Edited copy, change log, claim table, four scores, PASS or FAIL, held rows with reasons.
 
 ## Learning loop
-Weekly: log repeat fixes in blueprints/cold-email.md. Compare scores to real page clicks and positive replies; if they disagree, recalibrate and note it in the changelog.
+Weekly: log repeat fixes in the blueprint. Compare scores to real page clicks and positive replies; if they disagree, recalibrate and log it.
