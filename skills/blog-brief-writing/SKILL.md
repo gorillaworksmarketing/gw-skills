@@ -8,17 +8,17 @@ description: >-
   that already ranks. Use it even if the request just says "brief this keyword".
 ---
 # Blog brief writing
-Format reference: blog/briefs/ (existing briefs) and blueprints/blog.md.
+Format reference: blog/briefs/ and blueprints/blog.md. Apply `gw-brand-guidelines`.
 
 ## Why
-The writer can only add something new if the brief names it. A brief that says what the top results already say produces a page Google and AI engines have no reason to pick.
+The writer can only add something new if the brief names it. A brief that repeats the top results gives Google and AI engines no reason to pick the page.
 
 ## Brief template
 - **Title (= site H1, the question word for word)**, slug (lowercase, hyphenated, unique), 2 alternative SEO titles. SEO title patterns: "How to [task]"; "[N] [things] for [trade]"; "[A] vs [B]: [difference]". Query first, about 60 characters or fewer; use a year or number only if the page delivers it.
 - Target keyword/question + source tag (`PAA` / `PAA-candidate`); volume/KD or `n/a`; secondary keywords.
 - **Intent and stage** (read from the SERP), industry (HVAC, roofing, B2B lead; fencing max 3/week, per team/industry-mix.md).
 - **SERP study:** what ranks (Reddit, listicles, homepages, video, AIO, PAA), dominant page type and components, mixed intent → majority format or the round-up backdoor (blueprints/blog.md). List every subtopic.
-- **Main point (one sentence, required):** the single takeaway every section serves; the outline must not contradict it, and use plain words with no jargon (coherence rule, `gw-content-rules`, Nov 6 2026).
+- **Main point (one sentence, required):** the takeaway every section serves; the outline never contradicts it; plain words, no jargon (coherence rule, Nov 6).
 - **Research inputs (required, Nov 10):** Blog Research PAA/SERP/keyword data plus Video Research notes (preferred; any video, any trade, tactics adapted to direct mail; library first), named in Sources; without them it isn't ready.
 - **Information gain:** one sentence on what this post adds that the top three lack (approved fact, fence-specific example, template, clearer answer). Required.
 - **Format** (post, list, best-X, comparison, review); word range as a guide only [JUDGMENT].
@@ -28,7 +28,7 @@ The writer can only add something new if the brief names it. A brief that says w
 - **Direct answer draft** (40-60 words, consensus first, US/state scope).
 - **Outline:** H2s phrased as related PAA questions, each with a one-line answer-first intent; FAQ (3-5 self-contained answers); closing + CTA. If the topic isn't about mail, note where custom direct mail fits as a recommended channel.
 - **Content upgrade (optional):** a lead magnet from `gw-lead-magnets` (needs Brennan's approval).
-- **Sources/data:** each stat with its stat-log ID (V/S only) and source URL; gaps as `[NEED: ...]`; start the `gw-fact-check` claim table.
+- **Sources/data:** each stat as an inline marker `[S:ID]` (V/S only) plus source URL; gaps as `[NEED: ...]`; start the `gw-fact-check` claim table.
 - **Internal links:** relevant gorillaworksmarketing.com pages, plus /book-demo ("Book a free demo").
 - **Rules reminders:** the `gw-content-rules` and `gw-claims-guardrails` items most at risk here.
 - Notion fields: Excerpt; SEO Title; Meta Description (140-160 chars, keyword, benefit first, a reason to click, unique); Publish At (9:00 AM New York, correct offset).

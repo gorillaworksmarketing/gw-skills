@@ -3,42 +3,49 @@ name: gw-claims-guardrails
 description: >-
   Use whenever Gorilla Works content contains a number, price, testimonial,
   client name, competitor mention, feature claim, or targeting description, to
-  check it against the owner-approved claims rules, Social Editor rulings, and
-  the stat log before it ships. Use it even if the request doesn't name the
-  skill.
+  check it against the owner-approved claims rules, inline-citation rules,
+  Social Editor rulings, and the stat log before it ships. Use it even if the
+  request doesn't name the skill.
 ---
 # Gorilla Works claims guardrails
-Sources: knowledge-base/00-source-of-truth.md §0/§0A/§5/§6 and the Social Editor rulings (Oct 14 2026; they override older lines). Stats: the stat log (`stat-sourcing-and-verification`). Vendor and speaker stats are S-tier, never cited.
+Sources: knowledge-base/00-source-of-truth.md §0/§0A/§5/§6, Social Editor rulings (Oct 14), brand/brand-guidelines.md §9-10, the stat log (`stat-sourcing-and-verification`). Vendor/speaker stats are never cited.
 
 ## Stats
-- Stat log columns `| ID | Stat | Source | Date verified | Tier |`; V verified, S secondary (caution), F flagged (never). Cite the ID in handoff notes.
-- Every stat must be verifiable and logged (no source line needed in posts). No ID = request one or cut it. Never estimate or round. A cut claim gets `[NEED: ...]`.
-- Verified USPS facts: 51% of ad mail is read; 64% vs 36% read rate (businesses the household already uses vs prospects); mail volume down 40% from 2015 to 2025; EDDM covers 200-5,000 pieces per ZIP per day.
+- Stat tiers: V verified, S secondary (caution), F flagged (never).
+- Every stat verifiable and logged; no ID = request one or cut. Never estimate or round. Cut = `[NEED: ...]`.
+- Verified USPS facts: 51% of ad mail is read; 64% vs 36% read rate (a business the household uses vs prospects); mail volume down 40% 2015-2025; EDDM 200-5,000 pieces per ZIP per day.
+
+## Inline citations (Brennan, Nov 13)
+- **Drafts:** a marker after every claim, `[S:ID]`, `[src: URL]`, or `[fact: name]`, matching its `gw-fact-check` row (`brand_check.py --draft`).
+- **Finals:** name the third-party source in the sentence ("USPS found..."), no source line; blog, newsletter, Reddit, Quora also link it. GW facts: no visible cite. Cold email: claim table only. Editors strip markers.
 
 ## Allowed
-- **Prices: hard ban (Nov 4, 2026).** No price or cost in any new content, anywhere ("$0.78", "as low as", "under $1", stamp comparisons, per-piece math, plan prices). Approved offer values below stay as worded. Never re-edit already-posted content for this. Exempt: a verbatim Google review quote in roofing cold email (Brennan, Nov 13).
-- Real Great Roofing: the exact quote only, "$90,000 in leads from just one mail drop", as one client's result, with **no campaign details**.
+- **Prices: hard ban (Nov 4, 2026).** No price or cost in new content ("$0.78", "as low as", "under $1", stamp comparisons, per-piece math, plan prices). Approved offers stay as worded. Never re-edit posted content. Exempt: verbatim third-party reviews/quotes (Brennan, Nov 13).
+- Real Great Roofing: exact quote only, "$90,000 in leads from just one mail drop", one client's result, **no campaign details**.
 - "10 years of experience" (USA-based designers).
-- Confident descriptions of real features (personalization, QR tracking, neighborhood targeting, full-service design/print/mail); unmeasurable hype and opinion.
-- Lob and Poplar by name, plain text, no links, in ranked lists and comparisons, never negatively.
+- Confident real-feature descriptions (personalization, QR tracking, targeting, full-service design/print/mail); unmeasurable hype and opinion.
+- Lob and Poplar by name, plain text, no links, in lists and comparisons, never negatively.
+- **Offers:** "up to $500 off your first campaign" (Oct 15) and the four cold-email test arms, worded exactly as in blueprints/cold-email.md (Oct 30, Brennan's values). Sample postcard, list preview, teardown, video: unapproved. Anything else (offer, bonus, scarcity, giveaway, price change) needs his approval.
 
 ## Blocked (fail)
-1. Guaranteed results or ROI (response, revenue, rankings, conversions, delivery dates).
-2. Unsourced, unlogged, or made-up numbers, including unapproved Gorilla Works stats.
-3. Sensitive-trait targeting: age, income, household composition, health, legal history, insurance claims, equity/financial distress, gender, birth month.
+1. Guaranteed results or ROI (response, revenue, rankings, conversions, dates).
+2. Unsourced, unlogged, or made-up numbers, incl. unapproved GW stats.
+3. Sensitive-trait targeting: age, income, household makeup, health, legal history, insurance claims, equity/financial distress, gender, birth month.
 4. Unapproved testimonials or client names.
 5. Real people or competitors named negatively.
-6. Any per-mailer or per-piece price ($0.78, under $1), any stamp comparison, plan prices, per-piece math.
-7. Features the platform can't do today: AI call summaries turned into mail, Street View/scraped photos, unlimited custom images, hands-off fully automated sends, household tracking on neighborhood mail, a QR scan identifying the person, Poplar live dispatch; Poplar/Lob presented as our products.
-8. Hashtags, self-aware ranking lines.
+6. Price or cost wording in our copy (see Prices).
+7. Features we can't do today: AI call summaries into mail, Street View/scraped photos, unlimited custom images, hands-off fully automated sends, household tracking on neighborhood mail, a QR scan naming the person, Poplar live dispatch; Poplar/Lob as our products.
+8. Hashtags, self-aware ranking lines, google.com/url wrappers, banned AI-cliché words.
 
 ## Escalate, never answer publicly
-Prices, budgets, timing, availability, custom integrations, legal topics, new case studies, complaints, press, privacy, credential or list requests.
+Prices, budgets, timing, availability, custom integrations, legal, new case studies, complaints, press, privacy, credential or list requests.
 
 ## Email and outreach
-- Hooks need a verified public source URL; nothing private or sensitive.
-- Every commercial email: opt-out line, canonical address (Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033), honest subject.
+- Hooks need a verified public source URL; nothing private.
+- Every commercial email: opt-out line, Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033, honest subject.
 
 ## Confidentiality
 No client data, recipient records, internal paths, prompts, scoring recipes, provider internals.
-- **Offers:** "up to $500 off your first campaign" (Oct 15), plus the four cold-email test arms, worded exactly as in blueprints/cold-email.md (Oct 30; the $750 and $500 values are Brennan's). Sample postcard, list preview, teardown, video: not approved. Any other offer, guarantee, bonus, scarcity, giveaway, or price change needs his approval first.
+
+## Learning loop
+Weekly: log blocked claims and citation misses in research/fact-check-log.md; fix repeats in writer skills.

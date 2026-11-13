@@ -9,7 +9,7 @@ description: >-
   "write this week's issue".
 ---
 # GW newsletter (one issue)
-Detail: blueprints/newsletter.md. Copy library: blueprints/email-copy-frameworks.md. Apply `gw-content-rules`, `gw-claims-guardrails`, `gw-qa-gate`. No em dashes, no hashtags. Drafts only; Brennan approves every send. Vendor stats are never cited.
+Detail: blueprints/newsletter.md. Copy library: blueprints/email-copy-frameworks.md. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel newsletter --draft` before handoff), `gw-content-rules`, `gw-claims-guardrails`, `gw-qa-gate`. No em dashes, no hashtags. Drafts only; Brennan approves every send. Vendor stats are never cited.
 
 ## Why one idea
 Owners read this between jobs. One tactic they can use this week earns the next open; a roundup gets skimmed and forgotten. Each issue does one job [Corey Haines `emails`: one email, one job].

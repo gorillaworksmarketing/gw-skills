@@ -9,15 +9,15 @@ description: >-
   even if the request just says "check this" or "edit this".
 ---
 # GW fact check (no made-up facts)
-Brennan's rule (Nov 10 2026): nothing we publish anywhere may be invented, guessed, or "probably true". This check runs on every post, reply, comment, article, newsletter and email, after drafting and again at the editor, and `gw-qa-gate` fails anything without it.
+Brennan's rule (Nov 10 2026): nothing we publish may be invented, guessed, or "probably true". This runs on every piece, after drafting and again at the editor; `gw-qa-gate` fails anything without it.
 
 ## Why
-AI drafts sound sure even when they're wrong: a made-up stat, a quote no one said, a feature we don't have, a USPS rule that changed. One wrong claim costs more trust than ten good posts earn.
+AI drafts sound sure even when wrong: a made-up stat, a quote no one said, a feature we don't have, a changed USPS rule. One wrong claim costs more trust than ten good posts earn.
 
 ## 1. Build the claim table (writer)
 List every checkable claim, one row each: `| Claim (as written) | Type | Source (stat ID, URL, or file) | Status |`.
 Types: number or stat; quote; something a person, company, or video said; Gorilla Works fact (service, feature, result, offer, client); rule, law, or USPS fact; date, event, or "new" trend; tool or platform behavior; link.
-Opinion and advice need no row, but advice can't rest on a claim that has none.
+Opinion and advice need no row, but advice can't rest on a claim that has none. **Inline citations (Nov 13):** put the row's marker right after the claim in the draft, `[S:ID]`, `[src: URL]`, or `[fact: name]` (`gw-claims-guardrails`).
 
 ## 2. Verify each row
 - **Numbers:** a V or S stat-log ID (`stat-sourcing-and-verification`). Never estimate, round, or "about" a number we don't have.
@@ -33,7 +33,7 @@ Status is `verified`, `cut`, or `[NEED: ...]`. If you can't verify it, cut it or
 Precise numbers with no source; percentages that add up too neatly; named studies, surveys, or reports; years and "in 2026" trend claims; quotes; anything about competitors; superlatives ("the only", "first", "#1" outside approved ranked lists); "guaranteed"; claims about what someone else posted (replies must match what they actually wrote); facts from memory or from another bot's message with no source attached.
 
 ## 4. Editor re-check
-The editor doesn't trust the table. Open the source for every number, quote, and Gorilla Works claim, plus a sample of the rest, and confirm the draft says exactly what the source says (watch for drift: "up to" becoming a flat number, a range becoming one figure, a 2019 stat called current). A wrong row sends the piece back to the writer.
+The editor doesn't trust the table. Open the source for every number, quote, and Gorilla Works claim, plus a sample of the rest, and confirm the draft says exactly what the source says (watch for drift: "up to" becoming a flat number, a range becoming one figure, a 2019 stat called current). A wrong row is a judge fail: run the retry loop (`gw-brand-guidelines`).
 
 ## 5. Gate result
 - PASS: every row is verified, or cut, with nothing left as [NEED].

@@ -7,7 +7,7 @@ description: >-
   if the request doesn't name the skill.
 ---
 # GW X post (framework)
-Platform rules: blueprints/x.md; patterns: blueprints/swipe/x.md. The copywriter delivers the framework; `gw-x-editor` writes the final version.
+Platform rules: blueprints/x.md; patterns: blueprints/swipe/x.md. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel x --draft` before handoff). The copywriter delivers the framework; `gw-x-editor` writes the final version.
 
 ## Style (owner, Oct 19 2026)
 Match **LinkedIn's voice more**, while still using X skills and X constraints:
@@ -31,7 +31,7 @@ Match **LinkedIn's voice more**, while still using X skills and X constraints:
 4. **Key points:** specific HOW and WHAT; each number with its stat-log ID (V/S).
 5. **Close:** a sharp two-sentence takeaway (LinkedIn-style bar), no engagement bait ("Agree?", "Thoughts?"), then at most ONE CTA on lead-gen days (soft DM or UTM /book-demo).
 6. **Thread notes:** capitalized header titles without punctuation, no numbering, 4-6 relevant accounts to tag.
-6b. **Coherence check (required, Nov 6 2026):** write the main point in one sentence first, then read the framework top to bottom as the target owner. Each line follows from the one before; no contradicting its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
+6b. **Coherence check (required, Nov 6 2026):** write the main point in one sentence first, then read the framework as the target owner. Each line follows from the one before; no contradicting its own advice; stats in plain words; no jargon ("map the first reminder drop"). Any miss = rewrite, not polish (`gw-qa-gate` check 9).
 7. Output the framework (main point in one sentence, angle, awareness stage, hooks, points, close, CTA, stat IDs). Daily order: replies first (`social-reply`), then originals under the 50% volume cap.
 
 **Links (required):** build every gorillaworksmarketing.com link per research/utm-link-strategy.md and log each one in research/link-log.csv.

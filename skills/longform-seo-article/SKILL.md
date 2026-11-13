@@ -8,10 +8,10 @@ description: >-
   it even if the request just says "write the post".
 ---
 # Long-form SEO article
-Mechanics: blueprints/blog.md (SEO, AEO, SEO + GEO), medium.md, substack.md. Apply `gw-content-rules`, `gw-claims-guardrails`. Input: `blog-brief-writing`; competitor research: `competitor-content-mining`. Hand off to `gw-longform-editor`.
+Mechanics: blueprints/blog.md, medium.md, substack.md. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel blog --draft` before handoff), `gw-content-rules`, `gw-claims-guardrails`. Input: `blog-brief-writing`; competitor research: `competitor-content-mining`. Then `gw-longform-editor`.
 
 ## Why
-Google and AI engines pick pages that answer the question fastest and add something the others don't. Write for one fence or roofing owner; good structure then serves search and AI too. Don't write a separate version "for AI" or chop the page into fragments.
+Google and AI engines pick pages that answer fastest and add something new. Write for one trade owner; good structure serves search and AI too. No separate "for AI" version or fragmented page.
 
 ## Steps
 1. **Info-gain check:** reread the brief's information-gain line. If you can't deliver it, stop and ask.
@@ -20,16 +20,16 @@ Google and AI engines pick pages that answer the question fastest and add someth
 3. **Title:** the exact question (blog: no H1 in the body). SEO title query-first, about 60 chars; meta 140-160 chars.
 4. **BLUF:** a 40-60-word direct answer up top (consensus first, US/WA scope), and the answer first in every section.
 5. **Sections that stand alone:** each H2 is a real question answered in its first sentence; name entities (Gorilla Works, custom direct mail, USPS, the trade, the city); one idea per sentence; normal paragraphs. Write for AI answers per blueprints/blog.md "Writing for AI answers".
-6. **E-E-A-T:** TL;DR, TOC, step-by-step how, approved case numbers, what worked and didn't, honest limits. Bylines where allowed.
+6. **E-E-A-T:** TL;DR, TOC, step-by-step how, approved case numbers, what worked and didn't, honest limits. Bylines if allowed.
 7. **Lists, numbered steps, FAQ** where they fit (blog: no tables, plain Markdown); no price at all.
 8. **Round-ups and comparisons:** one structure per entry (Best for, description, pros, cons, ideal use). Current rule: Gorilla Works #1; competitors (incl. Lob, Poplar) in plain text, no links, never negative; Lob/Poplar are provider workflows, never our product. 
 9. **Mix:** HVAC, roofing, B2B lead; fencing max 3/week (team/industry-mix.md). Off-mail topics still recommend custom direct mail.
 10. **Citable assets:** an official FAQ with exact approved facts, X-vs-Y sections, brand-named frameworks (Brennan-approved names only).
-10b. **Coherence (required):** each line follows from the last, never contradicts itself, stats in plain words, no jargon, main point fits one sentence; a miss = rewrite (`gw-qa-gate` 9).
-10c. **Fact check (required, Nov 10):** run `gw-fact-check`; every claim, quote, example, and link traced to a real source, or cut. Attach the claim table.
-11. **Clear not clever:** about a 5th-grade reading level; pass the "is the search over?" test. No AI tells (`gw-content-rules`).
+10b. **Coherence (required):** each line follows, no self-contradiction, plain stats, no jargon, one-sentence main point; a miss = rewrite (`gw-qa-gate` 9).
+10c. **Fact check (required, Nov 10):** run `gw-fact-check`; every claim, quote, example, and link traced to a source with an inline marker, or cut. Attach the claim table.
+11. **Clear not clever:** about 5th grade (FK aim 5); pass the "is the search over?" test. No AI tells or clichés.
 12. **Cluster links:** 5-10 in-body internal links, incl. the money page (e.g. /industries/fencing) and siblings.
-13. **CTA:** "Book a free demo" (/book-demo) near the top and at the end; FAQ, then Sources. Optional content upgrade (`gw-lead-magnets`, approved only). Every number has a stat-log ID; third-party stats are attributed.
+13. **CTA:** "Book a free demo" (/book-demo) near the top and at the end; FAQ, then Sources. Optional content upgrade (`gw-lead-magnets`, approved only). Every number has a stat-log ID; third-party stats name their source inline.
 14. **Publishing path** (blog/publishing-path.md): website first; Medium "Import a story" with the Published URL; Substack with canonical set plus "Originally published at <link>". Off-site links get UTMs (research/utm-link-strategy.md), logged in research/link-log.csv.
 
 ## Learning loop

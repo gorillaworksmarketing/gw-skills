@@ -8,7 +8,7 @@ description: >-
   the request doesn't name the skill.
 ---
 # GW LinkedIn editor
-Platform rules: blueprints/linkedin.md; patterns: blueprints/swipe/linkedin.md; voice: research/linkedin-voice-brennan.md; editor brief: team/editor-brief.md. Apply `gw-content-rules`, `gw-claims-guardrails`, then `gw-qa-gate`.
+Platform rules: blueprints/linkedin.md; patterns: blueprints/swipe/linkedin.md; voice: research/linkedin-voice-brennan.md; editor brief: team/editor-brief.md. Apply `gw-brand-guidelines`, `gw-content-rules`, `gw-claims-guardrails`, then `gw-qa-gate`.
 
 ## Steps
 1. **Line 1:** a real @Gorilla Works Marketing mention. Then a keyword-led hook that makes the topic clear in the first 1-2 lines.
@@ -17,9 +17,10 @@ Platform rules: blueprints/linkedin.md; patterns: blueprints/swipe/linkedin.md; 
 4. **Voice:** Brennan's analytical, confident, blunt style; hard numbers (approved or with V/S stat IDs only).
 5. **Bar:** a punchy two-sentence close, then ONE CTA (UTM /book-demo or a native ask).
 6. **Humanize:** the AI-pattern sweep (`gw-content-rules`); cut adverbs; vary rhythm; show emotion. Social tells to cut: one-sentence-per-line for the whole post (break lines where a person would pause), engagement bait ("Agree?", "Thoughts?", "Read that again"), manufactured vulnerability, emoji as bullets on every line.
-- **Rulings:** stats need no source in the post but must be logged (V/S IDs); no per-mailer price at all ($0.78, under $1, stamp comparison); Real Great Roofing exact quote only, no campaign details; lead-gen posts carry the /book-demo UTM; no hashtags or self-aware ranking lines (`gw-claims-guardrails`).
+- **Rulings:** stats name their source in the sentence (no source line) and are logged (V/S IDs); no per-mailer price at all ($0.78, under $1, stamp comparison); Real Great Roofing exact quote only, no campaign details; lead-gen posts carry the /book-demo UTM; no hashtags or self-aware ranking lines (`gw-claims-guardrails`).
 - **Links (required):** build every gorillaworksmarketing.com link per research/utm-link-strategy.md (utm_source=<platform>, utm_campaign=`<industry>_<type>`, utm_term=<slug>, unique utm_content, lowercase) and log each in research/link-log.csv.
 6b. **Coherence check (required, Nov 6 2026):** read the post top to bottom as the target owner. Each line follows from the one before; no contradicting its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
+6c. **Retry loop (Nov 13, `gw-brand-guidelines` §9):** run `brand_check.py --channel linkedin` plus an LLM judge (hallucination vs claim table, voice, persona reset, clichés). Any fail: auto-rewrite with the exact errors fed back, recheck; max 2 rewrites, then escalate to Brennan with all versions.
 7. Output the final post, a change log, and the `gw-qa-gate` result. Brennan posts manually; never publish.
 
 Skills to reference: `gw-lead-generation` (lead-magnet naming and CTA rules, clear not clever, Proof+Promise+Plan, reading-level check, one CTA, front-loaded hook).

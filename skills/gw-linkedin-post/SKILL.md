@@ -7,7 +7,7 @@ description: >-
   Use it even if the request doesn't name the skill.
 ---
 # GW LinkedIn post (framework)
-Platform rules: blueprints/linkedin.md; patterns: blueprints/swipe/linkedin.md. The copywriter delivers the framework; `gw-linkedin-editor` writes the final version.
+Platform rules: blueprints/linkedin.md; patterns: blueprints/swipe/linkedin.md. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel linkedin --draft` before handoff). The copywriter delivers the framework; `gw-linkedin-editor` writes the final version.
 
 ## Steps
 1. **Slot:** personal (2 a day) or company page (at least 1 a day, in Brennan's voice, a different angle from the same day's personal posts); Pulse is 1 a week on a BOFU keyword.

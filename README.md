@@ -16,6 +16,7 @@ The shared private skill library for Gorilla Works Marketing's GW bots. Bots sho
 | [facebook-group-post](skills/facebook-group-post/SKILL.md) | >- |
 | [gbp-post](skills/gbp-post/SKILL.md) | >- |
 | [gw-blog-to-social](skills/gw-blog-to-social/SKILL.md) | >- |
+| [gw-brand-guidelines](skills/gw-brand-guidelines/SKILL.md) | >- |
 | [gw-claims-guardrails](skills/gw-claims-guardrails/SKILL.md) | >- |
 | [gw-content-rules](skills/gw-content-rules/SKILL.md) | >- |
 | [gw-email-marketing](skills/gw-email-marketing/SKILL.md) | >- |

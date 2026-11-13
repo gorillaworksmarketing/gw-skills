@@ -7,7 +7,7 @@ description: >-
   if the request doesn't name the skill.
 ---
 # Social reply
-Platform rules: blueprints/x.md and blueprints/linkedin.md. Apply `gw-content-rules` and `gw-claims-guardrails`.
+Platform rules: blueprints/x.md and blueprints/linkedin.md. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel x-reply --draft` before handoff), `gw-content-rules` and `gw-claims-guardrails`.
 
 ## Steps
 1. **Targets:** niche-relevant posts (direct mail, home services marketing, local lead gen, ad costs); prioritize accounts outperforming their size and posts under 48 hours old (daily viral list). Volume follows the blueprint (X: 5-7 replies a day before originals).

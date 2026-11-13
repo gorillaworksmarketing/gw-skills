@@ -8,7 +8,7 @@ description: >-
   tactics only. Use it whenever links or mentions come up, even if unnamed.
 ---
 # Link building (GW Backlinks)
-Detail: blueprints/backlinks.md. Apply `gw-content-rules`, `gw-claims-guardrails`, `ai-search-visibility`.
+Detail: blueprints/backlinks.md. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel email --draft` before handoff), `gw-content-rules`, `gw-claims-guardrails`, `ai-search-visibility`.
 
 ## Hard rules
 - **No paid tactics** until Brennan says otherwise (Oct 14). Paid ideas go to the blueprint's parked list. Never PBNs, link swaps for ranking, image claiming, paid indexing, AI-written pitches.

@@ -7,7 +7,7 @@ description: >-
   the contractor groups".
 ---
 # Facebook group post
-Group list and rules: blueprints/facebook-groups.md. Community research comes from `community-mapping` (GW Social Research). Apply `gw-content-rules` and `gw-claims-guardrails`.
+Group list and rules: blueprints/facebook-groups.md. Community research comes from `community-mapping` (GW Social Research). Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel facebook --draft` before handoff), `gw-content-rules` and `gw-claims-guardrails`.
 
 ## Steps
 1. **Pick the group** from the blueprint's ranked list and confirm its rules (find/offer allowed, or no pitching at all).

@@ -8,7 +8,7 @@ description: >-
   doesn't name the skill.
 ---
 # GW lead generation (shared)
-Detail: blueprints/lead-generation.md. Never cite vendor stats. Apply `gw-content-rules`, `gw-claims-guardrails`. Goal: traffic, awareness, demo signups. Bots never send or post.
+Detail: blueprints/lead-generation.md. Never cite vendor stats. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel <ch> --draft` before handoff), `gw-content-rules`, `gw-claims-guardrails`. Goal: traffic, awareness, demo signups. Bots never send or post.
 **Needs Brennan's approval:** offers, guarantees, bonuses, scarcity, giveaways, free work, price changes. Approved offers: up to $500 off the first campaign, plus the four cold-email test arms (blueprints/cold-email.md). Approved proof only.
 
 ## Principles

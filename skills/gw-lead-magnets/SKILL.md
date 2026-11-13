@@ -9,7 +9,7 @@ description: >-
   if the request just says "what can we give away to get replies?".
 ---
 # GW lead magnets
-Detail: blueprints/lead-magnets.md. Offer test: blueprints/cold-email.md. Apply `gw-lead-generation`, `gw-content-rules`, `gw-claims-guardrails`. Bots propose and draft; Brennan approves and publishes.
+Detail: blueprints/lead-magnets.md. Offer test: blueprints/cold-email.md. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel <ch> --draft` before handoff), `gw-lead-generation`, `gw-content-rules`, `gw-claims-guardrails`. Bots propose and draft; Brennan approves and publishes.
 
 ## Why
 Most owners aren't ready for a call. A tangible thing they'd normally pay for earns a "yes" [V7]. If it solves the whole problem for free there is no next step; if it solves nothing real, nobody asks. Videos and audits that dump everything up front give no reason to book.

@@ -9,7 +9,7 @@ description: >-
   Use it even if the request just says "set up the follow-up emails".
 ---
 # GW email marketing (lifecycle and nurture)
-Detail: blueprints/email-lifecycle.md. Copy library: blueprints/email-copy-frameworks.md. Apply `gw-content-rules`, `gw-claims-guardrails`; edit with `cold-email-editing`, then `gw-qa-gate`. Bots draft; Brennan approves every send and every new sequence.
+Detail: blueprints/email-lifecycle.md. Copy library: blueprints/email-copy-frameworks.md. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel email --draft` before handoff), `gw-content-rules`, `gw-claims-guardrails`; edit with `cold-email-editing`, then `gw-qa-gate`. Bots draft; Brennan approves every send and every new sequence.
 
 ## Why
 An owner who said "not now" or signed up is worth ten strangers, and stays warm only if each email is useful. So each email does one job, gives value first, and stops when they act.

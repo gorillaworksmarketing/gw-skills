@@ -7,7 +7,7 @@ description: >-
   Reddit" or "find threads to answer".
 ---
 # Reddit comment
-Platform rules and subreddit map: blueprints/reddit.md (from research/brief-2026-10-14.md §4/§8). Apply `gw-content-rules` and `gw-claims-guardrails`.
+Platform rules and subreddit map: blueprints/reddit.md (from research/brief-2026-10-14.md §4/§8). Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel reddit --draft` before handoff), `gw-content-rules` and `gw-claims-guardrails`.
 
 ## Steps
 1. **Pick the sub** from the blueprint's allowed list. Skip any "never post" sub. Re-check the sidebar rules (Brennan's browser) before a first post.

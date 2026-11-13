@@ -7,7 +7,7 @@ description: >-
   name the skill.
 ---
 # GW blog to social (content waterfall)
-Sources: team/team-structure.md, blog/blog-rules.md (Syndication), blueprints/linkedin.md and x.md.
+Sources: team/team-structure.md, blog/blog-rules.md (Syndication), blueprints/linkedin.md and x.md. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel linkedin|x --draft` before handoff).
 
 ## Steps
 1. Take a published URL from team/handoffs.md. Only use pieces that are live.

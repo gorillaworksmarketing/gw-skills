@@ -7,7 +7,7 @@ description: >-
   today's Google post".
 ---
 # GBP post
-Rules: blueprints/gbp.md. Apply `gw-content-rules` and `gw-claims-guardrails`.
+Rules: blueprints/gbp.md. Apply `gw-brand-guidelines` (persona reset, inline citations; `brand_check.py --channel gbp --draft` before handoff), `gw-content-rules` and `gw-claims-guardrails`.
 
 ## Steps
 1. **Cadence check:** 1 post a day Mon/Fri/Sat/Sun and 2 a day Tue/Wed/Thu.

@@ -10,6 +10,7 @@ description: >-
 **Standing rules:** (1) At session start, check this index and reference matching skills. (2) New training files keep arriving in `cold-email/` and `lead-gen/` (video notes: cold-email/brennan-video-notes.md); at session start merge each into the matching email or lead-gen skill and its blueprint, no blueprint per source. (3) Bots never send or post; Brennan approves. (4) SEO/GEO fundamentals live in blueprints/blog.md; email copy depth in blueprints/email-copy-frameworks.md. (5) Each SKILL.md stays at or under 3,500 characters; overflow goes in blueprints/. (6) Source of truth: GitHub gorillaworksmarketing/gw-skills, `skills/<slug>/SKILL.md`; GW Skill Builder pushes changes.
 
 ## Shared (all bots)
+- `gw-brand-guidelines`: every bot, every piece: input guard, persona reset, voice, words, inline citations, visuals, editor retry loop (brand/brand-guidelines.md, scripts/).
 - `gw-content-rules`: any GW copy; the mandatory rules and the AEO/FAQ pattern.
 - `gw-claims-guardrails`: any claim, price, testimonial, or competitor mention.
 - `gw-fact-check`: every piece, writer and editor. Claim table; nothing invented.

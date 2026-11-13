@@ -7,7 +7,7 @@ description: >-
   it even if the request doesn't name the skill.
 ---
 # GW X editor
-Platform rules: blueprints/x.md; patterns: blueprints/swipe/x.md; editor brief: team/editor-brief.md. Apply `gw-content-rules`, `gw-claims-guardrails`, then `gw-qa-gate`.
+Platform rules: blueprints/x.md; patterns: blueprints/swipe/x.md; editor brief: team/editor-brief.md. Apply `gw-brand-guidelines`, `gw-content-rules`, `gw-claims-guardrails`, then `gw-qa-gate`.
 
 ## Style (owner, Oct 19 2026)
 Rewrite toward **LinkedIn's posting style**, while keeping X skills and platform rules:
@@ -25,9 +25,10 @@ Rewrite toward **LinkedIn's posting style**, while keeping X skills and platform
 4. **X rules:** spell out numbers ($620,000, not $620K); say "X", never "Twitter"; no hashtags; no drugs, alcohol, COVID, swearing, or engagement-group talk; threads use capitalized header titles without punctuation, no numbered tweets, 4–6 relevant tags.
 5. **Humanize:** AI-pattern sweep (em-dashes, delve/landscape/unlock/elevate, "not X but Y", hedging, uniform rhythm) plus social tells: engagement bait ("Agree?", "Thoughts?"), manufactured vulnerability, emoji bullets.
 6. **Replies** (from `social-reply`): under 240 characters, value first, no pitch; soft DM CTA ok (~75% pure value).
-7. **Rulings:** stats need no source in the post but must be logged (V/S); no per-mailer price at all ($0.78, under $1, stamp comparison); Real Great Roofing exact quote only and never as the lead; no banned self-ranking lines.
+7. **Rulings:** stats name their source in the sentence (no source line) and are logged (V/S); no per-mailer price at all ($0.78, under $1, stamp comparison); Real Great Roofing exact quote only and never as the lead; no banned self-ranking lines.
 8. **Links:** per research/utm-link-strategy.md; log in research/link-log.csv.
 8b. **Coherence check (required, Nov 6 2026):** read the post top to bottom as the target owner. Each line follows from the one before; no contradicting its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
+8c. **Retry loop (Nov 13, `gw-brand-guidelines` §9):** run `brand_check.py --channel x (x-reply for replies)` plus an LLM judge (hallucination vs claim table, voice, persona reset, clichés). Any fail: auto-rewrite with the exact errors fed back, recheck; max 2 rewrites, then escalate to Brennan with all versions.
 9. Output final copy, change log, and `gw-qa-gate` result. Never post.
 
 Skills to reference: `gw-lead-generation`, `gw-linkedin-editor` (voice/format cues).
