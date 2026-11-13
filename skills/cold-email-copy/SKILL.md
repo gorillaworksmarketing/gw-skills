@@ -9,13 +9,13 @@ description: >-
   leads".
 ---
 # Cold email copy (GW Email Copywriter)
-Full spec, examples, history: blueprints/cold-email.md (roofing landing-page format). Apply `gw-content-rules`, `gw-claims-guardrails`, `gw-fact-check`; hand drafts to `cold-email-editing`. Bots draft; Brennan sends.
+Spec, examples, pipeline: blueprints/cold-email.md. Apply `gw-content-rules`, `gw-claims-guardrails`, `gw-fact-check`; hand drafts to `cold-email-editing`. Bots draft; Brennan sends.
 
 ## Goal (roofing, every lead)
 One job: get the owner to click through to the personal landing page built for their company. No call booking, no "reply yes", no offer dollar amounts. Brennan owns the Ember HTML; you write only the copy. Never write the greeting, "Inside your page" checklist, channel strip, signature, or footer/opt-out (fixed in Ember).
 
 ## Before writing
-Brief from `cold-email-lead-research` with sourced hooks. **No hook or no usable Google review: hold the row and say why.**
+Brief from `cold-email-lead-research` with sourced hooks. **No hook, or Reviews says NO QUALIFYING REVIEW: hold the row and say why.**
 
 ## Where it goes
 Notion **Email Copy** (Cold Leads – Roofing), plain text, one labeled line per slot, in this order, spelled exactly:
@@ -23,10 +23,10 @@ Subject: / Preview: / Eyebrow: / Headline: / Review quote: / Review name: / Body
 
 ## Slot rules
 1. **Subject:** short, company name in it ("Built a page for Titan Roofing"). No fake Re:, urgency, pitch words.
-2. **Preview:** one line, under 90 characters, about the page. Default: "Your Google reviews, a sample mailer and the homes near your recent roofs."
+2. **Preview:** one line, under 90 characters. Default: "Your Google reviews, a sample mailer and the homes near your recent roofs."
 3. **Eyebrow:** "<Review Count> Google reviews at <Rating, 1 decimal>", matching the row's properties.
-4. **Headline:** 3-8 words, this company only, from a verified hook.
-5. **Review quote:** a real Google review of this company, word for word, from the row, its page body, or the company site where labeled as Google. Shorten only with "..."; never reword, fix typos, or merge reviews. 20 words or fewer. 5 stars, about 6 months old or newer, with proof of stars and date. Skip any review that mentions price, cost, or money.
+4. **Headline:** 3-8 words, from a verified hook.
+5. **Review quote:** a line from the row's **Reviews** field (5 stars, about 6 months or newer, no price, screenshot proof; Nov 13), word for word. Shorten only with "..."; never reword, fix typos, or merge. 20 words or fewer.
 6. **Review name:** exactly as the source shows it.
 7. **Body paragraph 1:** 25-40 words. One or two verified company details, then a line tying it to nearby homes that need the same work.
 8. **Body paragraph 2:** the spec's fixed sentence, only the short company name changes (blueprint).
@@ -36,12 +36,15 @@ Subject: / Preview: / Eyebrow: / Headline: / Review quote: / Review name: / Body
 ## Hard rules
 - No price or cost wording: no $0.78, "under $1", stamp comparisons, "$750 value", "$500 off". The only dollar figure is the proof line (approved quote).
 - Never write "thousands of other customers" (not approved).
-- No hashtags, em dashes, AI tells. 7th-grade level.
-- Draft only. Never set Status = Send or touch Ember send settings. Set Editing; touch no other workflow fields.
+- No hashtags, em dashes, AI tells; 7th-grade level.
+- Draft only. Never set Status = Send or touch Ember send settings. Set Editing; no other workflow fields.
 - Coherence check in template order. Attach a `gw-fact-check` claim table: count, rating, quote source (stars, date), each company fact, proof line.
 
+## 1-day rule (Nov 13)
+Ready for Summary rows are assigned, drafted, and edited within 1 day unless they fail (Claude/Replit 25 a day, Grok Bot the rest). Every run report lists rows past 1 day and why. Grok Bot checks daily and fixes stalls with the step's owner.
+
 ## Follow-ups and replies
-The spec covers email 1 only. Roofing follow-ups and positive-reply text: PENDING Brennan; ask before drafting. Replies are drafts; no auto-send until Brennan approves the reply agent. Other trades: legacy offer-arm flow (blueprint) until Brennan extends this format.
+Roofing follow-ups and positive-reply text: PENDING Brennan (spec covers email 1); ask first. Replies are drafts; no auto-send until Brennan approves it. Other trades: legacy offer-arm flow (blueprint) until Brennan extends this format.
 
 ## Learning loop
 Weekly with GW Analytics (blueprints/cold-email.md loop): page clicks and positive replies by headline type, hook, and review choice; Editor fixes. Log changes in its changelog.

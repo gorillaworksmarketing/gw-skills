@@ -11,7 +11,7 @@ description: >-
 Detail: blueprints/cold-email.md (Lead research). Free public sources only. Never invent or guess. Bots never send.
 
 ## Why
-The Copywriter is only as personal as your facts. Wrong, stale, or private-feeling facts cost trust and replies, so deliver fewer, verified, dated facts and leave the angle to the Copywriter.
+The Copywriter is only as personal as your facts. Deliver fewer, verified, dated facts; leave the angle to the Copywriter.
 
 ## Find
 1. **Mix:** roofing first (cold outreach stays roofing-first), then other trades per team/industry-mix.md. **One niche per list** [V7]; never mix trades.
@@ -20,23 +20,28 @@ The Copywriter is only as personal as your facts. Wrong, stale, or private-feeli
 4. **Lookalikes:** from best clients (Real Great Roofing) and positive repliers' traits [V4].
 5. **Email:** first@, first.last@, flast@ on the company domain; verify with free checkers within 7 days of sending; flag catch-alls; bounces under 2%.
 
+## Required review pull (Brennan, Nov 13; coded into the scrape, never skipped)
+Capture up to 3 Google Maps reviews per lead: 5 stars, about 6 months old or newer, no price mention, word for word, with a screenshot. One line each in the **Reviews** field:
+`★5 | name | relative date (captured date) | "text" | Maps URL | proof: screenshot path`
+None qualify: write `NO QUALIFYING REVIEW (checked date)`. Never leave it blank.
+
 ## 3-layer research (5-7 minutes)
 1. **Human:** role, time in role, career path, public talks, posts, quotes.
 2. **Company:** site, press, values, projects, awards, our history with them.
-3. **Space:** problems the niche already talks about, in their words (jobs, estimates, crews, Google profile) [V7]. Never invent a problem.
+3. **Space:** problems the niche already talks about, in their words [V7]. Never invent one.
 
 ## Account brief (one per lead)
 Fit, dated signal, priority (hot, warm, cold, skip), **3-5 hooks** each with source URL, date seen, and confidence, a suggested angle, what not to mention, and "hook found: yes/no".
 - **Allowed:** professional or clearly public business facts (service area, a posted project, a review reply, an award, a podcast, a public quote, a listed chamber or alumni tie).
 - **Never:** private-feeling items, sensitive topics (health, family, religion, politics, finances, age), guesses, or the business's own numbers quoted back as fact when sources conflict (mark [U]).
-- **So-what check:** each hook should connect to their lead flow or neighbors around jobs. If none does, the hook is weak.
+- **So-what check:** each hook ties to their lead flow or neighbors around jobs, or it's weak.
 - **No strong hook: HOLD the lead.** About 20 deeply researched leads a week beats 100 thin ones.
 
 ## CRM fields
 As in the blueprint, incl. verify date, signal date, hook URLs, contact source URL and date (for "how did you get my email?"), hold reason, unsubscribe flag, offer arm, problem, last campaign date (a new problem and offer can run about a month later [V7]), utm_campaign `<industry>_<type>`.
 
 ## Output
-Account briefs, CRM rows, and a hold list with reasons.
+Account briefs, CRM rows, and a hold list with reasons. Once Hunter verifies a row and it reaches Ready for Summary, it's assigned, drafted, and edited within 1 day unless it fails (blueprint).
 
 ## Learning loop
 Weekly with GW Analytics: which hook types and signals earned positive replies. Log dated changes in the blueprint changelog.
