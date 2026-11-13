@@ -26,7 +26,7 @@ Subject: / Preview: / Eyebrow: / Headline: / Review quote: / Review name: / Body
 2. **Preview:** one line, under 90 characters. Default: "Your Google reviews, a sample mailer and the homes near your recent roofs."
 3. **Eyebrow:** "<Review Count> Google reviews at <Rating, 1 decimal>", matching the row's properties.
 4. **Headline:** 3-8 words, from a verified hook.
-5. **Review quote:** only from a line in the row's **Reviews** field (Google Maps reviews only; Nov 13), word for word. Shorten only with "..."; never reword, fix typos, or merge. 20 words or fewer.
+5. **Review quote:** only from a ★5 line in the row's **Reviews** field (Google Maps; usually the first), word for word. Shorten only with "..."; never reword, fix typos, or merge. 20 words or fewer.
 6. **Review name:** exactly as the source shows it.
 7. **Body paragraph 1:** 25-40 words. One or two verified company details, then a line tying it to nearby homes that need the same work.
 8. **Body paragraph 2:** the spec's fixed sentence, only the short company name changes (blueprint).
@@ -34,7 +34,7 @@ Subject: / Preview: / Eyebrow: / Headline: / Review quote: / Review name: / Body
 10. **CTA:** `See my page -> ` + the row's Prospect Page URL, else `{{page_link}}`. Never invent or edit a URL; no google.com/url wrappers.
 
 ## Hard rules
-- No price or cost wording: no $0.78, "under $1", stamp comparisons, "$750 value", "$500 off". The only dollar figure is the proof line (approved quote).
+- No price or cost wording: no $0.78, "under $1", stamp comparisons, "$750 value", "$500 off". Only dollar figure in our words: the proof line. The verbatim review quote is exempt.
 - Never write "thousands of other customers" (not approved).
 - No hashtags, em dashes, AI tells; 7th-grade level.
 - Draft only. Never set Status = Send or touch Ember send settings. Set Editing; no other workflow fields.

@@ -17,11 +17,11 @@ One job: a click to their personal page. Specific and true: leave it. Generic or
 
 ## Pass 1: hard fails (any one = FAIL, list the fix)
 - Labeled lines missing, out of order, misspelled, or extra (Subject, Preview, Eyebrow, Headline, Review quote, Review name, Body paragraph 1-2, Proof line, CTA). Any greeting, checklist, channel strip, signature, or footer in the copy (Ember has them).
-- **Review quote:** not from a **Reviews** field line (Google Maps only), or not matching it and its screenshot word for word (cuts only with "..."). Screenshot listing name not the row's company. Not 5 stars, older than about 6 months, or mentions price. Reviewer name not exact. NO QUALIFYING REVIEW: hold.
-- Eyebrow matches neither the row's Review Count and Rating nor the live Maps values in the Reviews capture (rating 1 decimal). If those differ, note it; stale row numbers alone don't fail.
+- **Review quote:** not from a **Reviews** field line (Google Maps only), or not matching it and its screenshot word for word (cuts only with "..."). Screenshot listing name not the row's company. Not 5 stars or not directly about the company (age and price mentions are fine). Reviewer name not exact. NO QUALIFYING REVIEW: hold.
+- Eyebrow doesn't match the Review Count and Rating fields, which the lookup refreshes (rating 1 decimal). Row scraped before the refresh: note it, not a fail.
 - A company fact unsourced or not matching.
 - Proof line not exactly `Real Great Roofing: "$90,000 in leads from just one mail drop."`, or details or stats added.
-- Any other dollar amount or price word: $0.78, "under $1", stamp comparison, "$750 value", "$500 off". Guarantees, ROI promises. Write `[NEED: ...]`.
+- Any other dollar amount or price word in our copy (review quote exempt): $0.78, "under $1", stamp comparison, "$750 value", "$500 off". Guarantees, ROI promises. Write `[NEED: ...]`.
 - "Thousands of other customers" or any unapproved claim.
 - CTA not `See my page -> ` + the row's Prospect Page URL or `{{page_link}}`. Invented or edited URL, google.com/url wrapper, or a second ask (call, "reply yes").
 - Fake Re:/Fwd: subject, urgency, pitch words. Any em dash, hashtag.
@@ -31,7 +31,7 @@ One job: a click to their personal page. Specific and true: leave it. Generic or
 Subject short with the company name. Preview one line under 90 characters. Headline 3-8 words. Body paragraph 1 is 25-40 words: verified details, then nearby homes needing the same work. Body paragraph 2 is the spec's fixed sentence with the short company name.
 
 ## Pass 3: Seven Sweeps for email
-1. **Clarity:** 7th-grade level; scannable on a phone.
+1. **Clarity:** 7th grade; phone-scannable.
 2. **Voice:** Brennan, peer to peer.
 3. **So what:** each slot ties to their jobs.
 4. **Prove it:** each claim backed or cut.
@@ -52,7 +52,7 @@ Ready for Summary rows are edited within 1 day unless they fail. Every run repor
 Roofing follow-ups and positive-reply text: PENDING Brennan. Replies stay drafts; no auto-send until he approves it. Other trades: legacy offer-arm checks in the blueprint.
 
 ## Output
-Edited copy, change log, claim table, four scores, PASS or FAIL, held rows with reasons.
+Edited copy, change log, claim table, scores, PASS/FAIL, held rows and reasons.
 
 ## Learning loop
 Weekly: log repeat fixes in the blueprint. Compare scores to real page clicks and positive replies; if they disagree, recalibrate and log it.

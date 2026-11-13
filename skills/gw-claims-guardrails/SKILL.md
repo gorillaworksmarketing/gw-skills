@@ -16,7 +16,7 @@ Sources: knowledge-base/00-source-of-truth.md §0/§0A/§5/§6 and the Social Ed
 - Verified USPS facts: 51% of ad mail is read; 64% vs 36% read rate (businesses the household already uses vs prospects); mail volume down 40% from 2015 to 2025; EDDM covers 200-5,000 pieces per ZIP per day.
 
 ## Allowed
-- **Prices: hard ban (Nov 4, 2026).** No price or cost in any new content, anywhere ("$0.78", "as low as", "under $1", stamp comparisons, per-piece math, plan prices). Approved offer values below stay as worded. Never re-edit already-posted content for this.
+- **Prices: hard ban (Nov 4, 2026).** No price or cost in any new content, anywhere ("$0.78", "as low as", "under $1", stamp comparisons, per-piece math, plan prices). Approved offer values below stay as worded. Never re-edit already-posted content for this. Exempt: a verbatim Google review quote in roofing cold email (Brennan, Nov 13).
 - Real Great Roofing: the exact quote only, "$90,000 in leads from just one mail drop", as one client's result, with **no campaign details**.
 - "10 years of experience" (USA-based designers).
 - Confident descriptions of real features (personalization, QR tracking, neighborhood targeting, full-service design/print/mail); unmeasurable hype and opinion.
