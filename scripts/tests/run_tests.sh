@@ -1,8 +1,9 @@
 #!/bin/bash
+# All samples are fictional (no prospect or client data; the repo must not hold Cold Leads records).
 # Expected: s1, s2, s4, s5 pass (exit 0); s3 fails (exit 1). input_guard: brief allow (0), web injection block (2), off-topic review (1).
 cd "$(dirname "$0")"; B=../brand_check.py; G=../input_guard.py; ok=1
 t(){ "$@" >/dev/null; echo $?; }
-[ "$(t python3 $B --channel cold-email --file s1-cold-email-envision.txt)" = 0 ] || { echo FAIL s1; ok=0; }
+[ "$(t python3 $B --channel cold-email --file s1-cold-email-sample.txt)" = 0 ] || { echo FAIL s1; ok=0; }
 [ "$(t python3 $B --channel facebook --file s2-facebook-door-hangers.txt)" = 0 ] || { echo FAIL s2; ok=0; }
 [ "$(t python3 $B --channel linkedin --file s3-bad-linkedin.txt)" = 1 ] || { echo FAIL s3; ok=0; }
 [ "$(t python3 $B --channel blog --draft --file s4-blog-draft-cited.md)" = 0 ] || { echo FAIL s4; ok=0; }
