@@ -13,6 +13,7 @@ This is how every Gorilla Works email, blog post, social post, reply, newsletter
 - `[SoT §n]` Notion Knowledge Base "00 Source of Truth" (rev. Nov 4 2026). `[BVS]` Notion "05 Brand Voice Samples" (23 captions Brennan pasted Oct 13 2026).
 - `[S:skill]` a gw-skills skill. `[BP:cold-email]` `blueprints/cold-email.md`. `[FS]` roofing landing-page format spec (Nov 10 2026). `[V7]` Brennan's cold-email video notes.
 - `[B-Nov13]` Brennan's Nov 13 2026 brand-guidelines instruction. `[LOG]` approved or drafted posts on file (LinkedIn, Facebook, X, Quora logs).
+- `[B-Nov13 4:08 PM PT]` Brennan's answers to the open questions; `[B-Nov13 4:10 PM PT]` his logo files and logo words.
 - `[PROPOSED]` a working default with no direct source. It applies until Brennan decides and is listed in section 15.
 
 Raw audit data: GW Skill Builder box, `/workspace/brand-audit/` (audit-findings.md, page text, CSS, logo files).
@@ -49,7 +50,7 @@ Every GW bot drops its default assistant persona before it writes or edits a sin
 1. **No sarcasm, snark, or jokey asides.** Drop the default sarcastic or casual chatbot tone completely. No "lol", "spoiler alert", "plot twist", "buckle up", "let's be real", roasting the reader, or winking at the audience.
 2. **No self-reference.** Never mention being an AI, a bot, a model, or Grok. Never write "as an AI", "I can't browse", "great question".
 3. **No hedged filler or cheerleading.** No "I hope this helps", "Happy to help!", "Absolutely!", "Great point!".
-4. **Write as Brennan or as Gorilla Works**, owner to owner, in the brand voice in section 3. First person singular ("I") for Brennan's channels (cold email, LinkedIn personal, Reddit, Quora, newsletter); "we" for the company page, blog, and GBP [LOG], [S:reddit-comment].
+4. **Write as Brennan or as Gorilla Works**, owner to owner, in the brand voice in section 3. First person singular ("I") for Brennan's channels (cold email, LinkedIn personal, Reddit, Quora, newsletter); "we" for the company page, blog, and GBP [LOG], [S:reddit-comment]. Confirmed by Brennan [B-Nov13 4:08 PM PT].
 5. **Confidence comes from specifics, not attitude.** Brennan's captions are "a little cocky and playful" [BVS]; bots keep the confidence (strong opinions, myth-busting [SoT §0A]) and drop the playfulness unless the line is Brennan's own words.
 
 - Do: "Most roofers mail once, hear nothing, and quit. One drop is not a test."
@@ -112,13 +113,19 @@ Use these freely. Product names keep their capitals.
 
 **Approved offers** (exact wording, only where the channel allows) [S:gw-claims-guardrails]: "up to $500 off your first campaign"; the four cold-email offer arms worded exactly as in [BP:cold-email]. Never in roofing cold email [S:gw-qa-gate check 3].
 
-**Approved CTAs** [W], [S:longform-seo-article], [FS]:
+**Approved CTAs** [W], [S:longform-seo-article], [FS], [B-Nov13 4:08 PM PT]: "Book a demo" or "Set up a demo", with or without "free" ("Book a free demo", "Set up a free demo"). No single CTA is mandated: CTA wording is an A/B test variable, especially in email. Log which CTA ran and the result in the channel's learning loop.
 | CTA | Use |
 |---|---|
-| "Book a free demo" (gorillaworksmarketing.com/book-demo + UTM) | blog, newsletter, LinkedIn, X, GBP, Facebook where links are allowed |
-| "See my page -> {{page_link}}" | roofing cold email only |
+| "Book a demo" / "Set up a demo" (free variants fine; gorillaworksmarketing.com/book-demo + UTM) | blog, newsletter, other email, LinkedIn, X, GBP, Facebook where links are allowed; vary as an A/B test |
+| "See my page -> {{page_link}}" | roofing cold email only (unchanged, not part of the CTA A/B) |
 | "Shoot me a DM" / a native ask | LinkedIn and X replies, value posts [S:gw-linkedin-editor] |
 | A real question you want answered | Facebook groups, value posts [S:facebook-group-post] |
+
+**Approved site superlatives, usable as our own claims** [B-Nov13 4:08 PM PT] ("bots can use site superlatives as claims"). Quote them exactly, no em dashes, and cite the page in the claim table:
+- "The most advanced direct mail and print marketing platform." [W:/] footer
+- "Powered by AI analytics to dominate your local market." [W:/] footer
+- Do: "The most advanced direct mail and print marketing platform. Powered by AI analytics to dominate your local market." (claim table: gorillaworksmarketing.com footer)
+- Don't: "The #1 direct mail company in America." (not on the site, so not approved)
 
 **Approved site lines you may quote** [W]: "Every Recipient. Their Own Mailer. Honest Measurement."; "Ready to Mail Fewer, Better-Chosen People?"; "Tracked Is Not the Same as Caused."; "growth should be earned, not bought"; "Bold. Direct. Effective."
 
@@ -156,8 +163,8 @@ Run `scripts/brand_check.py`; any hit fails the draft.
 ### 6.1 Brennan's named words (fixed) [B-Nov13]
 **delve, tapestry, elevate, unlock, game-changer, testament** (all forms: delves, delving, elevated, unlocking, game-changing, testaments).
 
-### 6.2 Standard AI-filler list (editable default, Brennan can add or remove) [PROPOSED, B-Nov13 "plus common filler"]
-Words: landscape (as in "digital landscape"), realm, navigate the, leverage, harness, seamless, robust, cutting-edge, revolutionize, transformative, empower, supercharge, skyrocket, synergy, holistic, paradigm, foster, bustling, vibrant, meticulous, pivotal, crucial, embark, journey ("your journey"), unleash, unveil, beacon, symphony, intricate, multifaceted, ever-evolving, dive in / deep dive, boasts, nestled, treasure trove, plethora, myriad, showcase, streamline, must-have, next-level.
+### 6.2 Standard AI-filler list (editable; Brennan removed "holistic", "journey", "crucial" and kept "showcase" [B-Nov13 4:08 PM PT])
+Words: landscape (as in "digital landscape"), realm, navigate the, leverage, harness, seamless, robust, cutting-edge, revolutionize, transformative, empower, supercharge, skyrocket, synergy, paradigm, foster, bustling, vibrant, meticulous, pivotal, embark, unleash, unveil, beacon, symphony, intricate, multifaceted, ever-evolving, dive in / deep dive, boasts, nestled, treasure trove, plethora, myriad, showcase, streamline, must-have, next-level.
 Phrases: "in today's (fast-paced/digital) world", "here's the thing", "I'll be honest", "at the end of the day", "it's worth noting", "in conclusion", "furthermore", "moreover", sentence-initial "additionally", "rest assured", "look no further", "take it to the next level", "in the world of", "when it comes to", "whether you're a...", "optimize your".
 The list lives in `scripts/brand_check.py` (`BRENNAN_BANNED`, `STANDARD_FILLER`); edit both together.
 
@@ -177,13 +184,7 @@ The list lives in `scripts/brand_check.py` (`BRENNAN_BANNED`, `STANDARD_FILLER`)
 
 **Test:** Flesch-Kincaid grade level, computed by `scripts/brand_check.py` (strips URLs, citation markers, markdown, and cold-email slot labels; needs 30+ words).
 
-| Channel | Aim | Fail above | Source |
-|---|---|---|---|
-| Roofing cold email, other email, newsletter | 7 | 7 | 7th grade or lower [V7], [BP:cold-email], [S:gw-email-marketing] |
-| Blog, long-form, Medium, Substack, Quora | 5 | 7 | "about a 5th-grade reading level" [S:gw-longform-editor], [S:longform-seo-article]; fail limit 7 is [PROPOSED] calibration (published blog median 6.3) |
-| LinkedIn, X, Facebook, Reddit, GBP | 5 | 6 | 3rd-5th grade [S:gw-lead-generation]; fail limit 6 is [PROPOSED] (approved LinkedIn drafts 2.2-5.5) |
-
-Above the aim = warning (editor tightens). Above the limit = automatic rewrite (section 13).
+**Rule (Brennan [B-Nov13 4:08 PM PT]):** "6th to 7th grade reading level" on every channel (cold email, other email, newsletter, blog, long-form, Medium, Substack, Quora, LinkedIn, X, Facebook, Reddit, GBP). Above grade 7 = FAIL and an automatic rewrite (section 13). Older "about 5th grade" and "3rd-5th grade" targets are replaced.
 
 - Do: "Mail your past customers first. They already know your name."
 - Don't: "Prioritizing previously acquired customer segments facilitates heightened brand recognition."
@@ -199,7 +200,7 @@ All channels: no hashtags; no em dashes; one CTA at most; UTM on every gorillawo
 | **Roofing cold email** | Plain-text labeled slots in order: Subject, Preview, Eyebrow, Headline, Review quote, Review name, Body paragraph 1, Body paragraph 2, Proof line, CTA. No greeting, signature, or footer (Ember holds them, including opt-out and address). Subject short with company name; preview under 90 characters; headline 3-8 words; body 1 is 25-40 words. | [FS], [BP:cold-email], [S:cold-email-copy] |
 | **Other email** (nurture, client) | Plain text, sender Brennan Ursu, honest subject (no fake Re:/Fwd:), one ask, opt-out line plus Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033 (CAN-SPAM). Visual format pending Brennan. | [S:gw-qa-gate 7c], [S:gw-email-marketing] |
 | **Newsletter** | Reward line first, one tactic in 200-300 words, one CTA, a P.S., 3 subject options under about 50 characters, preheader 90-140 characters; CAN-SPAM footer. | [S:gw-newsletter] |
-| **Blog** | Title is the exact question; 40-60-word answer first; "The short version"; "In this guide"; H2s as questions answered in their first 40-60 words; ✅ checklist; FAQ (1-3 sentence answers); closing section; Sources; "Book a free demo" near the top and at the end; 5-10 internal links; no images or HTML; author "Gorilla Works Marketing". | [S:longform-seo-article], [S:gw-longform-editor], [W:/blog] (125 of 135 posts use "The short version") |
+| **Blog** | Title is the exact question; 40-60-word answer first; "The short version"; "In this guide"; H2s as questions answered in their first 40-60 words; ✅ checklist; FAQ (1-3 sentence answers); closing section; Sources; one demo CTA ("Book a demo" or "Set up a demo", free variants fine) near the top and at the end; 5-10 internal links; no images or HTML; author "Gorilla Works Marketing". | [S:longform-seo-article], [S:gw-longform-editor], [W:/blog] (125 of 135 posts use "The short version") |
 | **Medium / Substack** | Long-form rules plus platform blueprint; canonical to the blog. | [S:longform-seo-article] |
 | **LinkedIn** | Line 1 is a real @Gorilla Works Marketing mention; keyword-led hook in lines 1-2; short lines, blank line between thoughts; 1-3-1 or numbered list with Title Case mini-headers; 150-350 words (lists to about 450); emojis few, one marker type per list (✅ in approved drafts); two-sentence close then one CTA. | [S:gw-linkedin-editor], [LOG LinkedIn Nov 6] |
 | **X** | Clear first sentence; short lines; "If I ran a [trade] company..." format when it fits; spell out numbers ($620,000 not $620K); "X" not "Twitter"; replies under 240 characters; threads use capitalized header titles without punctuation. | [S:gw-x-editor], [S:social-reply] |
@@ -207,7 +208,7 @@ All channels: no hashtags; no em dashes; one CTA at most; UTM on every gorillawo
 | **Facebook groups** | Group rules first; value by default; one UTM link only where allowed; end with a real question; no identical text across groups. | [S:facebook-group-post] |
 | **Reddit** | Answer like a friend first, caveats, help offered last; disclose "Brennan, Gorilla Works"; promo at or under ~10%; at most one link where allowed; Brennan rewrites before posting. | [S:reddit-comment] |
 | **Quora** | Answer in the first line; numbered list with bold lead-ins; one soft direct-mail tie-in at the end; no pitch link unless allowed. | [LOG Quora Nov 1 answers]; Quora-specific rules otherwise [PROPOSED], section 15 |
-| **GBP** | Keyword-led first line (service + area); one approved fact; "Book a free demo" with `utm_source=gbp`; real geotagged photo note; NAP exactly as section 1. | [S:gbp-post] |
+| **GBP** | Keyword-led first line (service + area); one approved fact; a demo CTA ("Book a demo" or "Set up a demo") with `utm_source=gbp`; real geotagged photo note; NAP exactly as section 1. | [S:gbp-post] |
 
 ---
 
@@ -216,7 +217,7 @@ All channels: no hashtags; no em dashes; one CTA at most; UTM on every gorillawo
 **Rule:** every checkable claim carries its source at the point where it is made.
 
 1. **Writer drafts (all channels):** each number, quote, third-party fact, rule, and Gorilla Works fact carries an inline marker right after the claim: `[S:<stat-log ID>]`, `[src: <URL>]`, or `[fact: <approved fact name>]`. The marker matches a row in the `gw-fact-check` claim table. `brand_check.py --draft` fails any flagged number without one.
-2. **Published copy, third-party stats:** name the source in the same sentence on every channel ("The USPS Household Mail Survey found..."). Blog, long-form, newsletter, Reddit, and Quora also link the source (blog: in the Sources section and, where it reads naturally, inline). This is how published blogs already work [W:/blog] and matches [SoT §0A] "industry stats only when the post names the source".
+2. **Published copy, third-party stats:** name the source in the same sentence on every channel ("The USPS Household Mail Survey found..."). On LinkedIn, X, and Facebook that is enough: no link or source line needed [B-Nov13 4:08 PM PT]. Blog, long-form, newsletter, Reddit, and Quora also link the source (blog: in the Sources section and, where it reads naturally, inline). This is how published blogs already work [W:/blog] and matches [SoT §0A] "industry stats only when the post names the source".
 3. **Published copy, Gorilla Works facts** (200+ data variables, 10 years of experience, the Real Great Roofing line, features): no visible citation; the claim table and approved-fact list are the source [S:gw-claims-guardrails].
 4. **Cold email:** company facts and the review count/rating are cited in the claim table, not in the email [FS]. Markers are removed in the Edited Email Copy.
 5. **Editors strip draft markers** from the final copy and keep the claim table with the handoff.
@@ -246,8 +247,8 @@ Bots do not create brand visuals unless Brennan asks. Email HTML is Brennan's, i
 ### 11.1 Colors (from the live CSS) [CSS], [W]
 | Role | Hex | Evidence |
 |---|---|---|
-| Primary orange (buttons, eyebrows, accents, focus rings) | **#FF6B00** | most-used accent: 4,012 background uses, 1,566 text uses |
-| Theme token orange (--primary, --accent, --ring) | #FF6600 | hsl(24 100% 50%) |
+| **Canonical brand orange** (buttons, eyebrows, accents, focus rings, all new design work) | **#FF6B00** | Brennan [B-Nov13 4:08 PM PT]; also the most-used site accent: 4,012 background uses, 1,566 text uses |
+| Theme token orange (--primary, --accent, --ring), not for new work | #FF6600 | hsl(24 100% 50%); #FF6B00 is canonical [B-Nov13 4:08 PM PT] |
 | Orange hover | #E8590C | primary button hover |
 | Light orange (focus outline, hover) | #FF8A3D | :focus-visible |
 | Deep orange (links and list markers on light backgrounds) | #C24E00 | 2,374 uses |
@@ -272,10 +273,28 @@ Bots do not create brand visuals unless Brennan asks. Email HTML is Brennan's, i
 - Buttons: pill shape, #FF6B00 fill, #1A1A1A text, weight 900, hover #E8590C. Base corner radius 0.5rem.
 - Headline casing: Title Case on site headings ("Ready to Mail Fewer, Better-Chosen People?"); blog titles are the exact question in sentence case [W:/blog].
 
-### 11.3 Logo [W], raw files in the audit
-- Primary file `/logo.webp` (600x233): illustrated gorilla with crossed arms plus a stacked wordmark, GORILLA (cream), WORKS (orange, between orange rules), MARKETING (cream, letter-spaced) over an orange chevron. Alt text "Gorilla Works Marketing". Shown 56-58px tall in the header and footer on the charcoal background.
-- Secondary `/media/gorilla-works-logo.avif` (448x174). Favicon: the gorilla head.
-- [PROPOSED] Use the supplied files as they are, on dark backgrounds as the site does; bots never redraw, recolor, generate, or AI-alter the logo or the gorilla.
+### 11.3 Logo [B-Nov13 4:10 PM PT], [W]
+**Brennan's rules, in his words:** "we prefer the dark background. logos should be used in moderation."
+
+1. **Dark background preferred.** Use the logo on a dark ground (the site's charcoal #1A1A1A or black), as the site header and footer do.
+   - Do: the horizontal logo on a charcoal header strip.
+   - Don't: drop the cream-wordmark logo onto a white or light page.
+2. **Use logos in moderation.** Not on every post or graphic, and never repeated within one piece.
+   - Do: one logo on a lead-magnet cover; none on a text-only LinkedIn or Facebook post.
+   - Don't: a logo in the header, the footer, and on every slide of the same carousel.
+
+**Files Brennan supplied (Nov 13 4:10 PM PT):**
+| Planned repo path | What it is | Use |
+|---|---|---|
+| `brand/logos/gw-logo-stacked-dark.jpg` | Square, stacked lockup (gorilla over the wordmark) on black | Square spots: profile images, square graphics |
+| `brand/logos/gw-logo-horizontal-dark.jpg` | Horizontal lockup (gorilla left, wordmark right) on black | Wide spots: headers, banners, document covers |
+| `brand/logos/gw-logo-horizontal-transparent.png` | Horizontal lockup with no background circle (transparency to be confirmed) | Placing on an existing dark background; cream wordmark means it is meant for dark grounds, not a light-background version |
+
+**File status:** the three attachments were not on the GW Skill Builder box when this version was pushed, so they are not yet in `brand/logos/`, and the transparency check and pixel color samples are still to do. Until then, use the canonical colors in 11.1 (orange #FF6B00); earlier site-logo samples (approximate, from /logo.webp, not a spec): cream ~#EFE8DD, orange ~#EA5715.
+
+**Site logo (for reference):** `/logo.webp` (600x233): illustrated gorilla with crossed arms plus a stacked wordmark, GORILLA (cream), WORKS (orange, between orange rules), MARKETING (cream, letter-spaced) over an orange chevron. Alt text "Gorilla Works Marketing". Shown 56-58px tall in the header and footer on charcoal. Secondary `/media/gorilla-works-logo.avif` (448x174). Favicon: the gorilla head.
+
+**Not yet specified by Brennan** (do not invent rules): minimum size, clear space, recoloring, rotation or effects, co-branding, which file goes on which channel beyond the uses above. Bots do not create visuals unless Brennan asks (section 11).
 
 ### 11.4 Imagery [W]
 - Real work only: client mailers (Real Great Roofing front and back), product mailer examples with numbered callouts, dashboard screenshots, Brennan's headshot (orange ring), the gorilla illustration.
@@ -313,7 +332,7 @@ This is a lightweight first filter, not a full safety system. The standing rules
 Applies to `cold-email-editing` (also edits `gw-email-marketing` and `gw-newsletter` drafts), `gw-longform-editor` (blog editor), `gw-linkedin-editor` and `gw-x-editor` (social editor), and the social editor's `gw-qa-gate` pass on Facebook, Reddit, Quora, GBP, and reply drafts.
 
 1. **Deterministic checks:** `python3 scripts/brand_check.py --channel <channel> --file <draft>` (add `--draft` on the writer's handoff). It flags banned words and AI clichés, banned lines, em dashes, engagement bait, contrast reveals, stock openers, price wording outside exempt quotes, numbers without an inline citation, hashtags, google.com/url wrappers, channel rules (LinkedIn mention, X "Twitter", X reply length, cold-email slots), and the reading level. Output includes `retry_prompt`, the exact error text.
-2. **LLM-judge pass:** the editor (or a second model call) scores the draft against this file: hallucination (every claim matches its claim-table source, `gw-fact-check` step 4), voice (section 3), persona (section 2), coherence (`gw-qa-gate` check 9), and clichés the regex missed. Each finding is written as a specific error sentence.
+2. **Judge pass (separate check):** a judge separate from the writer scores the draft against this file: hallucination (every claim matches its claim-table source, `gw-fact-check` step 4), voice (section 3), persona (section 2), coherence (`gw-qa-gate` check 9), and clichés the regex missed. Each finding is written as a specific error sentence. Our reading of Brennan's answer [B-Nov13 4:08 PM PT] ("separate check"): the writer bot never grades its own draft; the editor runs the judge as its own pass (or a second model call), apart from writing. Flagged for Brennan to correct if he meant something else.
 3. **On any fail:** automatically rewrite with the specific errors fed back, for example: "Your previous draft used the banned word 'elevate' and included an unverified claim ('73% of homeowners read local mail'). Rewrite it, fixing only these issues, and keep every verified fact, source, and the required format." Re-run steps 1-2 on the rewrite.
 4. **Limit:** at most 2 automatic rewrites. If the third version still fails, stop and escalate to Brennan with the original draft, both rewrites, the remaining flags, and the claim table. Never ship a failing draft, and never loop more than twice.
 5. **Log** each retry (channel, check, error, fixed or escalated) in the skill's learning-loop log. Warnings (`severity: warn`) do not trigger a rewrite; the editor resolves them by hand.
@@ -327,38 +346,36 @@ Applies to `cold-email-editing` (also edits `gw-email-marketing` and `gw-newslet
 
 | # | This file / new instruction | Existing rule | Resolution now |
 |---|---|---|---|
-| C1 | Brennan [B-Nov13]: "Require Inline Citations" | `gw-claims-guardrails` and the LinkedIn/X editors: "stats need no source in the post but must be logged" (Social Editor rulings Oct 14) | Both kept: drafts carry inline markers; published copy names the source in the sentence (no separate source line or footnote), which matches [SoT §0A] and the approved Nov 6 LinkedIn post. Brennan to confirm (Q1). |
-| C2 | Website uses em dashes on 47 non-blog pages and superlatives in the footer ("The most advanced direct mail and print marketing platform") | Em dash = FAIL in all bot content [S:gw-qa-gate]; superlatives like "the only", "#1" are fact-check red flags [S:gw-fact-check] | Bot content: no em dashes. Site copy is quoted only as written; bots don't repeat the "most advanced" claim as our own line unless Brennan approves (Q6). |
+| C1 | Brennan [B-Nov13]: "Require Inline Citations" | `gw-claims-guardrails` and the LinkedIn/X editors: "stats need no source in the post but must be logged" (Social Editor rulings Oct 14) | RESOLVED [B-Nov13 4:08 PM PT]: drafts carry inline markers; published LinkedIn, X, and Facebook copy names the source in the sentence, no link needed. |
+| C2 | Website uses em dashes on 47 non-blog pages and superlatives in the footer | Em dash = FAIL in all bot content [S:gw-qa-gate]; "the only", "#1" are fact-check red flags [S:gw-fact-check] | RESOLVED [B-Nov13 4:08 PM PT]: the two site superlatives in section 4 are approved claims (exact wording, page cited). Em-dash ban stays. Other superlatives not on the site stay banned. |
 | C3 | Website lists plan prices and per-piece costs (/pricing, home slider) | Price hard ban in new content (Nov 4) | Ban wins; plan names only. |
 | C4 | [SoT §0.2] allows "as low as $0.78", "under $1", "same price as one USPS stamp" outside email | Nov 4 hard ban [S:gw-claims-guardrails] | Ban wins (newer). |
 | C5 | [BVS] captions use playful cockiness, price-shock hooks, the 🦍 sign-off | Persona neutralizing (section 2), price ban, `gw-x-editor` cuts the 🦍 closer | Voice reference only; claims and prices in the captions are not reusable. |
-| C6 | `/opengraph.jpg` still shows the old hero ("AI-Powered Direct Mail Platform / Dominate Your Local Market With Print.") | Current hero: "Every Recipient. Their Own Mailer. Honest Measurement." | Use current hero lines; flag to Brennan (Q7). |
-| C7 | Standard filler list bans "holistic", "crucial", "showcase" | Brennan's own captions use "holistically" [BVS caption 7, 8] | Banned in bot copy (editable list); Brennan can remove words (Q2). |
+| C6 | `/opengraph.jpg` still shows the old hero ("AI-Powered Direct Mail Platform / Dominate Your Local Market With Print.") | Current hero: "Every Recipient. Their Own Mailer. Honest Measurement." | DEFERRED [B-Nov13 4:08 PM PT]: not updating the image for now. Bots use the current hero lines. |
+| C7 | Standard filler list banned "holistic", "crucial", "journey" | Brennan's own captions use "holistically" [BVS caption 7, 8] | RESOLVED [B-Nov13 4:08 PM PT]: those three removed; "showcase" stays banned. |
+| C8 | Old reading targets: "about a 5th-grade reading level" (long-form), 3rd-5th grade (lead gen), 7th or lower (email) | Brennan [B-Nov13 4:08 PM PT]: 6th to 7th grade everywhere, fail above 7 | RESOLVED: newest instruction wins; skills and `brand_check.py` updated. |
+| C9 | Older skills defaulted to "Book a free demo" as the one CTA | Brennan [B-Nov13 4:08 PM PT]: "Book a demo" or "Set up a demo" (free fine), CTA is an A/B variable | RESOLVED: no mandated CTA; roofing cold email CTA unchanged. |
 
 ---
 
 ## 15. Questions for Brennan (not decided; do not treat as rules)
 
-1. Inline citations: is "name the source in the sentence" enough for LinkedIn, X, and Facebook, or do you want a link or a source line in social posts too? (C1)
-2. AI-filler list: keep the standard list in section 6.2 as is, or add/remove words (e.g. "holistic", "crucial", "journey", "showcase")?
-3. Reading level fail limits: blog fails above grade 7 and social above grade 6 (aims 5). Approve these numbers?
-4. Official logo colors and files: are there exact hex values for the wordmark (sampled ~#EFE8DD cream, ~#EA5715 orange vs the site's #FF6B00), a light-background version, and logo do/don't rules?
-5. Which orange is canonical for new design work: #FF6B00 (site classes) or #FF6600 (theme token)?
-6. May bots use the site's superlative lines as our own claims ("The most advanced direct mail and print marketing platform", "AI-Powered Direct Mail Platform", "dominate your local market")?
-7. Update /opengraph.jpg to the current hero? (bots won't touch the site)
-8. Quora: any rules beyond the existing answer pattern (disclosure line, link policy, promo share)?
-9. Preferred CTA casing: "Book a free demo" (blog) vs "Book a Demo" / "Set Up a Demo" (site buttons). Should all bot copy use "Book a free demo"? (Existing open question: default CTA.)
-10. Can bots write "+" as "plus" ("200+ data variables" vs "200 plus")? (existing open question)
-11. Is "Your phone goes quiet between storms" approved phrasing? (existing open question)
-12. Ranked-list disclosure: none (rules) or disclose (older memory)? (existing open question in `gw-content-rules`)
-13. Email visual format for non-roofing email (existing open question).
-14. First person: "I" for your channels and "we" for company channels. Confirm.
-15. LLM judge: should the judge pass be a separate model call, or the editor bot itself? Any judge you prefer?
+Answered [B-Nov13 4:08 PM PT] and applied: inline citations on social (Q1), AI-filler list (Q2), reading level (Q3), canonical orange #FF6B00 (Q5), site superlatives (Q6), /opengraph.jpg deferred (Q7), Quora: no new rules for now (Q8), CTAs (Q9), "I" vs "we" (Q14), judge is a separate check (Q15). Logo files and two logo rules received [B-Nov13 4:10 PM PT] (section 11.3).
+
+Still open:
+1. Logo do's and don'ts beyond "prefer the dark background" and "use in moderation": minimum size, clear space, recoloring, which file goes where, any light-background version (section 11.3).
+2. Can bots write "+" as "plus" ("200+ data variables" vs "200 plus")? (existing open question)
+3. Is "Your phone goes quiet between storms" approved phrasing? (existing open question)
+4. Ranked-list disclosure: none (rules) or disclose (older memory)? (existing open question in `gw-content-rules`)
+5. Email visual format for non-roofing email (existing open question).
+6. Judge: confirm our reading of "separate check" (the editor's judge pass, never the writer grading itself) and whether you want a specific judge model.
 
 ---
 
 ## 16. Learning loop
-Weekly (every bot that writes or edits): log each brand_check fail, judge finding, retry, and escalation in research/brand-check-log.md (channel, check, error, outcome). GW Skill Builder reviews the log weekly: repeat failures go into the writer skills and section 5-6 lists; false positives get the regex fixed; Brennan's edits become new do/don't examples. Changes are logged below.
+Weekly (every bot that writes or edits): log each brand_check fail, judge finding, retry, and escalation in research/brand-check-log.md (channel, check, error, outcome). GW Skill Builder reviews the log weekly: repeat failures go into the writer skills and section 5-6 lists; false positives get the regex fixed; Brennan's edits become new do/don't examples. CTA A/B results (which CTA ran, channel, clicks or replies) are logged with the channel's results and reviewed weekly; no CTA becomes the default without Brennan. Changes are logged below.
 
 ## Changelog
 - 2026-11-13 v1.0: created from the full site crawl (195 URLs), CSS, logo files, Notion 00 Source of Truth and 05 Brand Voice Samples, the gw-skills repo, cold email drafts, social and Quora logs, and Brennan's cold-email video notes. Scripts brand_check.py and input_guard.py added. Existing skills updated to point here (Brennan, Nov 13 3:27 PM PT).
+- 2026-11-13 v1.1: applied Brennan's answers (4:08 PM PT): social citations name the source only; #FF6B00 canonical; grade 6-7 everywhere, fail above 7; holistic, journey, crucial removed from filler list; site superlatives approved as claims; CTA "Book a demo"/"Set up a demo" as an A/B variable; "I"/"we" confirmed; judge is a separate check; no new Quora rules; /opengraph.jpg deferred.
+- 2026-11-13 v1.2: logo section rewritten from Brennan's 4:10 PM PT message ("we prefer the dark background. logos should be used in moderation.") and his three files; "pending his files" note replaced. Files and color samples to be added once the attachments reach the box.

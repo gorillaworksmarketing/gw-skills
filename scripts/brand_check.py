@@ -21,17 +21,17 @@ BRENNAN_BANNED = {  # Brennan, Nov 13 2026: explicitly forbidden
     "elevate": r"elevat(?:e|es|ed|ing)", "unlock": r"unlock(?:s|ed|ing)?",
     "game-changer": r"game[- ]?chang(?:er|ers|ing)", "testament": r"testaments?",
 }
-STANDARD_FILLER = {  # editable standard AI-filler list (Brennan can add/remove)
+STANDARD_FILLER = {  # editable standard AI-filler list (Brennan Nov 13 4:08 PM PT removed holistic, journey, crucial)
     "landscape": r"(?:digital |marketing |ever[- ]changing |competitive )?landscape",
     "realm": r"realms?", "navigate": r"navigat(?:e|es|ing) the", "leverage": r"leverag(?:e|es|ed|ing)",
     "harness": r"harness(?:es|ed|ing)?", "seamless": r"seamless(?:ly)?", "robust": r"robust",
     "cutting-edge": r"cutting[- ]edge", "revolutionize": r"revolutioni[sz](?:e|es|ed|ing)",
     "transformative": r"transformative", "empower": r"empower(?:s|ed|ing|ment)?",
     "supercharge": r"supercharg(?:e|es|ed|ing)", "skyrocket": r"skyrocket(?:s|ed|ing)?",
-    "synergy": r"synerg(?:y|ies|istic)", "holistic": r"holistic(?:ally)?",
+    "synergy": r"synerg(?:y|ies|istic)",
     "paradigm": r"paradigms?", "foster": r"foster(?:s|ed|ing)?", "bustling": r"bustling",
     "vibrant": r"vibrant", "meticulous": r"meticulous(?:ly)?", "pivotal": r"pivotal",
-    "crucial": r"crucial(?:ly)?", "embark": r"embark(?:s|ed|ing)?", "journey": r"(?:your|our|the) journey",
+    "embark": r"embark(?:s|ed|ing)?",
     "unleash": r"unleash(?:es|ed|ing)?", "unveil": r"unveil(?:s|ed|ing)?", "beacon": r"beacons?",
     "symphony": r"symphon(?:y|ies)", "intricate": r"intricate", "multifaceted": r"multifaceted",
     "ever-evolving": r"ever[- ]evolving", "dive in": r"(?:let's |deep )?dive (?:in|into)\b|deep dive",
@@ -71,12 +71,10 @@ CITE_MARK = r"\[S:[^\]]+\]|\[src:[^\]]+\]|\[fact:[^\]]+\]|https?://\S+"
 APPROVED_FACTS = [r"200\+\s*(?:data )?variables", r"200\+\s*data points", r"10 years of experience", re.escape(PROOF_LINE),
                   r"\$90,000 in leads from just one mail drop"]
 NUM_CLAIM = r"(?<![\w/#.-])(?:\d[\d,]*(?:\.\d+)?\s?(?:%|percent\b|x\b)|\$\s?\d[\d,]*(?:\.\d+)?|\d{1,3}(?:,\d{3})+|\d{3,}(?!\s?(?:am|pm|AM|PM))|\d+(?:\.\d+)?\s(?:out of|in)\s\d+)"
-GRADE_TARGET = {  # (aim, fail above). Sources: cold email 7th max (Brennan V7 / blueprints/cold-email.md);
-    # long-form "about 5th grade" (gw-longform-editor); social 3rd-5th (gw-lead-generation).
-    # Fail limits for blog (7) and social (6) are calibration, pending Brennan (guidelines section 5).
-    "cold-email": (7, 7), "email": (7, 7), "newsletter": (7, 7),
-    "blog": (5, 7), "longform": (5, 7), "quora": (5, 7),
-    "linkedin": (5, 6), "facebook": (5, 6), "x": (5, 6), "x-reply": (5, 6), "reddit": (5, 6), "gbp": (5, 6),
+GRADE_TARGET = {  # (target range low, fail above). Brennan, Nov 13 2026 4:08 PM PT:
+    # "6th to 7th grade reading level" for every channel; fail above grade 7.
+    ch: (6, 7) for ch in ["cold-email", "email", "newsletter", "blog", "longform", "quora",
+                          "linkedin", "facebook", "x", "x-reply", "reddit", "gbp"]
 }
 CHANNELS = sorted(GRADE_TARGET)
 
@@ -188,11 +186,9 @@ def check(text, channel, draft=False):
             if need not in text: add("cold_email_slots", "fail", need, None, f"is missing the labeled line '{need}'")
     # 8. Reading level
     grade, nwords = fk_grade(text)
-    aim, limit = GRADE_TARGET[channel]
+    low, limit = GRADE_TARGET[channel]
     if grade is not None and grade > limit:
-        add("reading_level", "fail", str(grade), None, f"reads at Flesch-Kincaid grade {grade}; {channel} must be grade {limit} or lower (aim for {aim}), so use shorter sentences and shorter words")
-    elif grade is not None and grade > aim:
-        add("reading_level", "warn", str(grade), None, f"reads at Flesch-Kincaid grade {grade}; aim for grade {aim} on {channel}")
+        add("reading_level", "fail", str(grade), None, f"reads at Flesch-Kincaid grade {grade}; every channel must be grade {limit} or lower (target grades {low}-{limit}), so use shorter sentences and shorter words")
     fails = [f for f in flags if f["severity"] == "fail"]
     retry = None
     if fails:
@@ -215,7 +211,7 @@ def check(text, channel, draft=False):
                     if f["error"] not in seen: seen.append(f["error"])
                 parts.extend(seen)
         retry = "Your previous draft " + "; ".join(parts) + ". Rewrite it, fixing only these issues, and keep every verified fact, source, and the required format."
-    return {"channel": channel, "draft_mode": draft, "pass": not fails, "reading_grade": grade, "grade_aim": aim, "grade_limit": limit,
+    return {"channel": channel, "draft_mode": draft, "pass": not fails, "reading_grade": grade, "grade_target": f"{low}-{limit}", "grade_limit": limit,
             "words": nwords, "fail_count": len(fails), "warn_count": len(flags) - len(fails), "flags": flags, "retry_prompt": retry}
 
 def main():
