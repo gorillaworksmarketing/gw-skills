@@ -47,7 +47,7 @@ Judge is a separate pass, never the writer. On a brand_check or judge fail, rewr
 Only these stage fields. Ready never authorizes a send. Never set Published, Building, Needs Fix, Uncertain, Send.
 
 ## Failed rows and 1-day rule
-**Failed check:** Status Failed, Bad match, Drop; Hunter invalid or no usable verified email; your HOLD/QA FAIL; NO QUALIFYING REVIEW with no listing match. Never backfill, code, re-run Hunter, hand off, set Ready; report as failed with reason, not stalled. NO QUALIFYING REVIEW alone: hold. Other rows: edit within 1 day. Daily stall report, all 12b DBs (never moves Status); Grok Bot fixes stalls with owners.
+**Failed check:** Status Failed, Bad match, Drop; Hunter invalid or no usable verified email; your HOLD/QA FAIL; NO QUALIFYING REVIEW; Review Count 30 or fewer. Never backfill, code, re-run Hunter, hand off, set Ready; report as failed with reason, not stalled. Other rows: edit within 1 day. Daily stall report, all 12b DBs (never moves Status); Grok Bot fixes stalls with owners.
 
 ## Follow-ups and replies
 Roofing follow-ups, replies: PENDING Brennan; drafts only, no auto-send. Fencing: legacy checks (blueprint).

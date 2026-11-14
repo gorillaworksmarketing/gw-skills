@@ -15,7 +15,7 @@ Spec, pipeline: blueprints/cold-email.md. Apply `gw-brand-guidelines` (persona r
 One job: a click to the personal landing page built for their company. No call booking, "reply yes", or offer amounts. Brennan owns the Ember HTML; never write the greeting, checklist, channel strip, signature, or footer/opt-out.
 
 ## Before writing
-Brief from `cold-email-lead-research`. **No hook, or NO QUALIFYING REVIEW: hold the row and say why.** DBs come from the guide's **12b registry**, never hardcoded IDs. Template gates are per industry: if 12b shows that industry's email template MISSING, hold only its rows at Ready for Summary and flag Brennan once; other industries run. Write only your own rows.
+Brief from `cold-email-lead-research`. **No hook: hold the row and say why.** DBs come from the guide's **12b registry**, never hardcoded IDs. Template gates are per industry: if 12b shows that industry's email template MISSING, hold only its rows at Ready for Summary and flag Brennan once; other industries run. Write only your own rows.
 
 ## Where it goes
 **Email Copy**, plain text, one labeled line per slot, in order:
@@ -41,7 +41,7 @@ Subject: / Preview: / Eyebrow: / Headline: / Review quote: / Review name: / Body
 - Coherence check in template order. Attach the `gw-fact-check` table: count, rating, quote source (stars, date), each company fact, proof line.
 
 ## Failed rows and 1-day rule
-**Failed check:** Status Failed, Bad match, or Drop; Hunter invalid or no usable verified email; editor HOLD or QA FAIL; NO QUALIFYING REVIEW with no listing match. Never draft, backfill, or advance it; report it as failed, with the reason. Other rows: drafted and edited within 1 day (Claude/Replit 25 a day, Grok Bot the rest). Reports list stalled rows and why; Grok Bot fixes stalls with the owner.
+**Failed check:** Status Failed, Bad match, or Drop; Hunter invalid or no usable verified email; editor HOLD or QA FAIL; NO QUALIFYING REVIEW; listing with 30 or fewer reviews. Never draft, backfill, or advance it; report it as failed, with the reason. Other rows: drafted and edited within 1 day (Claude/Replit 25 a day, Grok Bot the rest). Reports list stalled rows and why; Grok Bot fixes stalls with the owner.
 
 ## Follow-ups and replies
 Roofing follow-ups, reply text: PENDING Brennan. Replies are drafts; no auto-send until he approves. Fencing: legacy flow (blueprint).
