@@ -11,11 +11,11 @@ description: >-
 Detail: blueprints/cold-email.md. Free public sources only. Never invent or guess. Never send. Fewer, verified, dated facts; the Copywriter picks the angle.
 
 ## Find
-1. **Mix:** roofing first, then team/industry-mix.md. **One niche per list**; never mix trades.
-2. **Sources:** Google Maps and WA directories (one by one, never bulk-scrape), company sites, public LinkedIn, news, trade lists, permits. No logins.
-3. **Signals (dated):** new location, permits, hiring, new owner, recent post, review surge, no ads, website. Filter cheapest first. Check CRM for prior contact.
+1. **Focus:** only the industry Brennan names (currently Roofing). Systems on other DBs are setup only, never a signal to research. One niche per list. **Order:** WA, then AZ, then OR, then west to east across the USA.
+2. **Sources:** Google Maps and state directories (one by one, never bulk), company sites, public LinkedIn, news, trade lists, permits. No logins.
+3. **Signals (dated):** see blueprint. Filter cheapest first. Check CRM for prior contact.
 4. **Lookalikes:** from best clients and positive repliers.
-5. **Email:** first@, first.last@, flast@; verify within 7 days of sending; flag catch-alls; bounces under 2%.
+5. **Email:** common patterns (blueprint); verify within 7 days of sending; flag catch-alls; bounces under 2%.
 
 ## Required review pull (part of each Maps lookup, never skipped)
 **Target (Brennan):** only listings with 31+ Maps reviews; 30 or fewer or unknown: skip before creating a row. One listing at a time, never bulk. Read the 5 most recent Maps reviews; best-sounding qualifying one first, then up to 2 more. None: check up to 10. **Qualifies:** 5 stars (any age), about the company (price fine), word for word, screenshot listing name matches the company. Write live count and rating into Review Count and Rating. **Reviews** holds only Maps ★5 lines:
@@ -30,12 +30,12 @@ Nothing in 10: `NO QUALIFYING REVIEW (checked date)` = failed. Never blank.
 - **Failed check** (Status Failed, Bad match, Drop; Hunter invalid or no usable verified email; editor HOLD/QA FAIL; NO QUALIFYING REVIEW; listing 30 or fewer reviews): never backfill, code, re-run Hunter, hand off, set Ready. Report as failed with reason, not stalled.
 
 ## 3-layer research (5-7 minutes)
-Human (role, tenure, talks, posts); company (site, press, projects, awards, our history); space (problems the niche already names, in their words; never invent one).
+Human, company, space (problems the niche already names, in their words; never invent one). Detail in blueprint.
 
 ## Account brief (one per lead)
 Fit, dated signal, priority (hot, warm, cold, skip), **3-5 hooks** with source URL, date, confidence; suggested angle, what not to mention, "hook found: yes/no".
 - **Allowed:** professional or clearly public business facts.
-- **Never:** private or sensitive topics (health, family, religion, politics, finances, age), guesses, conflicting numbers as fact (mark [U]).
+- **Never:** private or sensitive topics (list in blueprint), guesses, conflicting numbers as fact (mark [U]).
 - **So what:** each hook ties to their lead flow or neighbors.
 - **No strong hook: HOLD the lead.** Depth beats volume.
 

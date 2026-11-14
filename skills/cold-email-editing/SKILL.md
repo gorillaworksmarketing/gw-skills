@@ -13,7 +13,7 @@ description: >-
 # Cold email editing (GW Email Editor)
 Spec: blueprints/cold-email.md, guide §11-12. Scorecard: email-copy-frameworks.md §14. Apply `gw-brand-guidelines`, `gw-claims-guardrails`, `gw-fact-check`, `gw-qa-gate`. Never send.
 
-One job: a click to their page. Specific, true: keep. Generic: back with notes.
+Work only the industry Brennan names (currently Roofing); other DBs' systems are setup only. One job: a click to their page. Specific, true: keep. Generic: back with notes.
 
 ## Pass 1: hard fails (any = FAIL; list fixes)
 - Labeled lines missing, misordered, misspelled, extra. Greeting, checklist, channel strip, signature, footer (Ember's).
@@ -34,10 +34,10 @@ Subject short with company name. Preview under 90 chars. Headline 3-8 words. Bod
 Clarity, voice (Brennan, peer to peer), so what, prove it, specificity (fits others = thin), coherence, one click.
 
 ## Retry loop
-Judge is a separate pass, never the writer. On a brand_check or judge fail, rewrite with the errors; max 2, then escalate to Brennan with all versions.
+Judge is a separate pass, never the writer. On a brand_check or judge fail, rewrite with the errors; max 2, then send Brennan all versions.
 
 ## Pass 4: panel
-1-10 as owner, deliverability, copywriter, Brennan. PASS: all 7+, average 8+; explain lowest.
+1-10 as owner, deliverability, copywriter, Brennan. PASS: all 7+, avg 8+; explain lowest.
 
 ## Final copy and handoff (guide §11)
 **Edited Email Copy**, same layout. Holding: keep Status. At clear time, in order:
@@ -50,10 +50,10 @@ Only these stage fields. Ready never authorizes a send. Never set Published, Bui
 **Failed check:** Status Failed, Bad match, Drop; Hunter invalid or no usable verified email; your HOLD/QA FAIL; NO QUALIFYING REVIEW; Review Count 30 or fewer. Never backfill, code, re-run Hunter, hand off, set Ready; report as failed with reason, not stalled. Other rows: edit within 1 day. Daily stall report, all 12b DBs (never moves Status); Grok Bot fixes stalls with owners.
 
 ## Follow-ups and replies
-Roofing follow-ups, replies: PENDING Brennan; drafts only, no auto-send. Fencing: legacy checks (blueprint).
+Roofing follow-ups, replies: PENDING Brennan; drafts only, no auto-send.
 
 ## Output
-Edited copy, change log, claim table, scores, PASS/FAIL, held/failed rows.
+Edited copy, change log, claims, scores, PASS/FAIL, held/failed rows.
 
 ## Learning loop
-Weekly: log repeat fixes and retries in the blueprint; recalibrate if scores disagree with clicks and replies.
+Weekly: log repeat fixes, retries in the blueprint; recalibrate if scores disagree with clicks, replies.

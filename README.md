@@ -21,6 +21,7 @@ The shared private skill library for Gorilla Works Marketing's GW bots. Bots sho
 | [gw-content-rules](skills/gw-content-rules/SKILL.md) | >- |
 | [gw-email-marketing](skills/gw-email-marketing/SKILL.md) | >- |
 | [gw-fact-check](skills/gw-fact-check/SKILL.md) | >- |
+| [gw-google-places-budget](skills/gw-google-places-budget/SKILL.md) | >- |
 | [gw-lead-generation](skills/gw-lead-generation/SKILL.md) | >- |
 | [gw-lead-magnets](skills/gw-lead-magnets/SKILL.md) | >- |
 | [gw-linkedin-editor](skills/gw-linkedin-editor/SKILL.md) | >- |
