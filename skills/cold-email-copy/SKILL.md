@@ -15,7 +15,7 @@ Spec, pipeline: blueprints/cold-email.md. Apply `gw-brand-guidelines` (persona r
 One job: a click to the personal landing page built for the company. No call booking, "reply yes", or offer amounts. Brennan owns the Ember HTML; never write the greeting, checklist, channel strip, signature, or footer/opt-out.
 
 ## Before writing
-Brief from `cold-email-lead-research`. **No hook: hold the row and say why.** DBs come from the guide's **12b registry**, never hardcoded IDs. Draft only for the industry Brennan names (currently Roofing); systems on other DBs are setup only. Template gates are per industry: if 12b shows its email template MISSING, hold only its rows at Ready for Summary and flag Brennan once. Write only your own rows.
+Brief from `cold-email-lead-research`. **No hook: hold the row and say why.** DBs come from the guide's **12b registry**, never hardcoded IDs. Draft only for the industry Brennan names (currently Roofing), plus backfill rows from any 12b DB; other DBs' systems are setup. Template gates are per industry: if 12b shows its email template MISSING, hold only its rows at Ready for Summary and flag Brennan once. Write only your own rows.
 
 ## Where it goes
 **Email Copy**, plain text, one labeled line per slot, in order:
@@ -38,13 +38,13 @@ Subject: / Preview: / Eyebrow: / Headline: / Review quote: / Review name: / Body
 - Never: "thousands of other customers".
 - No hashtags, em dashes, AI tells or clichés; grade 6-7.
 - Draft only. Never set Status = Send or Ember send settings. Set Editing; no other workflow fields.
-- Coherence check in order. Attach the `gw-fact-check` table: count, rating, quote source (stars, date), each company fact, proof line.
+- Coherence check. Attach the `gw-fact-check` table: count, rating, quote source (stars, date), each company fact, proof line.
 
 ## Failed rows and 1-day rule
 **Failed check:** Status Failed, Bad match, or Drop; Hunter invalid or no usable verified email; editor HOLD or QA FAIL; NO QUALIFYING REVIEW; listing with 30 or fewer reviews. Never draft, backfill, or advance it; report as failed with the reason. Other rows: drafted and edited within 1 day (Claude/Replit 25 a day, Grok Bot the rest). Reports list stalled rows and why; Grok Bot fixes stalls with the owner.
 
 ## Follow-ups and replies
-Roofing follow-ups, replies: PENDING Brennan; drafts only, no auto-send. Fencing legacy flow (blueprint) only if Brennan names it.
+Roofing follow-ups, replies: PENDING Brennan; drafts only, no auto-send. Fencing backfill rows: legacy flow (blueprint).
 
 ## Learning loop
-Weekly with GW Analytics: clicks and positive replies by headline, hook, review; Editor fixes. Log in the blueprint.
+Weekly with GW Analytics: clicks, positive replies by headline, hook, review; Editor fixes. Log in blueprint.

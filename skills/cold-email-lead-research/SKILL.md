@@ -8,10 +8,10 @@ description: >-
   hook. Use it even if the request just says "find me 20 fence companies".
 ---
 # Cold email lead research
-Detail: blueprints/cold-email.md. Free public sources only. Never invent or guess. Never send. Fewer, verified, dated facts; the Copywriter picks the angle.
+Detail: blueprints/cold-email.md. Free public sources only. Never invent, guess, or send. Fewer, verified, dated facts; Copywriter picks the angle.
 
 ## Find
-1. **Focus:** only the industry Brennan names (currently Roofing). Systems on other DBs are setup only, never a signal to research. One niche per list. **Order:** WA, then AZ, then OR, then west to east across the USA.
+1. **Focus:** new work only for the industry Brennan names (currently Roofing); other DBs' systems are setup only. **Exception:** the cleanup backfill runs handoff steps 1-6 (blueprint) on every past row in every 12b DB, Fencing too; failed rows skipped. One niche per list. **Order:** WA, then AZ, then OR, then west to east across the USA.
 2. **Sources:** Google Maps and state directories (one by one, never bulk), company sites, public LinkedIn, news, trade lists, permits. No logins.
 3. **Signals (dated):** see blueprint. Filter cheapest first. Check CRM for prior contact.
 4. **Lookalikes:** from best clients and positive repliers.
@@ -26,26 +26,26 @@ Nothing in 10: `NO QUALIFYING REVIEW (checked date)` = failed. Never blank.
 - DBs come from the **12b registry**, never hardcoded IDs. No 12b DB for the industry: hold, flag, never write into Fencing.
 - Every new row gets a **Prospect Page Code**: 12 characters from `abcdefghjkmnpqrstuvwxyz23456789`, unique across all 12b DBs. Never change an existing code.
 - Same signed-out Maps lookup: fill **Address** and **Google Place ID**.
-- "Focus on <industry>": Grok Bot creates the DB from 12a, adds it to 12b; you start Maps lookups. A MISSING 12b template holds only that industry.
+- "Focus on <industry>": Grok Bot creates the DB from 12a, adds it to 12b; you start lookups. A MISSING 12b template holds only that industry.
 - **Failed check** (Status Failed, Bad match, Drop; Hunter invalid or no usable verified email; editor HOLD/QA FAIL; NO QUALIFYING REVIEW; listing 30 or fewer reviews): never backfill, code, re-run Hunter, hand off, set Ready. Report as failed with reason, not stalled.
 
 ## 3-layer research (5-7 minutes)
 Human, company, space (problems the niche already names, in their words; never invent one). Detail in blueprint.
 
 ## Account brief (one per lead)
-Fit, dated signal, priority (hot, warm, cold, skip), **3-5 hooks** with source URL, date, confidence; suggested angle, what not to mention, "hook found: yes/no".
+Fit, dated signal, priority, **3-5 hooks** with source URL, date, confidence; angle, what not to mention, "hook found: yes/no".
 - **Allowed:** professional or clearly public business facts.
 - **Never:** private or sensitive topics (list in blueprint), guesses, conflicting numbers as fact (mark [U]).
-- **So what:** each hook ties to their lead flow or neighbors.
+- **So what:** hooks tie to their lead flow or neighbors.
 - **No strong hook: HOLD the lead.** Depth beats volume.
 
 ## CRM fields
-Per blueprint: verify and signal dates, hook URLs, contact source and date, hold reason, unsubscribe flag, problem, last campaign, utm_campaign `<industry>_<type>`.
+Per blueprint, incl. verify and signal dates, hook URLs, contact source, hold reason, unsubscribe flag, utm_campaign `<industry>_<type>`.
 
 ## Output
-Briefs, CRM rows, hold and failed lists, reasons. Non-failed Ready for Summary rows are drafted and edited within 1 day.
+Briefs, CRM rows, hold and failed lists with reasons. Non-failed Ready for Summary rows: drafted and edited within 1 day.
 
 ## Learning loop
-Weekly with GW Analytics: hooks and signals that earned positive replies; log in the blueprint.
+Weekly with GW Analytics: hooks and signals that earned positive replies; log in blueprint.
 
-Related: `cold-email-copy`, `gw-lead-generation`.
+See `cold-email-copy`, `gw-lead-generation`.
