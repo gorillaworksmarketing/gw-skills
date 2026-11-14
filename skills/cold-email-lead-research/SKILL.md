@@ -20,10 +20,10 @@ Detail, owners: blueprints/cold-email.md; contract: guide v3.22 §0. Lookups per
 4. **Row + Prospect Page Code:** 12 chars from `abcdefghjkmnpqrstuvwxyz23456789`, unique across 12b DBs; check collisions first (collision: hold, report, never re-code). Never change a code; none on failed rows. Report code categories (blueprint).
 5. **Research:** required: Company, Website, Rating, Review Count, one complete ★5 review with proof, full site text in page body (Source: url + date). Rest of record per `gw-google-places-budget`; not found: "not available". Label facts website / Google Maps / directory / idea. **Review pull:** 5 newest Maps reviews; best-sounding qualifier first, up to 2 more; none: check 10. Qualifies: 5 stars, any age, about the company (price fine), word for word, listing name matches. **Reviews**, one per line:
 `★5 | name | relative date (captured date) | "text" | Maps URL | proof: screenshot path`
-Never paraphrase, date a relative date, rewrite legacy rows, or count "…" text as whole (parsing: blueprint). None in 10: `NO QUALIFYING REVIEW (checked date)` = failed. Emails: verify per `cold-email-deliverability`; Hunter only via Ember.
+Never paraphrase, date a relative date, rewrite legacy rows, or count "…" text as whole. None in 10: `NO QUALIFYING REVIEW (checked date)` = failed. Emails: verify per `cold-email-deliverability`; Hunter only via Ember.
 
 ## Failed rows
-**Failed check:** Status Failed, Bad match, Drop; Hunter not usable (Verified select = your match flag, not Hunter); active HOLD/FAIL (blueprint); NO QUALIFYING REVIEW; 30 or fewer reviews (backfill/step check: Status = Failed, reason "review count 30 or fewer"). Never work them; report as failed with reason, not stalled. **Existing duplicates:** keep the most complete (edited copy, then furthest stage; tie: oldest); others Status = Drop, reason "duplicate of <kept page id>"; never delete.
+**Failed check:** Status Failed, Bad match, Drop; Hunter not usable (Verified select = your match flag, not Hunter); active HOLD/FAIL (blueprint); NO QUALIFYING REVIEW; 30 or fewer reviews (backfill/step check: Status = Failed, reason "review count 30 or fewer"). Never work them; report as failed, with reason. **Existing duplicates (bulk Drop confirmed, Brennan 5:29 PM):** each group: keep the most complete (edited copy, then furthest stage; tie: oldest); others Status = Drop, reason "duplicate of <kept page id>"; never delete.
 
 ## Complete every step (Brennan)
 On any row you touch, dedupe first, then check every pipeline field. Any missing, even if later ones are filled: run it or hand it to its owner first. A step finding a failure marks the row failed and stops. Gating, focus, backfill apply.
@@ -33,4 +33,4 @@ On any row you touch, dedupe first, then check every pipeline field. Any missing
 3 layers, fit, dated signal, priority, 3-5 sourced hooks, angle, avoid (template, sensitive topics: blueprint). Public professional facts only; no guesses; conflicting numbers [U]. **No strong hook: HOLD.**
 
 ## Output and learning loop
-Briefs, CRM rows (blueprint), hold/failed lists. 1-day rule (blueprint). Weekly with GW Analytics: hooks, signals that earned replies; log in blueprint.
+Briefs, CRM rows, hold/failed lists. 1-day rule (blueprint). Weekly with GW Analytics: hooks, signals that earned replies; log in blueprint.
