@@ -29,7 +29,7 @@ The writer can only add something new if the brief names it. A brief that repeat
 - **Outline:** H2s phrased as related PAA questions, each with a one-line answer-first intent; FAQ (3-5 self-contained answers); closing + CTA. If the topic isn't about mail, note where custom direct mail fits as a recommended channel.
 - **Content upgrade (optional):** a lead magnet from `gw-lead-magnets` (needs Brennan's approval).
 - **Sources/data:** each stat as an inline marker `[S:ID]` (V/S only) plus source URL; gaps as `[NEED: ...]`; start the `gw-fact-check` claim table.
-- **Internal links:** relevant gorillaworksmarketing.com pages, plus /book-demo ("Book a free demo").
+- **Internal links:** relevant gorillaworksmarketing.com pages, plus /book-demo (CTA variant per the A/B log).
 - **Rules reminders:** the `gw-content-rules` and `gw-claims-guardrails` items most at risk here.
 - Notion fields: Excerpt; SEO Title; Meta Description (140-160 chars, keyword, benefit first, a reason to click, unique); Publish At (9:00 AM New York, correct offset).
 

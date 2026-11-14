@@ -18,7 +18,7 @@ Detail: blueprints/lead-generation.md. Never cite vendor stats. Apply `gw-brand-
 4. **Warm and referrals:** ask who else has the problem, at the wow moment, with a real reason (approval).
 5. **Events:** free only (Chamber, trade groups, meetups).
 6. **Lead magnets:** use `gw-lead-magnets`.
-7. **Clear not clever:** 3rd-5th grade (cold email 7th max), outcome not deliverable (more jobs, not AI); hook = Proof + Promise + Plan; 70/20/10.
+7. **Clear not clever:** grade 6-7, fail over 7 (Brennan, Nov 13), outcome not deliverable (more jobs, not AI); hook = Proof + Promise + Plan; 70/20/10.
 8. **Awareness:** match the message to the level; sell problems the niche already knows. Top-20% traits from Brennan's data only.
 9. **Voice of customer:** mine reviews, calls, groups, replies for pains, triggers, outcomes, exact words. About 5 data points make a pattern; tag confidence.
 10. **Psychology, ethically:** reciprocity, small first yes, real proof, gentle loss framing, mere exposure. Never fake scarcity, deadlines, or familiarity.

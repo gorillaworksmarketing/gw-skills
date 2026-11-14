@@ -11,7 +11,7 @@ Rules: blueprints/gbp.md. Apply `gw-brand-guidelines` (persona reset, inline cit
 
 ## Steps
 1. **Cadence check:** 1 post a day Mon/Fri/Sat/Sun and 2 a day Tue/Wed/Thu.
-2. **Post:** a keyword-led first line (service + area, WA/US scope), one real update, benefit, or fact (approved only), and one CTA ("Book a free demo") with a UTM link (`utm_source=gbp`) logged in research/link-log.csv. No hashtags.
+2. **Post:** a keyword-led first line (service + area, WA/US scope), one real update, benefit, or fact (approved only), and one CTA ("Book a demo" or "Set up a demo", an A/B variable) with a UTM link (`utm_source=gbp`) logged in research/link-log.csv. No hashtags.
 3. **Photo note:** suggest a real, geotagged photo; never a stock or scraped home photo.
 4. **Review replies:** reply to every review. Thank them specifically, add no client details beyond what they wrote, and send complaints to Brennan.
 5. **Review requests:** draft one neutral ask for a detailed review with photos, sent the same way to every client after the work is done. **Never offer incentives, and never ask only happy clients or steer anyone away from a bad review** (Google policy). Brennan approves before anything is sent.

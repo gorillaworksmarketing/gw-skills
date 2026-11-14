@@ -35,8 +35,8 @@ Subject: / Preview: / Eyebrow: / Headline: / Review quote: / Review name: / Body
 
 ## Hard rules
 - No price or cost wording ($0.78, "under $1", stamp comparisons, "$750 value", "$500 off"). Only dollar figure in our words: the proof line. Verbatim review quote exempt.
-- Never write "thousands of other customers".
-- No hashtags, em dashes, AI tells or clichés; grade 7 max.
+- Never: "thousands of other customers".
+- No hashtags, em dashes, AI tells or clichés; grade 6-7.
 - Draft only. Never set Status = Send or touch Ember send settings. Set Editing; no other workflow fields.
 - Coherence check in template order. Attach the `gw-fact-check` claim table: count, rating, quote source (stars, date), each company fact, proof line.
 

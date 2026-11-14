@@ -16,7 +16,7 @@ Spec: blueprints/cold-email.md. Scorecard: blueprints/email-copy-frameworks.md �
 One job: a click to their page. Specific and true: leave it. Generic or AI-sounding: back with notes.
 
 ## Pass 1: hard fails (any one = FAIL, list the fix)
-- Labeled lines missing, out of order, misspelled, or extra (spec order). Any greeting, checklist, channel strip, signature, or footer (Ember has them).
+- Labeled lines missing, out of order, misspelled, or extra (spec order). Any greeting, checklist, channel strip, signature, footer (Ember has them).
 - **Review quote:** not from a **Reviews** field line (Google Maps only), or not matching it and its screenshot word for word (cuts only with "..."). Screenshot listing name not the row's company. Not 5 stars or not directly about the company (age and price mentions are fine). Reviewer name not exact. NO QUALIFYING REVIEW: hold.
 - Eyebrow doesn't match the Review Count and Rating fields, which the lookup refreshes (rating 1 decimal). Row scraped before the refresh: note it, not a fail.
 - A company fact unsourced or not matching.
@@ -31,10 +31,10 @@ One job: a click to their page. Specific and true: leave it. Generic or AI-sound
 Subject short with the company name. Preview under 90 characters. Headline 3-8 words. Body 1 is 25-40 words: verified details, then nearby homes needing the same work. Body 2 is the spec's fixed sentence with the short company name.
 
 ## Pass 3: Seven Sweeps
-**Clarity** (phone-scannable); **voice** (Brennan, peer to peer); **so what** (each slot ties to their jobs); **prove it** (backed or cut); **specificity** (another company's name still works = thin); **coherence** in template order; **one click** (the page is the only next step).
+**Clarity** (phone-scannable); **voice** (Brennan, peer to peer); **so what** (each slot ties to their jobs); **prove it** (backed or cut); **specificity** (works for another company = thin); **coherence** in template order; **one click** (the page is the only next step).
 
 ## Retry loop (Nov 13)
-On a brand_check or judge fail (hallucination vs claim table, cliché, voice), auto-rewrite with the exact errors fed back (`retry_prompt`), recheck; max 2, then escalate to Brennan with all versions.
+Judge = a separate pass, never the writer. On a brand_check or judge fail (hallucination vs claim table, cliché, voice), auto-rewrite with the exact errors fed back, recheck; max 2, then escalate to Brennan with all versions.
 
 ## Pass 4: panel score
 1-10 as a roofing owner, a deliverability reviewer, a copywriter, Brennan. PASS: all 7+, average 8+. Note why the lowest is low.
@@ -43,7 +43,7 @@ On a brand_check or judge fail (hallucination vs claim table, cliché, voice), a
 **Edited Email Copy**, same labeled layout. Holding a row: keep its Status. Never set Status = Send.
 
 ## 1-day rule (Nov 13)
-Ready for Summary rows are edited within 1 day unless they fail; run reports list rows past 1 day and why. Grok Bot checks daily, fixes stalls with the step's owner.
+Ready for Summary rows are edited within 1 day unless they fail; reports list rows past 1 day and why. Grok Bot checks daily, fixes stalls with the owner.
 
 ## Follow-ups and replies
 Roofing follow-ups and positive-reply text: PENDING Brennan. Replies stay drafts; no auto-send until he approves. Other trades: legacy offer-arm checks in the blueprint.

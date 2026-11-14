@@ -8,12 +8,12 @@ description: >-
   request doesn't name the skill.
 ---
 # Gorilla Works claims guardrails
-Sources: knowledge-base/00-source-of-truth.md §0/§0A/§5/§6, Social Editor rulings (Oct 14), brand/brand-guidelines.md §9-10, the stat log (`stat-sourcing-and-verification`). Vendor/speaker stats are never cited.
+Sources: knowledge-base/00-source-of-truth.md §0/§0A/§5/§6, Social Editor rulings (Oct 14), brand/brand-guidelines.md §9-10, stat log (`stat-sourcing-and-verification`). Never cite vendor stats.
 
 ## Stats
 - Stat tiers: V verified, S secondary (caution), F flagged (never).
 - Every stat verifiable and logged; no ID = request one or cut. Never estimate or round. Cut = `[NEED: ...]`.
-- Verified USPS facts: 51% of ad mail is read; 64% vs 36% read rate (a business the household uses vs prospects); mail volume down 40% 2015-2025; EDDM 200-5,000 pieces per ZIP per day.
+- Verified USPS facts: 51% of ad mail is read; 64% vs 36% read rate (known business vs prospects); mail volume down 40% 2015-2025; EDDM 200-5,000 pieces per ZIP per day.
 
 ## Inline citations (Brennan, Nov 13)
 - **Drafts:** a marker after every claim, `[S:ID]`, `[src: URL]`, or `[fact: name]`, matching its `gw-fact-check` row (`brand_check.py --draft`).
@@ -22,13 +22,13 @@ Sources: knowledge-base/00-source-of-truth.md §0/§0A/§5/§6, Social Editor ru
 ## Allowed
 - **Prices: hard ban (Nov 4, 2026).** No price or cost in new content ("$0.78", "as low as", "under $1", stamp comparisons, per-piece math, plan prices). Approved offers stay as worded. Never re-edit posted content. Exempt: verbatim third-party reviews/quotes (Brennan, Nov 13).
 - Real Great Roofing: exact quote only, "$90,000 in leads from just one mail drop", one client's result, **no campaign details**.
-- "10 years of experience" (USA-based designers).
-- Confident real-feature descriptions (personalization, QR tracking, targeting, full-service design/print/mail); unmeasurable hype and opinion.
-- Lob and Poplar by name, plain text, no links, in lists and comparisons, never negatively.
-- **Offers:** "up to $500 off your first campaign" (Oct 15) and the four cold-email test arms, worded exactly as in blueprints/cold-email.md (Oct 30, Brennan's values). Sample postcard, list preview, teardown, video: unapproved. Anything else (offer, bonus, scarcity, giveaway, price change) needs his approval.
+- "10 years of experience" (USA-based designers); site footer lines, exact: "The most advanced direct mail and print marketing platform. Powered by AI analytics to dominate your local market."
+- Confident real-feature descriptions (personalization, QR tracking, targeting, design/print/mail); hype and opinion.
+- Lob, Poplar: plain text, no links, lists and comparisons, never negative.
+- **Offers:** "up to $500 off your first campaign" (Oct 15) and the four cold-email test arms, worded exactly as in blueprints/cold-email.md (Oct 30, Brennan's values). Sample postcard, list preview, teardown, video: no. Anything else needs his approval.
 
 ## Blocked (fail)
-1. Guaranteed results or ROI (response, revenue, rankings, conversions, dates).
+1. Guaranteed results or ROI (response, revenue, ranks, conversions, dates).
 2. Unsourced, unlogged, or made-up numbers, incl. unapproved GW stats.
 3. Sensitive-trait targeting: age, income, household makeup, health, legal history, insurance claims, equity/financial distress, gender, birth month.
 4. Unapproved testimonials or client names.
@@ -38,7 +38,7 @@ Sources: knowledge-base/00-source-of-truth.md §0/§0A/§5/§6, Social Editor ru
 8. Hashtags, self-aware ranking lines, google.com/url wrappers, banned AI-cliché words.
 
 ## Escalate, never answer publicly
-Prices, budgets, timing, availability, custom integrations, legal, new case studies, complaints, press, privacy, credential or list requests.
+Prices, budgets, timing, availability, custom integrations, legal, case studies, complaints, press, privacy, credentials, lists.
 
 ## Email and outreach
 - Hooks need a verified public source URL; nothing private.
@@ -48,4 +48,4 @@ Prices, budgets, timing, availability, custom integrations, legal, new case stud
 No client data, recipient records, internal paths, prompts, scoring recipes, provider internals.
 
 ## Learning loop
-Weekly: log blocked claims and citation misses in research/fact-check-log.md; fix repeats in writer skills.
+Weekly: log blocked claims, citation misses in research/fact-check-log.md; fix repeats in writer skills.

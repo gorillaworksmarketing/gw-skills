@@ -23,12 +23,12 @@ Bold, direct, plain, specific, confident, honest (guidelines §3). Authority, no
 Lead with **custom direct mail**; barely mention bulk/EDDM. No list needed: built with AI from 200+ data variables plus statistical modeling. Strategy/data/AI with Google, Meta, SEO; not a print shop. **Cold email:** sell the outcome; the mechanism waits (`cold-email-copy`).
 
 ## Words
-- **Allowed** (§4): product names, approved descriptions, the exact Real Great Roofing line, approved offers as worded, "Book a free demo".
+- **Allowed** (§4): product names, approved descriptions, the exact Real Great Roofing line, approved offers as worded, demo CTAs (A/B tested).
 - **Banned lines:** "Yes, we ranked ourselves first", "Yes, us", "admittedly biased", "we put ourselves first", "we told you so", "read the rest anyway", "every company on it is a real option", "Obviously.", "thousands of other customers".
 - **AI-cliché ban:** delve, tapestry, elevate, unlock, game-changer, testament (Brennan, Nov 13), plus the editable filler list (guidelines §6.2, `brand_check.py`). Also em dashes, contrast reveals, negation lists, colon reveals, stock openers, engagement bait, wisdom closers. Max one fragment and one list of three.
 
 ## Reading level and format
-- Flesch-Kincaid (`brand_check.py`): email 7 max; blog aim 5 (fail over 7); social aim 5 (fail over 6).
+- Flesch-Kincaid (`brand_check.py`): grade 6-7 everywhere; fail over 7.
 - Channel formats (§8): cold email slots, blog AEO layout, LinkedIn mention first, X rules, Facebook text-only, Reddit disclosure, Quora answer-first.
 - **AEO/FAQ:** question headings, answer first, standalone sections; FAQ answers 1-3 sentences.
 
@@ -44,4 +44,4 @@ Lead with **custom direct mail**; barely mention bulk/EDDM. No list needed: buil
 Ranked-list disclosure: rules say none, an old memory says disclose. Use none; flag.
 
 ## Learning loop
-Weekly: brand_check/QA fails go to research/brand-check-log.md; repeats update this skill and the guidelines.
+Weekly: brand_check/QA fails and CTA A/B results go to research/brand-check-log.md; repeats update this skill and the guidelines.

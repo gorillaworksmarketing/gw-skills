@@ -23,7 +23,7 @@ An owner who said "not now" or signed up is worth ten strangers, and stays warm 
 6. **Proof and offers:** approved only (Real Great Roofing exact quote; "up to $500 off the first campaign"; a cold lead's own offer arm, worded exactly). Claiming an offer means booking the 15-minute call. Lead magnets, referral rewards, deadlines need Brennan's approval.
 7. **Reviews:** ask every client the same neutral way, with no incentive and no filtering for happy clients.
 8. **Links:** UTM per research/utm-link-strategy.md (utm_medium email, utm_campaign `<industry>_<type>`, utm_term slug), logged in research/link-log.csv.
-9. **Strip AI tells** (frameworks §11 plus "I hope this finds you well", "just following up") and em dashes. Outcome first, 7th-grade level or lower. Plain text; **visual format pending from Brennan.**
+9. **Strip AI tells** (frameworks §11 plus "I hope this finds you well", "just following up") and em dashes. Outcome first, grade 6-7 (fail over 7). Plain text; **visual format pending from Brennan.**
 10. **Speed:** positive replies get a draft within 2 minutes; auto-send waits for Brennan's reply-agent approval.
 
 ## Output

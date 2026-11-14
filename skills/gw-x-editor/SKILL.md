@@ -28,7 +28,7 @@ Rewrite toward **LinkedIn's posting style**, while keeping X skills and platform
 7. **Rulings:** stats name their source in the sentence (no source line) and are logged (V/S); no per-mailer price at all ($0.78, under $1, stamp comparison); Real Great Roofing exact quote only and never as the lead; no banned self-ranking lines.
 8. **Links:** per research/utm-link-strategy.md; log in research/link-log.csv.
 8b. **Coherence check (required, Nov 6 2026):** read the post top to bottom as the target owner. Each line follows from the one before; no contradicting its own advice; stats in plain words, no garbled restatement; no jargon ("map the first reminder drop"); main point fits in one sentence. Any miss = rewrite, not polish (`gw-qa-gate` check 9).
-8c. **Retry loop (Nov 13, `gw-brand-guidelines` §9):** run `brand_check.py --channel x (x-reply for replies)` plus an LLM judge (hallucination vs claim table, voice, persona reset, clichés). Any fail: auto-rewrite with the exact errors fed back, recheck; max 2 rewrites, then escalate to Brennan with all versions.
+8c. **Retry loop (Nov 13, `gw-brand-guidelines` §9):** run `brand_check.py --channel x (x-reply for replies)` plus a separate LLM-judge pass, not the writer (hallucination vs claim table, voice, persona reset, clichés). Any fail: auto-rewrite with the exact errors fed back, recheck; max 2 rewrites, then escalate to Brennan with all versions.
 9. Output final copy, change log, and `gw-qa-gate` result. Never post.
 
 Skills to reference: `gw-lead-generation`, `gw-linkedin-editor` (voice/format cues).

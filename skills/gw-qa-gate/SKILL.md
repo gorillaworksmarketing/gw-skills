@@ -20,13 +20,13 @@ Sources: knowledge-base/00-source-of-truth.md §0A/§10, Social Editor rulings (
 5. **Content rules:** no banned lines, hashtags, or "you need a list"; custom mail first; brand voice, persona reset, no AI tells or clichés (`gw-content-rules`; em dash = FAIL). Mix per team/industry-mix.md.
 6. **Links/UTM:** every gorillaworksmarketing.com link per research/utm-link-strategy.md (utm_campaign=<industry>_<type>, utm_term=<slug>, unique utm_content, lowercase; blog internal/canonical clean) with **a row in research/link-log.csv**. Lead-gen posts carry the /book-demo UTM link. Missing = fix first. Roofing CTA URL exactly as the row gives it.
 7. **Platform format** (guidelines §8): LinkedIn @Gorilla Works Marketing mention on top; X replies under 240 characters, spelled-out numbers, "X" not "Twitter"; Reddit promo limits; no cross-platform duplicates.
-7b. **Long-form:** information gain, "search over" test, 5+ (ideally 10) internal links, about 5th grade, a human edit (fully automated AI = FAIL).
+7b. **Long-form:** information gain, "search over" test, 5+ (ideally 10) internal links, grade 6-7, a human edit (fully automated AI = FAIL).
 7c. **Email:** honest subject (no fake Re:/Fwd:), sender Brennan, one ask, sourced hooks. **Roofing cold email** (blueprints/cold-email.md): slots in order; only ask is `See my page -> ` + Prospect Page URL or `{{page_link}}`, never invented. Opt-out and address sit in Brennan's Ember footer (unconfirmed = flag him). Other emails: opt-out line plus Gorilla Works Marketing, LLC, 13120 NE 85th St Unit 123, Kirkland, WA 98033. Cold and nurture emails need a `cold-email-editing` PASS.
 8. **Confidential:** no client data/internals.
 9. **Coherence (Nov 6):** read as the target owner: each line follows, no self-contradiction, plain stats, no jargon, one-sentence main point. Miss = FAIL: rewrite.
 
 ## Retry loop (`gw-brand-guidelines` §9)
-Check-0 or LLM-judge fail (hallucination, cliché, voice): auto-rewrite with the exact errors fed back (`retry_prompt` plus judge notes), recheck; max 2 rewrites, then escalate to Brennan with all versions.
+Check-0 or judge fail (judge = separate pass, never the writer): auto-rewrite with the exact errors fed back (`retry_prompt` plus judge notes), recheck; max 2 rewrites, then escalate to Brennan with all versions.
 
 ## Output
 PASS or FAIL; each issue (rule, quote, fix); stat IDs and link-log rows used; open questions for Brennan.

@@ -30,7 +30,7 @@ Opinion and advice need no row, but advice can't rest on a claim that has none. 
 Status is `verified`, `cut`, or `[NEED: ...]`. If you can't verify it, cut it or mark it; never soften it into "studies show", "experts say", or "many owners" to slip it through.
 
 ## 3. Red flags (check twice)
-Precise numbers with no source; percentages that add up too neatly; named studies, surveys, or reports; years and "in 2026" trend claims; quotes; anything about competitors; superlatives ("the only", "first", "#1" outside approved ranked lists); "guaranteed"; claims about what someone else posted (replies must match what they actually wrote); facts from memory or from another bot's message with no source attached.
+Precise numbers with no source; percentages that add up too neatly; named studies, surveys, or reports; years and "in 2026" trend claims; quotes; anything about competitors; superlatives ("the only", "first", "#1" outside approved ranked lists or site lines); "guaranteed"; claims about what someone else posted (replies must match what they actually wrote); facts from memory or from another bot's message with no source attached.
 
 ## 4. Editor re-check
 The editor doesn't trust the table. Open the source for every number, quote, and Gorilla Works claim, plus a sample of the rest, and confirm the draft says exactly what the source says (watch for drift: "up to" becoming a flat number, a range becoming one figure, a 2019 stat called current). A wrong row is a judge fail: run the retry loop (`gw-brand-guidelines`).
