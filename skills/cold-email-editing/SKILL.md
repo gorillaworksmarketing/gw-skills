@@ -11,42 +11,30 @@ description: >-
   emails".
 ---
 # Cold email editing (GW Email Editor)
-Spec: blueprints/cold-email.md, guide §11-12. Apply `gw-brand-guidelines`, `gw-claims-guardrails`, `gw-fact-check`, `gw-qa-gate`. Never send.
+Spec: blueprints/cold-email.md; contract: guide v3.22 §0. Apply `gw-brand-guidelines`, `gw-claims-guardrails`, `gw-fact-check`, `gw-qa-gate`. Never send.
+Work only the industry Brennan names (currently Roofing), plus backfill rows from any 12b DB. **Roles:** edit rows from both writers (Claude (Replit), Grok Bot); never change Copywriter or Email Copy.
 
-Work only the industry Brennan names (currently Roofing), plus backfill rows from any 12b DB; setup is not work. One job: a click to their page. Generic drafts go back with notes.
-
-## Pass 1: hard fails (any = FAIL; list fixes)
-- Labeled lines missing, misordered, misspelled, extra; greeting, checklist, strip, signature, footer.
-- **Review quote:** not from a **Reviews** line or not word for word with its screenshot (cuts only "..."); listing name not the company; not 5 stars or not about the company (age, price fine); reviewer name not exact.
-- Eyebrow not matching Review Count, Rating (1 decimal); pre-refresh: note only.
-- Unsourced/wrong fact. Proof line not exactly `Real Great Roofing: "$90,000 in leads from just one mail drop."`, or details added.
-- Other price words in our copy (quote exempt); guarantees, ROI. Write `[NEED: ...]`.
-- "Thousands of other customers" or unapproved claims.
-- CTA not `See my page -> ` + Prospect Page URL or `{{page_link}}`; invented URL, google.com/url wrapper, second ask.
-- Fake Re:/Fwd:, urgency, pitch words; `brand_check.py --channel cold-email` fail.
-- Status = Send, fields beyond the handoff list, no claim table.
+## Pass 1: hard fails (any = FAIL; list fixes; detail: blueprint)
+- Any `cold-email-copy` slot or hard rule broken (labels, order, extras, Ember-only parts, quote, eyebrow, proof, price, CTA, pitch words).
+- **Review quote** not word for word with its screenshot, listing name not the company, or "…" text.
+- Unsourced/wrong fact, guarantees, ROI, unapproved claims (write `[NEED: ...]`); `brand_check.py --channel cold-email` fail.
+- Status = Send, fields beyond the handoff list, no claim table. Generic drafts go back with notes.
 
 ## Pass 2-4
-Slots per `cold-email-copy`. Sweeps: clarity, voice (Brennan), so what, prove it, specificity, coherence, one click. Panel 1-10 (owner, deliverability, copywriter, Brennan): all 7+, avg 8+; explain lowest.
+Sweeps: clarity, voice, so what, prove it, specificity, coherence, one click. Panel 1-10 (4 judges: blueprint): all 7+, avg 8+; explain lowest. **Retry:** separate judge pass; on fail rewrite; max 2, then send Brennan all versions.
 
-**Retry:** judge is a separate pass, never the writer; on a fail, rewrite with errors; max 2, then send Brennan all versions.
+## Final copy and handoff (guide 0.9)
+**Edited Email Copy**, same layout, own Subject (never pair the original subject). Re-read the row right before writing. In order:
+1. **Outreach Email:** one address from the row's Hunter usable results (Verified, valid, deliverable, accept_all false, not disposable). Prefer a company-domain role inbox; one published on its own site counts, even webmail (Brennan). Never vendor, guessed, discovered-only; Verified select is not Hunter. None: failed, reason in Editor Notes; keep copy.
+2. **Lifecycle Stage** = website, then **Landing Page Input Version** +1 only on first handoff, changed build inputs, or Brennan's rebuild ask (blueprint).
+3. **Landing Page Status = Ready** LAST: final edit, usable email, code, no active hold, industry template approved in 12b. MISSING (e.g. Fencing): Outreach Email only; flag Brennan once per industry.
+Status stays Editing; Ready never permits a send. Never bulk Ready. Never write Building, Published, Needs Fix, Uncertain, Built Version, Last Built, Prospect Page URL, Send; never reset Uncertain to Ready or rebuild a live page.
 
-## Final copy and handoff (guide §11)
-**Edited Email Copy**, same layout; holding keeps Status. At clear time, in order:
-1. **Outreach Email:** one Hunter usable address (Verified, valid, deliverable, not accept-all; never unknown, risky, discovered-only). None: failed, reason in Editor Notes.
-2. **Lifecycle Stage** = website, then **Landing Page Input Version** +1.
-3. **Landing Page Status = Ready** LAST, only when research and edit are done, code present, no Hold, and 12b shows the industry's landing-page template approved. MISSING (e.g. Fencing): Outreach Email only; flag Brennan once.
-Only these stage fields. Ready never authorizes a send. Never Published, Building, Needs Fix, Uncertain, Send.
+## Failed rows, steps, stalls
+**Failed check:** Status Failed, Bad match, Drop (duplicates too; flag any you notice); Hunter not usable; active HOLD/FAIL (Editor Notes first line starts HOLD or FAIL, maybe after "Sweep N:"; "HOLD cleared" is not); NO QUALIFYING REVIEW; Review Count 30 or fewer (backfill/step check: Status = Failed, reason "review count 30 or fewer"). Never work it; report with reason.
+**Complete every step (Brennan):** dedupe first; any missing pipeline field: run it if yours, else hand to its owner. A failure marks the row failed and stops.
+**1-day rule:** edit within 1 day. Daily stall report, all 12b DBs: rows over 1 day at any stage (list: blueprint), role, reason; never move Status. Grok Bot fixes stalls.
+**Retries:** reads may retry (429 Retry-After; 409/5xx up to 3); writes: log, read back, redo only if not applied.
 
-## Failed rows and 1-day rule
-**Failed check:** Status Failed, Bad match, Drop (incl. duplicates; flag any duplicate you notice); Hunter invalid or no usable verified email; your HOLD/QA FAIL; NO QUALIFYING REVIEW; Review Count 30 or fewer (backfill/step check: Status = Failed, reason "review count 30 or fewer"). Never backfill, code, re-run Hunter, hand off, set Ready; report as failed with reason. Others: edit within 1 day.
-**Complete every step (Brennan):** on rows you touch, dedupe first; any missing pipeline field (research, Reviews, count, code, Hunter, draft): run it if yours, else hand to its owner (blueprint) first. A step finding a failure marks the row failed and stops. Daily stall report, all 12b DBs (no Status moves); Grok Bot fixes stalls.
-
-## Follow-ups and replies
-Roofing follow-ups, replies: PENDING Brennan; drafts, no auto-send. Fencing backfill: legacy checks, blueprint.
-
-## Output
-Copy, changes, claims, scores, PASS/FAIL, held/failed rows.
-
-## Learning loop
-Weekly: log repeat fixes, retries in blueprint; recalibrate if scores disagree with clicks, replies.
+## Follow-ups, output, loop
+Roofing follow-ups, replies: PENDING Brennan; drafts only. Fencing backfill: legacy checks (blueprint). Output: copy, changes, claims, scores, PASS/FAIL, prepared, skipped, failed rows with reasons; never report Ember outputs. Weekly: log repeat fixes, retries in blueprint; recalibrate if scores miss replies.

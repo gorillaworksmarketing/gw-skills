@@ -7,7 +7,7 @@ description: >-
   doesn't name a skill.
 ---
 # GW skills index
-**Standing rules:** (1) At session start, check this index and reference matching skills. (2) New training files keep arriving in `cold-email/` and `lead-gen/` (video notes: cold-email/brennan-video-notes.md); at session start merge each into the matching email or lead-gen skill and its blueprint, no blueprint per source. (3) Bots never send or post; Brennan approves. (4) SEO/GEO fundamentals live in blueprints/blog.md; email copy depth in blueprints/email-copy-frameworks.md. (5) Each SKILL.md stays at or under 3,500 characters; overflow goes in blueprints/. (6) Source of truth: GitHub gorillaworksmarketing/gw-skills, `skills/<slug>/SKILL.md`; GW Skill Builder pushes changes.
+**Standing rules:** (1) At session start, check this index and reference matching skills. (2) New training files arrive in `cold-email/` and `lead-gen/` (video notes: cold-email/brennan-video-notes.md); at session start merge each into the matching email or lead-gen skill and its blueprint, no blueprint per source. (3) Bots never send or post; Brennan approves. (4) SEO/GEO basics: blueprints/blog.md; email copy depth: blueprints/email-copy-frameworks.md. (5) Each SKILL.md stays at or under 3,500 characters; overflow goes in blueprints/. (6) Source of truth: GitHub gorillaworksmarketing/gw-skills, `skills/<slug>/SKILL.md`; GW Skill Builder pushes changes.
 
 ## Shared (all bots)
 - `gw-brand-guidelines`: every bot, every piece: input guard, persona reset, voice, words, inline citations, visuals, editor retry loop (brand/brand-guidelines.md, scripts/).
@@ -16,13 +16,13 @@ description: >-
 - `gw-fact-check`: every piece, writer and editor. Claim table; nothing invented.
 - `gw-qa-gate`: the final pass/fail before approval.
 - `gw-lead-generation`: anything meant to generate leads or demos.
-- `gw-lead-magnets`: proposing or writing a lead magnet or front-end offer (approval first).
+- `gw-lead-magnets`: proposing or writing lead magnets, front-end offers (approval first).
 - `gw-skills-index`: this index.
 
 ## Blog and long-form (GW Blog Research, Copywriter, Editor)
 - `blog-keyword-research`: Research. PAA topics by intent.
 - `blog-brief-writing`: Research/Copywriter. Briefs and refresh briefs.
-- `video-research`: Video Research bot / Blog Research. Video transcripts into notes and info-gain briefs.
+- `video-research`: Video Research bot / Blog Research. Transcripts into notes, info-gain briefs.
 - `longform-seo-article`: Copywriter. Blog, Medium, Substack drafts.
 - `gw-longform-editor`: Editor. Final edit, sweeps, links, QA.
 - `ai-search-visibility`: GEO: get named, cited, recommended in AI answers.
@@ -30,8 +30,8 @@ description: >-
 
 ## Social (GW Social Research, Copywriter, Editor)
 - `social-platform-research-brief`: Research. Weekly brief.
-- `community-mapping`: Research. Find where owners talk.
-- `competitor-content-mining`: Research. Study competitor content.
+- `community-mapping`: Research. Where owners talk.
+- `competitor-content-mining`: Research. Competitor content.
 - `stat-sourcing-and-verification`: Research. Verify, log stats.
 - `gw-x-post`: Copywriter. X framework.
 - `gw-linkedin-post`: Copywriter. LinkedIn framework.
@@ -46,7 +46,7 @@ description: >-
 - `gbp-post`: GBP posts and review replies.
 
 ## Backlinks (GW Backlinks)
-- `link-building`: free link tactics, authority (E-E-A-T), logs.
+- `link-building`: free link tactics, E-E-A-T, logs.
 
 ## Analytics (GW Analytics)
 - Uses `gw-lead-generation` (leading vs lagging, UTM conversion) and each blueprint's learning loop.
@@ -57,4 +57,4 @@ description: >-
 - `cold-email-editing`: Email Editor. Hard fails, Seven Sweeps, scoring, PASS/FAIL.
 - `cold-email-deliverability`: Email Editor, Grok Bot. Domain, warm-up, stop-loss.
 - `gw-email-marketing`: Email Copywriter/Editor. Welcome, nurture, re-engagement, client emails.
-- `gw-newsletter`: Email Copywriter. Newsletter issues.
+- Guide v3.22 §0 = Ember/landing-page contract (scope, roles, retries, receipts); Brennan's direct rules win.
