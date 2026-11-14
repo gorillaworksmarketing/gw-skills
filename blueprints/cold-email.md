@@ -82,7 +82,7 @@ CTA: See my page -> <Prospect Page URL, or {{page_link}} if empty>
 ```
 **Ember slot mapping:** Preview = {{preview_text}}; Eyebrow = {{review_count}} + {{rating}} (also the Review Count and Rating properties); Headline = {{headline}}; Review quote = {{review_quote}}; Review name = {{review_name}}; Body paragraph 1/2 = the 2 body paragraphs; Proof line = {{proof_line}}; CTA = button to {{page_link}}. The editor puts the final version in **Edited Email Copy**, same labeled layout.
 **Slot rules:**
-1. **Subject:** short, with the company's name, for example "Built a page for Titan Roofing". No fake Re:, no urgency, no pitch words.
+1. **Subject:** short, with the company's name, for example "Built a page for <Company>". No fake Re:, no urgency, no pitch words.
 2. **Preview:** one line, under 90 characters, about what's on the page. Default: "Your Google reviews, a sample mailer and the homes near your recent roofs."
 3. **Headline:** 3 to 8 words, specific to this company, taken from a verified hook (an award, warranty, years in business, service area, owner name).
 4. **Review quote:** a real Google review of this company, copied word for word. **From Nov 13 it comes from a line in the row's Reviews field** (Pipeline rules, rule 1). Before Nov 13 it could come from the row (Reviews), its page body, or the company's own site where it's clearly labeled as a Google review (for example "Google Review", "Posted on Google", or Trustindex "source of the review is Google"). Shorten only with "..."; never reword, fix typos, or merge two reviews. Aim for 20 words or fewer. The review must be directly about the company; **it may mention price or anything else (Brennan, Nov 13 3:18 PM PT; the earlier no-price filter on reviews is removed).** 5 stars, with the stars and date shown as proof; **any age is fine (Brennan, Nov 13 3:16 PM PT; the Nov 11 "about 6 months or newer" rule is removed).** Usually the first Reviews line, the best-sounding one. No usable Google review: don't write the email; hold the row and say why.
@@ -96,30 +96,16 @@ CTA: See my page -> <Prospect Page URL, or {{page_link}} if empty>
 **Old rules replaced for roofing (Nov 11 2026):** no link in email 1 (the CTA links to the page); the 15-minute call ask and the "reply yes" claim; the opt-out line and postal address written in the copy (CAN-SPAM still applies: Ember's fixed footer carries the opt-out and the Kirkland address; the editor flags Brennan if that footer isn't confirmed); "never name the deliverable" (the email names the personal page); offer arms and offer values. The Real Great Roofing "one client's result" rule stays.
 **Open (ask Brennan):** roofing follow-up touches and positive-reply text (the spec covers email 1 only); whether the CTA page URL needs UTM tags and a link-log row; whether other trades move to this format.
 
-### Example 1: Titan Roofing (Kenmore, WA)
+### Example (fictional placeholders; the real-prospect examples live only in the box spec file, not in this public repo)
 ```
-Subject: Built a page for Titan Roofing
+Subject: Built a page for <Company>
 Preview: Your Google reviews, a sample mailer and the homes near your recent roofs.
-Eyebrow: 117 Google reviews at 5.0
-Headline: The Titan Protection Pledge
-Review quote: We needed a new roof. The Titan crew were amazing. They arrived on time, finished ahead of schedule...
-Review name: Rob Villahermosa
-Body paragraph 1: Titan Roofing puts a 25-year workmanship warranty in writing with the Titan Protection Pledge, and your reviews keep naming Gil. That kind of work should be in front of more nearby homes after each roof wraps.
-Body paragraph 2: I built Titan Roofing a personal page showing how cold email, custom direct mail and a landing page for every homeowner reach the homes around your recent jobs while your crew's work is still the talk of the street.
-Proof line: Real Great Roofing: "$90,000 in leads from just one mail drop."
-CTA: See my page -> {{page_link}}
-```
-
-### Example 2: Grant Roofing & Pressure Washing (Battle Ground, WA)
-```
-Subject: Built a page for Grant Roofing
-Preview: Your Google reviews, a sample mailer and the homes near your recent roofs.
-Eyebrow: 629 Google reviews at 4.9
-Headline: 4 to 5 roof replacements a week
-Review quote: The Grant roofing crew came to our residence as promised... was on time and prompt and finished the job well.
-Review name: Theresia Brannan
-Body paragraph 1: Grant Roofing & Pressure Washing finishes 4 to 5 full roof replacements in a typical week, all with your own W2 crews. Every one of those roofs sits on a street full of homes that need the same work.
-Body paragraph 2: I built Grant Roofing a personal page showing how cold email, custom direct mail and a landing page for every homeowner reach the homes around your recent jobs while your crew's work is still the talk of the street.
+Eyebrow: <Review Count> Google reviews at <Rating>
+Headline: <3-8 words from a verified hook, e.g. the company's named warranty>
+Review quote: <a ★5 line from the Reviews field, word for word, cut only with "...">
+Review name: <reviewer name exactly as on Maps>
+Body paragraph 1: <25-40 words: one or two verified company details, then a line tying them to nearby homes that need the same work>
+Body paragraph 2: I built <short company name> a personal page showing how cold email, custom direct mail and a landing page for every homeowner reach the homes around your recent jobs while your crew's work is still the talk of the street.
 Proof line: Real Great Roofing: "$90,000 in leads from just one mail drop."
 CTA: See my page -> {{page_link}}
 ```
@@ -132,6 +118,27 @@ CTA: See my page -> {{page_link}}
 3. **Run reports.** Every copywriter and editor run report lists any row past 1 day and the reason it's stuck.
 4. **Daily stall check (Grok Bot).** Grok Bot checks every day for rows past 1 day and troubleshoots each stall with the bot that owns the step (Lead Research, Copywriter, Editor, or Claude/Replit).
 Unchanged: draft only; only Brennan sets Send; no price wording; `gw-fact-check` claim table on every row.
+
+## Landing-page handoff and registry (Nov 13 2026; relayed by Grok Bot, Brennan approved 4:00 and 4:03 PM PT)
+Source of truth: Notion API guide v3.19 §11 (handoff contract) and §12 (new industry onboarding): https://app.notion.com/p/40e92472fef981098470e9e6aa31c60d. Applies to **every DB in the 12b registry**, on autopilot; every new industry DB joins the same flow. Email sending stays TBD: no bot sends, schedules or activates email; Ready and Published are NOT send approvals; only Brennan sets Status = Send.
+**Registry rule (every bot):** DB and data-source IDs come only from the guide's **12b Industry registry**. No bot hardcodes DB IDs, in skills, scripts or this blueprint. The registry also says, per industry, whether the landing-page template and the email/copy template are approved or MISSING.
+**Steps and owners (guide 11a):**
+1. **Research (GW Lead Research):** Google Maps signed out, one listing at a time, plus the full website. Writes page-body research, Extracted Text, Reviews (Maps ★5 lines + proof; Pipeline rules), Rating, Review Count, the Google fields including **Address** and **Google Place ID** (same lookup), Website Emails. Scrape OK: Status = Email Lookup; fail: Failed.
+2. **Prospect Page Code (GW Lead Research at row creation; backfill: Grok Bot):** 12 characters from `abcdefghjkmnpqrstuvwxyz23456789` (no 0, o, 1, l, i), unique across ALL registered DBs. Never change an existing code.
+3. **Prospect Page URL (Ember page worker):** BASE_URL/PROSPECT_PAGE_CODE once Brennan supplies BASE_URL; until then the field stays empty and drafts use {{page_link}}.
+4. **Email Lookup (Ember Hunter):** only a usable verified mailbox moves the row to Ready for Summary; otherwise it stays at Email Lookup with the reason in Hunter Email Status. Ember/Hunter owns Status at this step.
+5. **Original draft (Copywriter = Claude (Replit) or Grok Bot):** Status = Ready for Summary and Copywriter = that writer. Email Copy starts with "Subject:"; Status → Editing. Each writer writes only its own rows. Assignment split (Grok Bot assigns): Claude (Replit) 25 a day, Grok Bot the rest.
+6. **Edit (GW Email Editor):** Edited Email Copy starts with "Subject:"; Email Copy preserved; Status stays Editing.
+7. **Outreach Email (GW Email Editor at clear time):** exactly one address copied from Hunter's actual results on the row: Hunter Email Status = Verified AND Hunter Evidence shows verification.status = valid, result = deliverable, accept_all = false, and the address is in usableEmails. Never accept-all, unknown, risky, webmail-guess or discovered-only. Prefer a Hunter-verified role inbox on the company domain from Website Emails. No such address: do not set the trio; record the reason in Editor Notes.
+8. **Handoff trio (GW Email Editor at clear time), in this order:** Lifecycle Stage = website → Landing Page Input Version += 1 → **Landing Page Status = Ready LAST**. Only when ALL are true (guide 11b): research complete (Reviews, Rating, Review Count, website text, Google Maps link); Prospect Page Code present; Email Copy and Edited Email Copy both start with "Subject:"; cleared by the editor (Status = Editing, no Hold in Editor Notes); Outreach Email set per step 7; and the industry's landing-page and email templates approved in 12b (guide 12d). Never bulk-mark rows Ready. Grok bots never set Building, Published, Needs Fix or Uncertain and never write Built Version, Last Built or Landing Page Error.
+9. **Build and publish (Ember page worker, PENDING):** Ready → Building → Published (or Needs Fix / Uncertain).
+10. **Send (Brennan only).**
+**Field ownership (guide 11d):** the editor writes Edited Email Copy, Editor Notes, Outreach Email, Lifecycle Stage, Landing Page Input Version, Landing Page Status = Ready. This replaces the editor's old "don't touch stage fields" rule for these fields only. Lead Research writes research and enrichment fields, Reviews, Rating, Review Count, page body, Website Emails, Industry, Prospect Page Code (new rows), Status Pending Extraction → Email Lookup / Failed.
+**Daily 1-day stall report (GW Email Editor, across every 12b DB; report to Brennan):** any row more than 1 day at Pending Extraction, Email Lookup, Ready for Summary, Editing, or Landing Page Status = Ready/Building/Uncertain, listed with its owner and reason. Report only; it never moves Status. Grok Bot troubleshoots each stall with the owning bot (Pipeline rules, rule 4).
+**Missing pieces (guide 12d):** no approved email/copy template for the industry → copywriters don't draft; rows stay at Ready for Summary; flag Brennan once. No approved landing-page template → the editor doesn't set the trio; rows stay cleared at Editing with Landing Page Status empty; flag Brennan once. No 12b DB for a lead's industry → Lead Research holds the lead (never writes into Fencing) and flags it.
+**New industry ("focus on <industry>", guide 12c):** Brennan names the industry → Grok Bot creates "Cold Leads – {Industry}" from the 12a schema template and adds the Industry option to every DB → Grok Bot adds it to 12b (both templates MISSING until approved) → Ember registry (Brennan's Replit) → GW Lead Research starts Maps lookups and creates rows with codes → Hunter → copywriter assignment → editor sweeps include it → handoff → daily stall check. Overflow at about 9,500 rows: "Cold Leads – {Industry}-2" from the same template, added to 12b.
+**Status at time of writing (per guide v3.19, Nov 13):** 12b lists the landing-page template as MISSING for every industry and approved email templates only for Roofing and Fencing, so under 12d no row gets the trio until Brennan approves a landing-page template. BASE_URL is not supplied; the Ember page worker is PENDING.
+**Guide vs brief conflicts (guide followed):** (a) the relay had Lead Research create the new DB and add it to 12b; the guide assigns that to Grok Bot, and Lead Research starts the Maps lookups. (b) The relay set Ready when research and the final edit are complete; the guide adds code present, both copies start with "Subject:", no Hold, Outreach Email set, and approved templates in 12b. (c) The guide names GW Email Editor as owner of the daily stall report; the Nov 13 2:13 PM rule's Grok Bot check stays as the troubleshooting step.
 
 ## Copy (GW Email Copywriter; skill `cold-email-copy`)
 The structure and offer flow below are the **legacy (pre-Nov 11) format**. Roofing uses the landing-page section above; other trades keep this until Brennan extends the new format.
@@ -241,6 +248,7 @@ New files keep arriving in cold-email/. At the start of each session, add each n
 - Old front-end offers (sample postcard, list preview, teardown, video): not approved; removed.
 
 ## Changelog
+- 2026-11-13 4:15 PM PT (landing-page handoff, relayed by Grok Bot; Brennan approved 4:00 and 4:03 PM PT per the relay): new "Landing-page handoff and registry" section from Notion API guide v3.19 §11-12 (autopilot for every 12b DB; Outreach Email rule 11c; trio order with Ready LAST and the 11b/12d conditions; editor field ownership replaces "don't touch stage fields" for those fields only; Prospect Page Code format; Address and Google Place ID in the same lookup; registry instead of hardcoded IDs; new-industry onboarding 12c; daily stall report across 12b). Guide conflicts noted in the section. Real-prospect examples replaced with fictional placeholders because the repo is public. Skills: cold-email-editing, cold-email-lead-research, cold-email-copy.
 - 2026-11-13 4:08 PM PT: reading level set to grade 6-7 for all copy, fail over 7 (Brennan). Roofing CTA unchanged.
 - 2026-11-13 3:18 PM PT correction (Brennan's words, relayed by Grok Bot: "it's fine if reviews mention price. we don't care what reviews mention. they should just be directly about the company"): removed the no-price filter on quoted reviews everywhere (pipeline rule 1, slot 4, editor hard fail; replaces item (3) of the 3:16 entry and the Nov 11 "never a review that mentions price" wording). Review rule now: 5 stars, any age, directly about the company, best-sounding of the 5 most recent (up to 10 if none qualifies), word for word, Google Maps only, screenshot listing name matches. Our own copy (every other slot) stays price-free; the exemption covers only the verbatim review quote. Matching one-line exemptions added to gw-qa-gate (item 3) and gw-claims-guardrails (price ban) so a review quote doesn't trip them.
 - 2026-11-13 3:16 PM PT (Brennan's words, relayed by Grok Bot: "we should use any 5-star google reviews we can get our hands on. we just use the 5 most recent reviews and use the best sounding 5-star review"): (1) removed the "about 6 months old or newer" rule everywhere (slot rules, editor hard fail, pipeline rule 1); any age is fine, dates stay as proof; (2) pull reads the 5 most recent Maps reviews, best-sounding qualifying 5-star first, up to 3 lines, then up to 10 most recent if none qualify; (3) no-price rule spelled out: no price, quote, estimate, cost, free, or dollar wording; (4) NO QUALIFYING REVIEW only after checking up to 10. Still required: 5 stars, word for word, listing-name screenshot match, Google Maps only. (6) **Grok Bot clarification (not Brennan's words):** live count and rating go straight into the Review Count and Rating fields (the source); no LIVE line; Reviews holds only ★5 lines or NO QUALIFYING REVIEW; the Eyebrow must match those fields (row scraped before the refresh: note it, not a fail). Skills: cold-email-lead-research, cold-email-copy, cold-email-editing.
