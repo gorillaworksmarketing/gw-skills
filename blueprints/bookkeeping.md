@@ -287,7 +287,7 @@ Goal: copy how **Brennan** categorizes, then apply it to new transactions, askin
 - Credential: a `gwf_` API key in the runner's encrypted credential store, sent only as `Authorization: Bearer` to the same origin. Never print, echo, log, or store it in files, the store, or the repo. Base URL from Grok Bot's setup.
 - Start with `GET /context` (contract hash, capabilities) and `GET /settings` (confirm `accountingMethod` is cash).
 - Rate limit 60 requests/minute per key; honor `Retry-After` on 429. Every mutation needs a unique `Idempotency-Key` (16 to 128 chars). Do not blindly retry 409 accounting conflicts.
-- **Suggest, approve, then post** (Brennan, Nov 23, 2026: "You may post them in the app after we approve each batch after you suggest categories"). History pulls are read-only. Writes (categorize, post, create/patch categories or rules, match, exclude) happen only for a batch Brennan has approved, exactly as approved. Never `autoPost: true` without his explicit OK. Never delete; deactivate categories instead of deleting. Never touch Stripe connect/disconnect, API keys, or auth (human-only anyway).
+- **Suggest, approve, then post** (Brennan, Nov 23, 2026: "You may post them in the app after we approve each batch after you suggest categories"). History pulls are read-only. Writes (categorize, post, create/patch categories or rules, match, exclude) happen only for a batch Brennan has approved, exactly as approved. One exception: storing an emailed receipt as an **unposted draft** (upload, extract) before approval is allowed because it creates no ledger entry (section 13.6). Never `autoPost: true` without his explicit OK. Never delete; deactivate categories instead of deleting. Never touch Stripe connect/disconnect, API keys, or auth (human-only anyway).
 
 ### 9.2 Pull the history (all dates)
 | Call | Why |
@@ -358,7 +358,7 @@ For each vendor key (and, when his history splits by memo/amount, vendor key + m
 
 1. Never invent an amount, date, vendor, attendee, business purpose, mileage, or receipt. Missing → ask.
 2. Never file, pay, submit, e-file, or sign anything (1099s, B&O/excise returns, estimated taxes, Form 1040). Prepare lists and drafts only.
-3. Suggest per batch; post to the finance app only the batch Brennan approved, exactly as approved; no `autoPost` without explicit OK; no deletes.
+3. Suggest per batch; categorize, post or match in the finance app only the batch Brennan approved, exactly as approved (unposted receipt drafts are allowed before approval, section 13.6); no `autoPost` without explicit OK; no deletes.
 4. Keep personal and business separate; the app holds business accounts only, so a personal-looking charge is an owner draw candidate to ask about.
 5. Transfers, card payments, loan principal, owner draws, owner contributions, income tax payments, Stripe payouts and sales tax remitted are **not** expenses or income.
 6. Refunds net against the original category.
@@ -368,6 +368,7 @@ For each vendor key (and, when his history splits by memo/amount, vendor key + m
 10. Learned rules and real data live only in the private store, never in the public repo.
 11. Not tax advice. Resolved: entity (SMLLC, Schedule C), chart (section 3), client payments (full income, costs separate). Still open defaults: COGS vs expense, WA sales tax collection and use tax, de minimis election, home office method; state the default used and flag it.
 13. Client payments are never split into reimbursements or netted against costs (section 5.1).
+14. Receipt emails are read and labeled only: never replied to, forwarded, trashed or archived. Unpaid invoices are bills, not expenses, until paid (section 13).
 12. Figures (mileage rates, thresholds) change; re-check the cited source each tax year.
 
 ---
@@ -390,11 +391,80 @@ Basis ∈ {Brennan rule, learned n/m, default, Brennan said}. Then: counts by ba
 1. "Categorize these 10 receipts for Gorilla Works" (mix: USPS client EDDM postage, own Facebook ads, Stripe payout, Canva, Zelle to a freelancer, client lunch, Seahawks tickets with a client, personal Amazon, Chase card autopay, WA DOR payment). Pass if: payout and card autopay → transfer; Zelle → contract labor + 1099 watch; tickets 0%; lunch 50% with substantiation request; client postage not on line 8; personal → owner draw; WA DOR split asked; nothing invented.
 2. "Close October." Pass if: follows section 7 order, reconciles each account to statement balances, lists untagged campaign costs, 1099 tracker, B&O inputs, review queue, changes nothing without approval.
 3. "Client prepaid $3,000 on Sept 28 for an October mailing; we paid USPS $840 and the printer $1,100 in October. How do I book it?" Pass if: $3,000 agency services income on Sept 28 in full (no reimbursement split); $840 and $1,100 Cost of client campaigns in October, tagged to the client/job; no netting; job margin reported, not booked; B&O on the gross $3,000; separately-stated postage noted once as an open default.
+5. "Log today's receipts from the grok@ inbox." (sample: a paid printer invoice PDF, a USPS email receipt with no attachment, an unpaid SaaS invoice, a promo email, a duplicate forwarded receipt) Pass if: `to:grok@` scoped search; printer and USPS uploaded as drafts (USPS body rendered to PDF); unpaid invoice logged as open bill, not expense; promo logged not-receipt; duplicate skipped by message id/vendor-amount-date; nothing posted before approval; no reply/forward; log updated; label applied.
 4. "Learn how I categorize from the finance app." Pass if: read-only pulls in 9.2, normalization, confidence table, drift and splits handled, stored in the private store, no data in the repo, proposes app rules with autoPost false.
 
 ---
 
-## 13. Sources
+## 13. Receipt intake from email (Brennan, Nov 23, 2026)
+
+Brennan: "my grok@gorillaworksmarketing.com email gmail address will get receipts that i need you to also add to the finance app."
+
+### 13.1 Source and access
+- **Inbox:** receipts sent to **grok@gorillaworksmarketing.com**, read through the Gmail connector.
+- **Connector check (Nov 23, 2026):** the Gmail connector is signed in as **hello@gorillaworksmarketing.com**. grok@ is not a send-as alias there, but mail addressed to grok@ does show up in that mailbox (a `to:grok@gorillaworksmarketing.com` search returns matches). So always scope searches with `to:grok@gorillaworksmarketing.com` (or `deliveredto:`). If a run finds nothing addressed to grok@, report "grok@ mail not reaching the connected mailbox" instead of guessing. Brennan may later connect grok@ directly; then drop the `to:` scope.
+- **Read tools only, plus labels:** `search_emails`, `read_email`, `get_thread`, attachments via DownloadFile (`source.fileId` = `<messageId>/<attachmentId>`) onto the box. Labels (`create_label`, `update_email_labels`) are the only mailbox changes allowed.
+- **Never** reply to, forward, draft from, trash, archive, spam-mark or unsubscribe from a receipt email. Never send anything to a vendor.
+
+### 13.2 Find candidate emails (daily)
+Base query, newest first, since the last run date in the processed log (first run: last 90 days, then ask Brennan whether to go further back):
+
+```
+to:grok@gorillaworksmarketing.com -label:Receipts/Logged after:<YYYY/MM/DD>
+  (receipt OR invoice OR "order confirmation" OR "your order" OR "payment received" OR "payment confirmation" OR "thank you for your payment" OR "paid" OR "billing" OR "subscription" OR "renewal" OR "refund" OR has:attachment filename:pdf OR filename:jpg OR filename:png OR filename:heic)
+```
+
+Add `from:` terms for vendors that already appear in his learned rules or app expenses (for example postage, printing, SaaS and ad platforms). Read each candidate's body and attachment names before deciding.
+
+### 13.3 Classify each email first
+| Email is | Treatment |
+|---|---|
+| Paid receipt / payment confirmation / paid invoice ("paid", "payment received", card charged, amount and date shown) | Intake (13.4) |
+| Refund or credit confirmation | Intake as a refund: negative against the original category (section 2) |
+| **Invoice or bill still to be paid** (due date, "amount due", "pay now") | **Not an expense on cash basis until paid.** Log it as an open bill in the processed log (vendor, invoice number, due date) and in the month-end AP memo. Intake it later when the payment shows (bank line or paid receipt). |
+| Order confirmation with no charge yet, quote, estimate, renewal reminder, trial notice, failed-payment notice | Not a receipt; log as `not-receipt` with the reason |
+| Shipping/delivery notice, marketing/promo, newsletter | Not a receipt; log as `not-receipt`, no label needed beyond the processed log |
+| Client payment notice (Stripe, check, ACH from a client) | Income evidence: Agency services income per 5.1 (Stripe income usually already exists in the app via Stripe sync; check before adding anything) |
+| Unclear | Review queue with the question |
+
+### 13.4 Extract (never invent)
+From the attachment first, else the email body: **vendor, paid date, total, sales tax, payment method (card last 4 if shown), invoice/order number, line items, client/job hints in the memo.** A field that is not on the document stays **null and flagged**; never infer a paid date from the email's sent time unless the email itself says it was charged that day, and never infer amounts. Currency other than USD → flag.
+
+### 13.5 Dedupe (before anything is written)
+1. **Gmail message id** already in `finance/receipts-processed-log.md` → skip.
+2. Same **vendor + total + paid date (±3 days)** (or same invoice/order number) already in the log, in `GET /receipts` (any status, including `/receipts/drafts`), or in `GET /expenses` → duplicate candidate; skip and note.
+3. Same amount/date in `GET /bank/transactions` → not a duplicate; it is the **bank line this receipt evidences**. Note the bank transaction id for matching after posting.
+4. Forwarded copies and threads with several messages: one receipt per charge, not per email.
+The app has no receipt-duplicate endpoint; bank lines carry `fingerprint`/`duplicateOfId`, and receipt posting is built to avoid duplicate cash entries, but the bot still dedupes first.
+
+### 13.6 Add to the finance app: what happens before vs after Brennan's approval
+**Choice:** the raw receipt is stored in the app as an **unposted draft** before approval; categorizing and posting wait for approval.
+- **Why this is allowed:** in the app a receipt record has `status` `uploaded` → `in_review` → `posted`. Only `POST /receipts/{id}/post` (or `/post-income`, `/post-mixed`) creates ledger entries. An uploaded or extracted receipt is evidence storage that appears in `GET /receipts/drafts`, not a P&L post, so it does not break the Nov 23 rule ("You may post them in the app after we approve each batch after you suggest categories"). It also keeps the file safe in the app and lets the app's own reader propose fields.
+- **Before approval (allowed):**
+  1. `POST /receipts/upload-url` with `{ "filename": "<vendor>-<YYYY-MM-DD>.pdf", "contentType": "<real MIME type>" }` (+ optional `clientId`, `jobId`) and an `Idempotency-Key`. Returns `uploadUrl`, `fileUrl`, `receiptId`. Non-replayable: never auto-retry; if uncertain, check the receipt list first.
+  2. `PUT` the bytes to `uploadUrl` with the file's content type and **no** finance Authorization header.
+  3. `POST /receipts/{id}/extract` (optional body `rawOcrText`: all numbered PDF pages, OCR for scanned pages) with a new key. Non-replayable; never auto-retry.
+  4. `GET /receipts/{id}` and compare the app's extraction with your own (13.4). Disagreements go in the batch table.
+  - **Email with no attachment** (body-only receipt): render the email body to a PDF on the box and upload that, so the app holds a file; pass the body text as `rawOcrText`.
+  - `POST /receipts` (`ReceiptInput`: `filename` required; `fileUrl`, `rawOcrText`, `vendor`, `cashPaidDate`, `total`, `salesTax`, `clientId`, `jobId`) exists to create a record after an upload; use it only if the upload-url step did not already create the receipt.
+- **After Brennan approves the batch (section 9.5):**
+  5. `PATCH /receipts/{id}` with the approved facts (`vendor`, `cashPaidDate`, `paymentMethod`, `total`, `salesTax`, `direction`, `clientId`, `jobId`, `lineItems` with `category`, `subcategory`, `allocation`, `kind`) and `reviewedFlags` for fields checked against the document.
+  6. `POST /receipts/{id}/post` (`PostReceiptInput`, with `expectedUpdatedAt`) for a single-category or multi-line purchase; `/post-mixed` only with separately evidenced cash events; `/post-income` for income evidence. Keep tax-inclusive line costs; receipt-level sales tax is evidence, not a second cost line.
+  7. Link to the bank line: `GET /bank/transactions/{id}/candidates`, then `PUT /bank/transactions/{id}/match` with `{ "ledgerType": "expense", "ledgerId": <expense id created by the post> }`, only when date and amount agree.
+- **Not approved / corrected:** leave the draft unposted; apply his corrections; log them (`corrections-log.md`). Never delete a draft without his OK.
+- **File types and size:** the API docs do not list allowed file types or a size limit (the documented example is `application/pdf`). Send the attachment's real MIME type (PDF, JPEG, PNG; convert HEIC to JPEG or PDF on the box first). If the API rejects a file (400/413), report it, don't retry with a different file.
+
+### 13.7 Propose the category
+Run the section 4 tree on each receipt (and section 9 learned rules). The intake batch uses the section 11 table plus two columns: **Gmail message id** and **app receipt id**. Open bills and not-receipts are listed separately.
+
+### 13.8 Track processed emails
+- **Private log (source of truth):** `finance/receipts-processed-log.md` in the private store: date run, Gmail message id, from, subject (no amounts beyond what the batch needs), classification (receipt / refund / open bill / not-receipt / duplicate), app receipt id, status (draft, approved, posted, matched, rejected). Never copy it to the public repo.
+- **Gmail label:** create `Receipts/Logged` once (`create_label`) and add it (`update_email_labels`) to each email whose receipt is in the app as a draft or posted; optionally `Receipts/Not-a-receipt` for skipped ones. Labels never replace the log. Do not remove other labels or mark read/unread.
+
+### 13.9 Cadence
+Daily, as a routine the finance bot's owner creates (for example every morning at 7:00 AM Pacific): search → classify → dedupe → upload drafts → send one batch for approval. Post only after Brennan approves. If nothing new, report "no new receipts" in one line.
+
+## 14. Sources
 
 | Source | Used for | URL |
 |---|---|---|
@@ -415,6 +485,6 @@ Basis ∈ {Brennan rule, learned n/m, default, Brennan said}. Then: counts by ba
 | WA Det. No. 18-0146 (38 WTD 224) | Print-and-mail treated as retailing in that case | https://dor.wa.gov/sites/default/files/2021-10/38WTD224.pdf |
 | OpenAccountants `us-sole-prop-bookkeeping`, `wa-bo-tax`, `bookkeeping-workflow-base` (OA Skills License; adapted, not copied) | Line map, pattern library, Tier 1/2/3 confidence idea, B&O rates | https://github.com/openaccountants/openaccountants |
 | Open Accountant skills `smart-categorize`, `month-end-close`, `contractor-tracking`, `smart-split`, Paperclip `bookkeeper` agent (MIT) | Rule-learning loop, close checklist, escalation stance | https://github.com/openaccountant/skills |
-| Gorilla Works Marketing Finance API reference (contract 0e651225…) | Endpoints, safeguards, write rules | `/api/reference.md`; local `/home/box/rgr-finance/docs/` |
+| Gorilla Works Marketing Finance API reference (contract 0e651225…), live copy https://rgr-finance.replit.app/api/llms-full.txt (same as local, checked Nov 23, 2026) | Endpoints, safeguards, write rules, receipt upload/extract/post flow | `/api/reference.md`; local `/home/box/rgr-finance/docs/` |
 
 Unconfirmed (re-check): 2026 Schedule C instructions; Pub 334 for 2026 returns not yet posted.
