@@ -5,6 +5,7 @@ The shared private skill library for Gorilla Works Marketing's GW bots. Bots sho
 | Skill | Description |
 |---|---|
 | [ai-search-visibility](skills/ai-search-visibility/SKILL.md) | >- |
+| [api-issue-handling](skills/api-issue-handling/SKILL.md) | >- |
 | [blog-brief-writing](skills/blog-brief-writing/SKILL.md) | >- |
 | [blog-keyword-research](skills/blog-keyword-research/SKILL.md) | >- |
 | [cold-email-copy](skills/cold-email-copy/SKILL.md) | >- |
@@ -34,8 +35,10 @@ The shared private skill library for Gorilla Works Marketing's GW bots. Bots sho
 | [gw-skills-index](skills/gw-skills-index/SKILL.md) | >- |
 | [gw-x-editor](skills/gw-x-editor/SKILL.md) | >- |
 | [gw-x-post](skills/gw-x-post/SKILL.md) | >- |
+| [hunter-notion-save-recovery](skills/hunter-notion-save-recovery/SKILL.md) | >- |
 | [link-building](skills/link-building/SKILL.md) | >- |
 | [longform-seo-article](skills/longform-seo-article/SKILL.md) | >- |
+| [notion-shared-rate-limit](skills/notion-shared-rate-limit/SKILL.md) | >- |
 | [reddit-comment](skills/reddit-comment/SKILL.md) | >- |
 | [social-platform-research-brief](skills/social-platform-research-brief/SKILL.md) | >- |
 | [social-reply](skills/social-reply/SKILL.md) | >- |
