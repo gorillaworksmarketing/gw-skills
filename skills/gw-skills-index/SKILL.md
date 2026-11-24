@@ -60,4 +60,4 @@ description: >-
 - Guide v3.22 §0 = Ember/landing-page contract (scope, roles, retries, receipts); Brennan's direct rules win.
 
 ## Finance (Bookkeeper, Expense Manager, Grok Bot)
-- `gw-bookkeeping`: categorizing receipts/bank lines, month-end close, client pass-throughs, 1099s, learning Brennan's categories (detail: blueprints/skills-index.md).
+- `gw-bookkeeping`: categorizing receipts/bank lines, month-end close, client campaign costs, 1099s, learning Brennan's categories (detail: blueprints/skills-index.md).
