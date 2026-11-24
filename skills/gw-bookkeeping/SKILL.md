@@ -2,43 +2,45 @@
 name: gw-bookkeeping
 description: >-
   Use for any Gorilla Works bookkeeping or accounting task on the cash basis:
-  categorizing receipts, bank or card lines, or Stripe activity; month-end close
-  and reconciliation; client campaign costs (printing, postage, lists, client ad
-  spend); 1099-NEC contractor tracking; Schedule C mapping; or learning how
-  Brennan categorizes from his finance app history. Use it even if he just says
-  "what category is this" or "close the month".
+  categorizing receipts, bank or card lines, or Stripe activity; logging receipt
+  emails from grok@gorillaworksmarketing.com into the finance app; month-end
+  close and reconciliation; client campaign costs (printing, postage, lists,
+  client ad spend); 1099-NEC contractor tracking; Schedule C mapping; or
+  learning how Brennan categorizes from his finance app history. Use it even if
+  he just says "what category is this", "log my receipts" or "close the month".
 ---
 # GW bookkeeping (cash basis, direct mail agency)
-Depth: blueprints/bookkeeping.md. Books live in the Gorilla Works Marketing Finance API (Brennan's cash-basis app). Gorilla Works Marketing, LLC is a single-member LLC filing Schedule C. No CPA chart: the blueprint chart (§3) is the standard. Every account in the app is business. Not tax advice: you prepare, Brennan decides.
+Depth: blueprints/bookkeeping.md. Books: Gorilla Works Marketing Finance API. Single-member LLC, Schedule C. Blueprint §3 is the standard chart (no CPA chart). Every app account is business. Not tax advice: you prepare, Brennan decides.
 
-## Order of authority (§0)
-Brennan's instruction or logged correction → his app rules and categories (`GET /transaction-rules`, `/categories`) → high-confidence learned rules (§9) → blueprint defaults, labeled "default, unconfirmed" → ask. A habit that conflicts with tax law is flagged, never copied or silently fixed.
+## Authority (§0)
+Brennan's instruction or logged correction → his app rules and categories → high-confidence learned rules (§9) → blueprint defaults ("default, unconfirmed") → ask. A habit that breaks tax law is flagged, not copied or silently fixed.
 
-## Cash-basis core (§1)
-Income when received or made available (constructive receipt). Expense when paid; a bank card charge counts on its charge date. Prepaids over 12 months are spread (12-month rule). Unpaid invoices and bills stay off the P&L.
+## Cash basis (§1)
+Income when received or made available. Expense when paid; a bank card charge counts on its charge date. Prepaids over 12 months are spread. Unpaid invoices and bills stay off the P&L.
 
-## Categorize (§4 tree, first match wins)
-Non-P&L checks first: duplicate, transfer/card payment/Stripe payout, loan (principal vs interest), owner draw or contribution, tax payment (income tax = draw; WA DOR = B&O vs sales tax split), refund (nets against its category). Then Brennan's or learned rule → client job cost → GW's own marketing → overhead → capital item over $2,500 → mixed receipt split by lines → review queue.
-Client printing, postage, lists and ad buys are cost of client campaigns (allocation `client` + client/job), never line 8; line 8 only promotes Gorilla Works. Meals 50% with attendee and purpose; entertainment 0%; gifts $25 per person per year. Track contractors paid by Zelle, ACH, check or cash; 1099-NEC at $2,000+ YTD (2026); card and platform payments don't count.
+## Categorize (§4, first match wins)
+Non-P&L first: duplicate, transfer/card payment/Stripe payout, loan (principal vs interest), owner draw or contribution, tax payment (income tax = draw; WA DOR = B&O vs sales tax split), refund (nets against its category). Then his or a learned rule → client job cost → own marketing → overhead → capital item over $2,500 → split mixed receipts by line → review queue.
+Client printing, postage, lists and ad buys are cost of client campaigns (allocation `client` + client/job), never line 8 (line 8 promotes GW only). Meals 50% with attendee and purpose; entertainment 0%; gifts $25/person/year. 1099-NEC: track contractors paid by Zelle, ACH, check or cash ($2,000+ YTD in 2026); card/platform payments excluded.
 
-## Client payments (§5.1, Brennan's practice)
-Clients prepay everything as agency services. Book the full payment as agency services income when received: never split out a reimbursement and never net it against costs. Campaign costs are separate expenses when paid, tagged to client/job. WA B&O applies to the gross receipt; flag it.
+## Client payments (§5.1)
+Clients prepay everything: book the full payment as agency services income when received. Never split out a reimbursement or net against costs. Campaign costs are separate expenses when paid, tagged to client/job. Flag WA B&O on the gross.
 
 ## Learn from history (§9)
-Read-only pulls of all history; normalize vendors; count his manual choices (High = 3+ uses, 90%+ share, last 3 agree); handle drift and stable splits. Store the table only in the private store `finance/` folder, never the public repo.
+Read-only pulls of all history, normalize vendors, count his manual choices (High = 3+ uses, 90%+ share, last 3 agree); handle drift and splits. Learned rules stay in private store `finance/`, never the repo.
 
-## Batch flow (§9.5)
-Suggest the batch → Brennan approves or corrects (log corrections) → post exactly the approved batch with an Idempotency-Key → read back and report what posted.
+## Receipt emails (§13, daily)
+Search Gmail `to:grok@gorillaworksmarketing.com` for receipts, invoices, payment confirmations, PDF/image attachments. Paid receipt or refund → intake; unpaid invoice = open bill, no expense until paid; promos → not-receipt. Extract from the document only (missing = null, flagged). Dedupe (message id; vendor+amount+date vs the app). Upload as an unposted draft (upload-url → PUT → extract). Log in `finance/receipts-processed-log.md`; label `Receipts/Logged`. Never reply, forward, trash or archive.
 
-## Month-end (§7)
-Pull, categorize, match receipts, check duplicates, reconcile every account to the statement ($0 or explain), update 1099 and B&O inputs, run reports, send the review queue.
+## Batch flow (§9.5) and month-end (§7)
+Suggest the batch → Brennan approves or corrects (log corrections) → post exactly the approved batch with an Idempotency-Key, then match bank lines → read back and report.
+Month-end: categorize, match, dedupe, reconcile each account to its statement ($0 or explain), update 1099/B&O inputs, run reports, send the review queue.
 
 ## Guardrails (§10)
 - Never invent amounts, dates, vendors, attendees, purposes, mileage or receipts.
 - Never file, pay, submit or sign anything.
-- No app write before Brennan approves that batch; no `autoPost` rules without his OK; never delete.
+- Categorize, post or match only after Brennan approves that batch (unposted receipt drafts OK, §13.6); no `autoPost` without his OK; never delete.
 - Transfers, card payments, loan principal, draws, contributions, income tax, payouts and sales tax remitted are not P&L.
-- Keep receipts. Never show the API key.
-- COGS vs expense, sales tax and the de minimis election are open: name the default used and flag it.
+- Keep receipts; never show the API key.
+- COGS vs expense, sales tax, de minimis: open defaults; name the one used.
 
-Output: the §11 batch table (with basis and confidence), then non-P&L items, then the review queue.
+Output: §11 batch table, non-P&L items, review queue.
