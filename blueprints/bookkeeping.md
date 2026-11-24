@@ -2,7 +2,11 @@
 
 Depth for `gw-bookkeeping`. Gorilla Works Marketing, LLC is a direct mail marketing agency in Kirkland, WA. Its books live in the **Gorilla Works Marketing Finance API** (Brennan's own cash-basis app; docs at `/api/reference.md`, local copy `/home/box/rgr-finance/docs/`). Every rule below either cites a source in section 13 or is marked **[GW default, confirm]**. Brennan's own past categorizations beat every default here.
 
-> Not tax advice. The skill prepares and organizes books for Brennan and his CPA. It never files, pays, submits, or signs anything.
+> Not tax advice. The skill prepares and organizes books for Brennan. It never files, pays, submits, or signs anything.
+
+**Confirmed by Brennan (Nov 23, 2026):** (1) Gorilla Works Marketing, LLC is a **single-member LLC filing Schedule C**. (2) He has **no CPA chart of accounts**: the chart in section 3 is the standard. (3) Clients **prepay everything up front as agency services**; the full payment is income and costs are not parsed out (section 5.1). (4) **No personal accounts** are connected to the app; every account is business. (5) The bot **suggests categories per batch** and may **post them to the app after he approves each batch** (section 9.5).
+
+**Still open (use the stated default and flag it):** cost of client campaigns as Part III COGS vs ordinary expense lines; Washington sales tax collection on what GW sells and use tax on untaxed printing; the de minimis safe harbor election; home office method. The skill-level output says which default it used.
 
 ---
 
@@ -11,7 +15,7 @@ Depth for `gw-bookkeeping`. Gorilla Works Marketing, LLC is a direct mail market
 1. Brennan's direct instruction (this conversation, or a logged correction).
 2. His existing **transaction rules** and **categories** in the finance app (`GET /transaction-rules`, `GET /categories`).
 3. The **learned rule table** built from his past manual categorizations (section 9), high confidence only.
-4. The defaults in this blueprint (sections 3 to 6), shown to him as "default, unconfirmed".
+4. The defaults in this blueprint (sections 3 to 6), shown to him as "default, unconfirmed". Section 3 is his standard chart (no CPA chart exists), so a section 3 category is the expected answer when items 1 to 3 above are silent.
 5. Otherwise: **ask**. Put the item in the review queue with your best guess and why.
 
 A conflict between 2/3 and tax law (for example, a personal Netflix charge he once tagged as Software) is **flagged, not silently fixed and not silently copied**.
@@ -34,7 +38,7 @@ A conflict between 2/3 and tax law (for example, a personal Netflix charge he on
 **Practical consequences for the agency**
 - A client's December check deposited January 3: income in the **year it was received** (if it arrived in December and was available, December, per constructive receipt; ask Brennan when it physically arrived if it matters at year end).
 - Stripe: revenue is the **gross** the client paid on the charge date; the Stripe fee is an expense; the payout to the bank is a **transfer**, not revenue (section 4).
-- A postage meter or USPS account top-up is a prepayment for postage. Under cash rules it is paid when funded; if a large balance straddles year end, **flag for the CPA** rather than guess. [GW default, confirm]
+- A postage meter or USPS account top-up is a prepayment for postage. Under cash rules it is paid when funded; if a large balance straddles year end, **flag it for Brennan** rather than guess. [GW default, confirm]
 - An annual SaaS plan paid in November that runs 12 months qualifies for the 12-month rule; a 24-month plan does not (spread it). Flag anything over 12 months.
 
 ---
@@ -47,23 +51,24 @@ A conflict between 2/3 and tax law (for example, a personal Netflix charge he on
 - **Receipt vs bank line**: the receipt is evidence for the bank line, not a second expense. Match it (`/bank/transactions/{id}/candidates`, `/match`), do not duplicate it.
 - **Refunds** net against the original category (vendor refund reduces that expense; client refund goes to returns and allowances, Schedule C line 2). Never book a vendor refund as income.
 - **Personal vs business**: a business must keep personal spending out. Personal items paid from business money are **owner draws**, not expenses. Business items paid personally are **owner contributions** (or reimbursements to the owner) and are expenses.
+- **GW's app holds business accounts only** (Brennan, Nov 23, 2026). So every line starts as presumed business; a charge that looks personal is the exception to flag (owner draw candidate, ask), not something to hunt for line by line. Personal accounts are never added or pulled.
 
 ---
 
 ## 3. Chart of accounts for a direct mail marketing agency
 
-Mapped to **Schedule C (Form 1040) 2026** lines (OA us-sole-prop-bookkeeping step 1, from the 2026 form). Use the finance app's own category names and its `taxLineCode` options (`GET /categories/tax-lines`) as the final word; this table is the default to propose when a category is missing. **Entity check first**: Gorilla Works Marketing, LLC files Schedule C only if it is a single-member LLC that has not elected S-corp or C-corp status. If it is an S-corp, the same categories map to Form 1120-S lines instead; ask Brennan/CPA (open question).
+Mapped to **Schedule C (Form 1040) 2026** lines (OA us-sole-prop-bookkeeping step 1, from the 2026 form). Use the finance app's own category names and its `taxLineCode` options (`GET /categories/tax-lines`) as the final word; this table is the default to propose when a category is missing. **Entity (confirmed Nov 23, 2026):** Gorilla Works Marketing, LLC is a single-member LLC filing Schedule C. There is no CPA chart; this chart is the standard. If the entity ever changes (for example an S-corp election), the same categories must be remapped to Form 1120-S lines; flag it then.
 
 ### 3.1 Income
 
 | Category | What goes in | Sch C |
 |---|---|---|
-| Client services revenue | Campaign management, design, strategy, retainers, setup fees received | 1 |
-| Direct mail campaign billings | Amounts received from clients for print + postage + lists on a campaign the agency runs | 1 |
-| Reimbursed client expenses | Clients repaying costs the agency fronted (see 5.1 before using) | 1 (default, see 5.1) |
+| Agency services income | **Every client payment, in full**: campaign management, design, strategy, retainers, setup fees, and the up-front prepayment that also covers print, postage, lists and ad spend. Costs are never parsed out of it (section 5.1). | 1 |
 | Refunds to clients | Money returned to a client | 2 (returns and allowances) |
-| Other business income | Rebates, credit-card cash back treated as business income only if the CPA says so, fuel tax credits | 6 |
+| Other business income | Rebates, fuel tax credits; credit-card cash back only if Brennan decides to treat it as income (flag) | 6 |
 | NOT income | Owner contributions, loan proceeds, transfers between own accounts, Stripe payouts, vendor refunds, sales tax collected | none |
+
+There is **no "reimbursed client expenses" income category** in GW's books (Brennan, Nov 23, 2026).
 
 ### 3.2 Cost of client campaigns (the agency's "cost of service")
 
@@ -71,16 +76,16 @@ These are costs of **delivering client work**, not the agency's own advertising.
 
 | Category | Examples | Sch C mapping (default) |
 |---|---|---|
-| Campaign printing | Printer invoices for client postcards, EDDM pieces, letters | Part III (line 4) **or** line 22/27b; CPA decides once, then keep consistent [GW default, confirm] |
+| Campaign printing | Printer invoices for client postcards, EDDM pieces, letters | **Open default:** the app category Cost of client campaigns, mapped to whatever tax line the app category already has; Part III (line 4) vs line 22/27b is still open. Brennan decides once, then keep consistent [GW default, confirm] |
 | Campaign postage | USPS postage, EDDM postage, permit-imprint postage, mail house postage pass-through | same as above |
 | Mailing lists and data | List purchases, data append, address verification (CASS/NCOA) for client mailings | same as above |
 | Mail house / fulfillment | Lettershop, inserting, presort services | same as above |
 | Client media buys | Ad spend bought for a client (Meta/Google ads run on a client's behalf, paid by the agency) | same; NOT line 8 |
 | Subcontracted client work | Freelance designers/copywriters on client jobs | 11 (contract labor) |
 
-Use the app's `allocation: "client"` plus `clientId`/`jobId` on these so job profitability and reimbursement tracking work. `allocation: "operational"` is for the agency's own overhead.
+Use the app's `allocation: "client"` plus `clientId`/`jobId` on these so job profitability (client prepayment vs the job's costs) shows. `allocation: "operational"` is for the agency's own overhead.
 
-Why "CPA decides": Pub 334 chapter 6 covers cost of goods sold for businesses that make or buy goods; a service agency that resells printed pieces sits near the line. Either way the total deduction is the same; the choice changes gross margin and must be consistent year to year.
+Why it is open: Pub 334 chapter 6 covers cost of goods sold for businesses that make or buy goods; a service agency that resells printed pieces sits near the line. Either way the total deduction is the same; the choice changes gross margin and must be consistent year to year.
 
 ### 3.3 Operating expenses (agency overhead)
 
@@ -88,7 +93,7 @@ Why "CPA decides": Pub 334 chapter 6 covers cost of goods sold for businesses th
 |---|---|---|
 | Advertising (own) | GW's own Google/Meta/LinkedIn ads, GW's own postcards and postage promoting GW, sponsorships with ad value, trade show booth, promo items, business cards | 8 |
 | Car and truck | Standard mileage (2026: 72.5¢ Jan 1 to Jun 30, 76¢ Jul 1 to Dec 31) or actual costs × business %, plus business parking and tolls | 9 |
-| Commissions and fees | Referral commissions paid; marketplace fees (some CPAs put merchant fees here) | 10 |
+| Commissions and fees | Referral commissions paid; marketplace fees (merchant fees may go here instead of 27b; follow the app category's tax line) | 10 |
 | Contract labor | Freelancers, VAs, designers, developers (non-employees) | 11 |
 | Depreciation / §179 | Computers, cameras, furniture over the de minimis amount | 13 (Form 4562) |
 | Insurance (not health) | General liability, E&O/professional liability, cyber, business property | 15 |
@@ -128,15 +133,15 @@ Run top to bottom. Stop at the first match.
 1. **Duplicate?** Same date ± 3 days, same amount, same vendor already posted or matched (or a Stripe projection exists). → Mark as duplicate candidate; do not post.
 2. **Movement between own accounts?** Transfer, card payment, Stripe/PayPal/Square payout. → Transfer.
 3. **Loan?** Proceeds → liability. Payment → split principal (liability) vs interest (16c) using the lender statement; no statement → ask.
-4. **Owner money?** Transfer to Brennan / personal card → owner draw. Brennan paying a business cost personally → expense + owner contribution.
+4. **Owner money?** Transfer to Brennan / payment to a personal card → owner draw (personal accounts are not in the app, so these show up only as outflows from business accounts). Brennan paying a business cost personally → expense + owner contribution.
 5. **Tax payment?** IRS/EFTPS/estimated tax → owner draw (federal income tax is never Sch C). WA DOR excise return → split B&O tax (line 23) vs sales tax remitted (liability) using the return; no return → ask.
 6. **Refund / credit / chargeback?** Vendor refund → negative in the original category. Client refund → line 2.
 7. **Brennan's rule or learned rule matches with high confidence?** → Apply it (section 9). Show "learned: n of m, last seen <date>".
-8. **Personal-looking?** Groceries, streaming, gym, clothing, medical, personal Amazon, Venmo to friends. → Owner draw candidate; ask if unsure. Never deduct by default.
+8. **Personal-looking?** Groceries, streaming, gym, clothing, medical, personal Amazon, Venmo to friends. All app accounts are business, so this is an exception: owner draw candidate, ask. Never deduct a personal-looking item by default.
 9. **Client job cost?** Ties to a client campaign (printer, postage for a client drop, list buy, client ad spend, freelancer on a job). → Cost of client campaigns with `allocation: client`, `clientId`, `jobId`.
 10. **Own marketing?** Promotes Gorilla Works itself. → Advertising (8).
 11. **Overhead by type** → section 3.3 table.
-12. **Capital item?** Single item/invoice over $2,500 (no AFS) → capitalize or flag for §179/bonus; ≤ $2,500 → expense under the de minimis safe harbor **if** the annual election is made on the return (flag to CPA). (Notice 2015-82; Treas. Reg. 1.263(a)-1(f))
+12. **Capital item?** Single item/invoice over $2,500 (no AFS) → capitalize or flag for §179/bonus; ≤ $2,500 → expense under the de minimis safe harbor **if** the annual election is made on the return (the election is open: flag it). (Notice 2015-82; Treas. Reg. 1.263(a)-1(f))
 13. **Mixed receipt?** Lines belong to different categories → split by receipt lines (`/receipts/{id}/post-mixed`); preserve tax-inclusive line costs; sales tax on the receipt is part of the cost, not a second expense (Finance API reference, receipt posting).
 14. **Still unsure** → review queue with best guess, reason, and the one question that would settle it.
 
@@ -151,7 +156,7 @@ Run top to bottom. Stop at the first match.
 | `FACEBK *ADS` for GW's own lead-gen campaign | Advertising (8) | own marketing |
 | `GOOGLE *ADS` charged on agency card for a client's campaign | Cost of client campaigns: Client media, client | client media buy |
 | `STRIPE PAYOUT` | Transfer | payout, not revenue |
-| `STRIPE FEE` / fee inside a charge | Merchant fees (27b, or 10 per CPA) | processor fee |
+| `STRIPE FEE` / fee inside a charge | Merchant fees (27b, or 10 if the app category maps there) | processor fee |
 | `CANVA`, `ADOBE`, `SEMRUSH`, `NOTION`, `GOOGLE *WORKSPACE` | Software and subscriptions (27b) | SaaS |
 | `GODADDY` / `NAMECHEAP` domain renewal | Software/web (27b) [or 8 if Brennan uses Advertising for web] | his history wins |
 | `UPWORK` / `FIVERR` designer | Contract labor (11); platform reports, usually no 1099-NEC from GW | platform |
@@ -164,7 +169,7 @@ Run top to bottom. Stop at the first match.
 | Holiday gift baskets to 10 clients at $60 each | Gifts: deductible $25 per recipient per year; record excess as nondeductible | IRC 274(b) |
 | `WA DEPT OF REVENUE` | Split B&O (23) vs sales tax remitted (liability) | needs the return |
 | `IRS USATAXPYMT` | Owner draw (income tax) | never Sch C |
-| `AMAZON MKTPLACE` no receipt | Review queue; default personal until the receipt shows business items | OA default |
+| `AMAZON MKTPLACE` no receipt | Review queue; ask for the receipt (business account, so presumed business, but the category needs the items; personal items → owner draw) | needs receipt |
 | `AMAZON` receipt: printer toner + kids' shoes | Split: toner → Office (18); shoes → owner draw | mixed |
 | `DELL` laptop $1,899 | Equipment ≤ $2,500 → expense under de minimis (if elected) or capitalize; flag | Notice 2015-82 |
 | `VERIZON` single phone, business+personal | Utilities (25) business share only; ask the % once, then reuse | mixed use |
@@ -173,24 +178,25 @@ Run top to bottom. Stop at the first match.
 | `HISCOX` professional liability | Insurance (15) | business insurance |
 | `GUSTO` | Wages (26) + employer taxes (23); fees 27b | payroll |
 | `QUICKBOOKS` / bookkeeping software | Other (27b) | software |
-| CPA invoice for business + personal return | Split: business part → Legal/pro (17); personal part → owner draw | OA professional services |
+| Tax preparer invoice for business + personal return | Split: business part → Legal/pro (17); personal part → owner draw | OA professional services |
 | `SHELL` fuel | Only on actual-cost vehicle method, business %; standard mileage already includes fuel | OA vehicle |
-| Client check "reimburse postage for March drop" | Income (see 5.1) | reimbursement |
+| Client prepayment "Spring EDDM campaign" (covers design, print, postage) | Agency services income, full amount, when received; tag client/job | Brennan's practice, 5.1 |
 
 ---
 
 ## 5. Agency-specific hard cases
 
-### 5.1 Client pass-through costs and reimbursements (e.g., client-reimbursed postage)
+### 5.1 Client payments and campaign costs (Brennan's practice, Nov 23, 2026)
 
-- **Default [GW default, confirm with CPA]:** record the agency's payment as a **Cost of client campaigns** expense (allocation `client`, `clientId`, `jobId`) when paid, and the client's repayment as **income** when received. On cash basis these can fall in different months or years; recording both keeps each in the period the cash moved and makes the job's margin visible.
-- Do **not** net the reimbursement against the expense without a CPA instruction. A true agent arrangement (client's own obligation, agency has no liability) can be treated differently, but that is a facts-and-contract call.
-- **Washington B&O angle:** WA DOR says ad agencies generally cannot exclude client advances and reimbursements from gross income unless all three hold: the amounts pay the client's own obligations; the agency is not performing the service directly or through contractors; and the agency has no liability except as the client's agent. Flag reimbursements for the B&O return. (WA DOR, "Advertising agencies – requirements for excluding advances and reimbursements")
-- **Direct mail postage on invoices:** WA allows a B&O deduction (RCW 82.04.4272) and a retail sales tax exclusion (RCW 82.08.807) for **delivery charges for direct mail** when separately stated on the invoice. Note in the review queue whether GW invoices state postage separately. This is a Washington excise point, not a federal one.
-- **Markup:** if GW bills postage or printing at more than cost, the whole amount received is income; the markup is simply part of service revenue. Never record only the markup.
-- **Client pays the vendor directly** (client's own postage permit or printer account): nothing enters GW's books except any fee GW bills.
-- **Year-end straddle:** cost paid in December and repaid in January lands in two tax years on cash basis. Say so in the close report; do not move either entry.
-- Track open reimbursements: every client-allocated cost should eventually tie to a client billing; list unbilled ones at close.
+Brennan: clients "pay me for everything up front and then i charge my expenses... they pay upfront as agency services. the cost isn't parsed out."
+
+- **Income:** book each client payment **in full** as **Agency services income** on the date received (cash basis: income when received, Pub 538). Tag `clientId`/`jobId`. Do not split out a "reimbursement" or "postage" portion, and do not create a reimbursement income line.
+- **Costs:** printing, postage, lists, mail house and client ad buys are **separate expenses on the date paid**, category Cost of client campaigns, `allocation: client`, same `clientId`/`jobId`. Never net them against the client payment.
+- **Job margin** = client payments received for the job minus the job's tagged costs. Report it; don't book it.
+- **Prepaid but not yet spent:** on cash basis the prepayment is still income when received, even if the campaign mails next month or next year. A December prepayment with January costs lands in two tax years; say so in the close report and do not move either entry.
+- **Client pays a vendor directly** (client's own postage permit or printer account): nothing enters GW's books for that cost.
+- **Washington B&O:** B&O is on **gross** receipts, so the full client payment is the measure. WA DOR says ad agencies generally cannot exclude client advances or reimbursements anyway unless a strict three-part agent test is met (WA DOR, "Advertising agencies – requirements for excluding advances and reimbursements"). Because GW does not parse costs out, treat the full payment as Service and Other Activities gross income for the excise return inputs.
+- **Direct mail postage (open default):** WA allows a B&O deduction (RCW 82.04.4272) and a retail sales tax exclusion (RCW 82.08.807) for direct mail delivery charges **only when separately stated on the invoice**. GW's invoices do not parse costs out, so the default is no deduction; note it once as a possible saving for Brennan to decide on, not every month.
 
 ### 5.2 Ad spend: own vs client
 
@@ -199,7 +205,7 @@ Ask "who does the ad promote?" GW → line 8. A client → cost of client campai
 ### 5.3 Washington taxes (GW is in Kirkland, WA)
 
 - WA has no state income tax; it levies **B&O tax on gross receipts**. Service and Other Activities rate 1.5% for 2026 if prior-year income in that class was under $1,000,000; small business credit can remove it at low volume (OA wa-bo-tax, citing RCW 82.04.290 and 82.04.4451). B&O tax paid is a line 23 expense.
-- **Printing bought by an ad agency** for its own or its clients' use (not resold) is a retail sale subject to WA retail sales tax (WAC 458-20-144(4)(b)). If a printer charged no sales tax, flag a possible **use tax** question for the CPA.
+- **Printing bought by an ad agency** for its own or its clients' use (not resold) is a retail sale subject to WA retail sales tax (WAC 458-20-144(4)(b)). If a printer charged no sales tax, flag a possible **use tax** question for Brennan (open).
 - Whether GW must collect sales tax on what it bills depends on what it sells (pure advertising services vs printed matter resold vs mailing services). WA DOR has treated combined print-and-mail as retailing in at least one determination (Det. No. 18-0146). **Never decide this; flag it.**
 
 ### 5.4 Meals, entertainment, gifts
@@ -215,6 +221,7 @@ Ask "who does the ad promote?" GW → line 8. A client → cost of client campai
 - Vehicle: needs a contemporaneous mileage log (date, destination, purpose, miles). Without a log, flag. Commuting is never deductible. Business parking and tolls are deductible on top of the standard rate (OA vehicle rules; IRS mileage page).
 
 ### 5.6 Owner's personal items that are NOT business expenses for an SMLLC/sole prop
+GW's app has no personal accounts; these appear only if paid from a business account, and then they are owner draws.
 Owner health insurance, owner retirement contributions, federal/state income tax, personal Netflix/gym/groceries → owner draw (health insurance and retirement go to Form 1040 schedules, not Schedule C). (OA us-sole-prop-bookkeeping)
 
 ---
@@ -239,7 +246,7 @@ Run within the first 5 business days of the next month (OA month-end-close). Out
 5. **Duplicates and anomalies:** same vendor/amount twice, amounts > 2× the vendor's usual, new vendors, round-number transfers.
 6. **Transfers and card payments** both sides present and excluded from the P&L.
 7. **Reconcile** each account: statement ending balance vs book balance (`/bank/statements/{id}/reconciliation`). Difference must be $0 or explained line by line. Common causes: pending items, fees not imported, split or duplicate entries.
-8. **Client pass-throughs:** list client-allocated costs not yet billed or not yet repaid.
+8. **Job costs:** every campaign cost tagged to a client/job; list untagged campaign costs and jobs whose costs exceed the prepayment received.
 9. **AR/AP aging (memo only):** unpaid invoices and bills, not on the cash P&L.
 10. **Stripe:** gross charges = payouts + fees + refunds ± timing; pending Stripe review items listed.
 11. **1099 tracker** updated (section 8).
@@ -280,7 +287,7 @@ Goal: copy how **Brennan** categorizes, then apply it to new transactions, askin
 - Credential: a `gwf_` API key in the runner's encrypted credential store, sent only as `Authorization: Bearer` to the same origin. Never print, echo, log, or store it in files, the store, or the repo. Base URL from Grok Bot's setup.
 - Start with `GET /context` (contract hash, capabilities) and `GET /settings` (confirm `accountingMethod` is cash).
 - Rate limit 60 requests/minute per key; honor `Retry-After` on 429. Every mutation needs a unique `Idempotency-Key` (16 to 128 chars). Do not blindly retry 409 accounting conflicts.
-- **Read-only by default.** Writes (categorize, post, create/patch categories or rules, match, exclude) only after Brennan approves the specific batch. Never `autoPost: true` without his explicit OK. Never delete; deactivate categories instead of deleting. Never touch Stripe connect/disconnect, API keys, or auth (human-only anyway).
+- **Suggest, approve, then post** (Brennan, Nov 23, 2026: "You may post them in the app after we approve each batch after you suggest categories"). History pulls are read-only. Writes (categorize, post, create/patch categories or rules, match, exclude) happen only for a batch Brennan has approved, exactly as approved. Never `autoPost: true` without his explicit OK. Never delete; deactivate categories instead of deleting. Never touch Stripe connect/disconnect, API keys, or auth (human-only anyway).
 
 ### 9.2 Pull the history (all dates)
 | Call | Why |
@@ -320,7 +327,11 @@ For each vendor key (and, when his history splits by memo/amount, vendor key + m
 3. Learned **medium** → propose but put in review with the alternative.
 4. **Low** / new vendor → decision tree default, marked "default, unconfirmed", in review.
 5. Never let a learned rule override a duplicate/transfer/owner-draw/loan check (steps 1 to 6 of the tree).
-6. Batch the proposals as a table; on approval, write with idempotency keys, then re-read the list to confirm.
+6. **Batch flow** (Brennan, Nov 23, 2026):
+   1. Suggest: send the batch as the section 11 table, with basis and confidence for every line and the review items separate.
+   2. Approve: Brennan approves, or corrects lines. Log each correction in `finance/corrections-log.md` and update the learned rule.
+   3. Post: write exactly the approved lines (create/patch expenses or income, post receipts, match bank lines) with a fresh `Idempotency-Key` per mutation. Lines he did not approve stay unposted. A 409 accounting conflict is reported, not retried blindly.
+   4. Confirm: re-read the affected lists and report what posted, what failed, and the request IDs for failures.
 7. Offer to turn stable high-confidence learned rules into app transaction rules (`autoPost: false`), one list for his approval.
 
 ### 9.6 Store the learned rules PRIVATELY
@@ -347,15 +358,16 @@ For each vendor key (and, when his history splits by memo/amount, vendor key + m
 
 1. Never invent an amount, date, vendor, attendee, business purpose, mileage, or receipt. Missing → ask.
 2. Never file, pay, submit, e-file, or sign anything (1099s, B&O/excise returns, estimated taxes, Form 1040). Prepare lists and drafts only.
-3. Read-only in the finance app unless Brennan approves the batch; no `autoPost` without explicit OK; no deletes.
-4. Keep personal and business separate; personal → owner draw; ask when unsure.
+3. Suggest per batch; post to the finance app only the batch Brennan approved, exactly as approved; no `autoPost` without explicit OK; no deletes.
+4. Keep personal and business separate; the app holds business accounts only, so a personal-looking charge is an owner draw candidate to ask about.
 5. Transfers, card payments, loan principal, owner draws, owner contributions, income tax payments, Stripe payouts and sales tax remitted are **not** expenses or income.
 6. Refunds net against the original category.
 7. Every expense needs evidence; flag missing receipts, never fabricate one.
 8. Brennan's history wins over defaults; tax-law conflicts are flagged, not copied and not silently "fixed".
 9. The API key is a secret: never shown, logged or stored outside the credential store.
 10. Learned rules and real data live only in the private store, never in the public repo.
-11. Not tax advice: entity type, COGS vs expense, sales tax collection, B&O classification, de minimis election, home office method and reimbursement treatment are CPA calls; the skill states the question and the default it used.
+11. Not tax advice. Resolved: entity (SMLLC, Schedule C), chart (section 3), client payments (full income, costs separate). Still open defaults: COGS vs expense, WA sales tax collection and use tax, de minimis election, home office method; state the default used and flag it.
+13. Client payments are never split into reimbursements or netted against costs (section 5.1).
 12. Figures (mileage rates, thresholds) change; re-check the cited source each tax year.
 
 ---
@@ -376,8 +388,8 @@ Basis ∈ {Brennan rule, learned n/m, default, Brennan said}. Then: counts by ba
 ## 12. Test prompts (skill-creator method; made-up data only)
 
 1. "Categorize these 10 receipts for Gorilla Works" (mix: USPS client EDDM postage, own Facebook ads, Stripe payout, Canva, Zelle to a freelancer, client lunch, Seahawks tickets with a client, personal Amazon, Chase card autopay, WA DOR payment). Pass if: payout and card autopay → transfer; Zelle → contract labor + 1099 watch; tickets 0%; lunch 50% with substantiation request; client postage not on line 8; personal → owner draw; WA DOR split asked; nothing invented.
-2. "Close October." Pass if: follows section 7 order, reconciles each account to statement balances, lists unbilled client pass-throughs, 1099 tracker, B&O inputs, review queue, changes nothing without approval.
-3. "Client paid us back $840 for postage on their September mailing; we paid USPS $840 in September. How do I book it?" Pass if: expense in September (client-allocated), income when the $840 arrived, no netting without CPA, WA B&O reimbursement rule and separately-stated postage note, asks entity/CPA question.
+2. "Close October." Pass if: follows section 7 order, reconciles each account to statement balances, lists untagged campaign costs, 1099 tracker, B&O inputs, review queue, changes nothing without approval.
+3. "Client prepaid $3,000 on Sept 28 for an October mailing; we paid USPS $840 and the printer $1,100 in October. How do I book it?" Pass if: $3,000 agency services income on Sept 28 in full (no reimbursement split); $840 and $1,100 Cost of client campaigns in October, tagged to the client/job; no netting; job margin reported, not booked; B&O on the gross $3,000; separately-stated postage noted once as an open default.
 4. "Learn how I categorize from the finance app." Pass if: read-only pulls in 9.2, normalization, confidence table, drift and splits handled, stored in the private store, no data in the repo, proposes app rules with autoPost false.
 
 ---
@@ -405,4 +417,4 @@ Basis ∈ {Brennan rule, learned n/m, default, Brennan said}. Then: counts by ba
 | Open Accountant skills `smart-categorize`, `month-end-close`, `contractor-tracking`, `smart-split`, Paperclip `bookkeeper` agent (MIT) | Rule-learning loop, close checklist, escalation stance | https://github.com/openaccountant/skills |
 | Gorilla Works Marketing Finance API reference (contract 0e651225…) | Endpoints, safeguards, write rules | `/api/reference.md`; local `/home/box/rgr-finance/docs/` |
 
-Unconfirmed (re-check): 2026 Schedule C instructions; Pub 334 for 2026 returns not yet posted; whether GW is an SMLLC on Schedule C or has an S-corp election.
+Unconfirmed (re-check): 2026 Schedule C instructions; Pub 334 for 2026 returns not yet posted.
