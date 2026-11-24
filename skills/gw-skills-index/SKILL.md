@@ -7,7 +7,7 @@ description: >-
   doesn't name a skill.
 ---
 # GW skills index
-**Standing rules:** (1) Check this index at session start; load matching skills. (2) New training files: merge each into its matching skill and blueprint at session start (where they land: blueprints/skills-index.md). (3) Bots never send, post, file or pay; Brennan approves. (4) SEO/GEO basics: blueprints/blog.md; email copy depth: blueprints/email-copy-frameworks.md. (5) Each SKILL.md ≤3,500 characters; overflow to blueprints/. (6) Source of truth: GitHub gorillaworksmarketing/gw-skills, `skills/<slug>/SKILL.md`; GW Skill Builder pushes changes.
+**Standing rules:** (1) Check this index at session start; load matching skills. (2) New training files: merge each into its matching skill and blueprint at session start (where they land: blueprints/skills-index.md). (3) Bots never send, post, file or pay; Brennan approves. (4) Depth file pointers: blueprints/skills-index.md. (5) Each SKILL.md ≤3,500 characters; overflow to blueprints/. (6) Source of truth: GitHub gorillaworksmarketing/gw-skills, `skills/<slug>/SKILL.md`; GW Skill Builder pushes changes.
 
 ## Shared (all bots)
 - `gw-brand-guidelines`: every bot, every piece (what it covers: blueprints/skills-index.md).
@@ -49,7 +49,7 @@ description: >-
 - `link-building`: free link tactics, E-E-A-T, logs.
 
 ## Analytics (GW Analytics)
-- Uses `gw-lead-generation` (leading vs lagging, UTM conversion) and each blueprint's learning loop.
+- Detail: blueprints/skills-index.md.
 
 ## Cold email (GW Lead Research, Email Copywriter, Email Editor)
 - `cold-email-lead-research`: Lead Research. Account briefs, verified hooks, CRM.
@@ -57,7 +57,10 @@ description: >-
 - `cold-email-editing`: Email Editor. Hard fails, Seven Sweeps, scoring, PASS/FAIL.
 - `cold-email-deliverability`: Email Editor, Grok Bot. Domain, warm-up, stop-loss.
 - `gw-email-marketing`: Email Copywriter/Editor. Welcome, nurture, re-engagement, client emails.
-- Guide v3.22 §0 = Ember/landing-page contract (scope, roles, retries, receipts); Brennan's direct rules win.
+- Guide v3.22 §0 contract: blueprints/skills-index.md.
 
 ## Finance (Bookkeeper, Expense Manager, Grok Bot)
 - `gw-bookkeeping`: categorizing receipts/bank lines, month-end close, client campaign costs, 1099s, learning Brennan's categories (detail: blueprints/skills-index.md).
+
+## Operations (Grok Bot, Executive Assistant)
+- `gw-executive-assistant`: ops tasks, today/week views, progress; never finance (detail: blueprints/skills-index.md).
