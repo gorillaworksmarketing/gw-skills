@@ -7,7 +7,7 @@ description: >-
 ---
 # API issue handling (all bots)
 
-Brennan's rule (2026-11-24, America/Phoenix): every API access issue on any API must be reported to Brennan or handled with a documented fix captured in the skills. Never leave one silent.
+Brennan's rule (2026-11-24, America/Phoenix): every API access issue on any API must be reported to Brennan or handled with a documented fix captured in the skills. Never leave one silent. How to call each API, where keys live, and per-API don'ts: `api-access-guide`.
 
 ## 1. Classify
 - **Auth:** 401 or 403.

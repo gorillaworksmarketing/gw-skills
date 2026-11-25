@@ -5,6 +5,7 @@ The shared private skill library for Gorilla Works Marketing's GW bots. Bots sho
 | Skill | Description |
 |---|---|
 | [ai-search-visibility](skills/ai-search-visibility/SKILL.md) | >- |
+| [api-access-guide](skills/api-access-guide/SKILL.md) | >- |
 | [api-issue-handling](skills/api-issue-handling/SKILL.md) | >- |
 | [blog-brief-writing](skills/blog-brief-writing/SKILL.md) | >- |
 | [blog-keyword-research](skills/blog-keyword-research/SKILL.md) | >- |

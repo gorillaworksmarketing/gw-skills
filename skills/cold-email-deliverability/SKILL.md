@@ -8,7 +8,7 @@ description: >-
   the request just says "why are replies down?".
 ---
 # Cold email deliverability
-Detail: blueprints/cold-email.md (Deliverability). Bots never send; Brennan approves sends, domains, and spend.
+Detail: blueprints/cold-email.md (Deliverability). Bots never send; Brennan approves sends, domains, and spend. Ember sending remains frozen until Brennan re-authorizes; weekday send caps are all 0 (Nov 24 re-audit).
 
 ## Why it matters
 One burned domain costs months, so stop-loss beats any meeting target and volume never rises to hit a number.
