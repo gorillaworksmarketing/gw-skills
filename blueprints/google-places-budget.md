@@ -20,5 +20,9 @@ Detail moved out of the skill on Nov 13 2026 so the skill fits 3,500 characters.
 ## Weekly learning loop
 Each week, log which query shapes returned the most qualifying businesses (31+ reviews) per credit and how many lookups needed the browser, and update the query guidance here.
 
+## Snapshot (Nov 24, 2026, 2:50 PM America/Phoenix)
+`freeLimit` 800, `freeUsed` 800, `freeRemaining` 0, rolling window about 32 days, `perMinuteLimit` 10, 26 requests already that day at 2:50 PM. Exact reset date is **unverified** (briefing: about Nov 30). Live `/places/status` wins over this snapshot. Until the window resets, GW Lead Research scrapes Maps with the signed-out browser and still requires 30+ reviews and the same full field set. While discovery is on the browser path, Lead Research has first priority on the shared computer (API calls from other bots are fine; extra browser windows are not).
+
 ## Changelog
+- 2026-11-24 (Brennan all-hands Part A / Part B): recorded the re-audit Places snapshot above (allowance exhausted; browser scrape until reset; Lead Research first priority on the shared computer while on the browser path). Live `/places/status` wins. Skill unchanged: still read status first and use Ember while `freeRemaining > 0`.
 - 2026-11-13 5:30 PM PT (Ember issue fixes, relayed by Grok Bot (Brennan 5:02 PM PT)): G21 retry line added (Places keeps never-retry); G06 no-invent/no-paid-enrichment note; skill trimmed from 4,131 to under 3,500 characters with the detail above moved here; weekly learning loop added.

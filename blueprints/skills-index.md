@@ -8,6 +8,9 @@ New training files arrive in `cold-email/` and `lead-gen/` (video notes: `cold-e
 ## Standing rule (4): depth file pointers
 SEO/GEO basics: blueprints/blog.md; email copy depth: blueprints/email-copy-frameworks.md.
 
+## Standing rule (6): source of truth
+Source of truth is `gorillaworksmarketing/gw-skills`, `skills/<slug>/SKILL.md`. GW Skill Builder pushes changes. Do not treat a local `/workspace` checkout as newer than `main` unless Skill Builder just pushed.
+
 ## Shared: `gw-brand-guidelines`
 Every bot, every piece: input guard, persona reset, voice, words, inline citations, visuals, editor retry loop. Files: `brand/brand-guidelines.md`, `scripts/`.
 
@@ -32,3 +35,31 @@ Every bot, every piece: input guard, persona reset, voice, words, inline citatio
 - **Where tasks live:** the planning workspace in the Gorilla Works Marketing Finance API (`GET /api/planning`, `POST /api/planning/commands`); there is no `/tasks` path.
 - **Depth:** `blueprints/executive-assistant.md` (Brennan's outline rules marked [B], which win; field and status mapping, `ea:` notes footer, write protocol and errors, ranking, daily/weekly/progress formats, habits, routines, guardrails, examples).
 - **Never:** read, create, edit or delete finance data (that is `gw-bookkeeping`); reveal or log the API key; delete a task without his explicit yes; invent tasks, dates or completion status; send email or messages; write calendar events.
+
+
+## Section owners (moved out of the index headings)
+- Blog and long-form: GW Blog Research, Copywriter, Editor.
+- Social: GW Social Research, Copywriter, Editor.
+- Engagement: GW Engagement.
+- Backlinks: GW Backlinks.
+- Analytics: GW Analytics.
+- Cold email: GW Lead Research, Email Copywriter, Email Editor; Grok Bot owns `hunter-notion-save-recovery` and shares deliverability.
+- Finance: Bookkeeper, Expense Manager, Grok Bot.
+- Operations: Grok Bot, Executive Assistant.
+
+## Shared: `api-access-guide` (always-on)
+Use before any Gorilla Works bot calls a Gorilla Works API or connector (Notion, Ember, Hunter, Google Places, RGR Finance, Semrush, GitHub, X, Resend, or other connected MCP tools). Shared hard rules, then one compact entry per API: what it's for, base URL, where the key lives (env var or file path name only), the helper, the auth header, rate limits, the owner, and key don'ts. Depth, endpoints, re-audit quotas, IDs, and paths: `blueprints/api-access-guide.md`. Live docs win over that snapshot. Related: `api-issue-handling`, `notion-shared-rate-limit`, `hunter-notion-save-recovery`, `gw-google-places-budget`, `gw-bookkeeping`, `x-api-mcp-guide`.
+
+## Shared: `api-issue-handling` (always-on)
+Use on any API access issue for any Gorilla Works API (Notion, Ember, Hunter, RGR Finance, Semrush, Google Places, X, and others). Brennan's rule (2026-11-24, America/Phoenix): every API access issue must be reported to Brennan or handled with a documented fix captured in the skills. Never leave one silent.
+- Classify: auth 401/403; rate limit 429; quota or allowance; timeout or connection; 4xx bad input; 5xx server.
+- Retry with backoff on 429 (wait `Retry-After`), 5xx, and timeouts only when the call is safe to repeat (a free read, or a write with an Idempotency-Key or a confirmed not-landed check). Never retry a write blindly. Never retry a paid call that may already have been charged (Places, Hunter). Never rotate or revoke keys; no credit purchases; never print keys.
+- Escalate to Brennan on auth failure, quota exhausted, a bug in his apps, or data lost or held.
+- After a fix, send the cause and the fix to GW Skill Builder so the relevant skill is updated. Log the incident with times in America/Phoenix.
+- Worked example: the 2026-11-24 Ember Hunter held-save incident; lasting skills `notion-shared-rate-limit` and `hunter-notion-save-recovery`.
+
+## Shared: `notion-shared-rate-limit` (always-on for any Notion read or write)
+Every Gorilla Works bot and Ember use the same Notion integration (Replit Marketing Integration) and share one Notion rate limit. One request at a time, about 350 ms pause (about 3 requests per second in total). Back off on 429 using `Retry-After`. Targeted filtered queries, not full scans. When avoidable, no bulk scans or writes while Ember's Hunter worker is running, or while copywriters and the editor are writing pipeline steps 8–11. Copy windows: 7:00 AM, 1:30 PM, 5:30 PM PT. Edit windows: 9:30 AM, 3:30 PM, 7:30 PM PT (one hour later in America/Phoenix in winter). Since 2026-11-24 4:02 PM PT no stage has a daily cap, so each window can run long. Log request counts. Lead Research must batch large row-creation pushes. See blueprints/cold-email.md and `hunter-notion-save-recovery`.
+
+## Cold email: `hunter-notion-save-recovery`
+Owner: Grok Bot. Pipeline step 7b after Ember Hunter, and step 0b of the daily 12:30 PM America/Phoenix cold-email check. Recovers already-paid Hunter results when Ember holds or fails the Notion save. Try reconcile first; on 409 `HUNTER_NO_WRITE_RECEIPT`, write Ember's field format only if the row is still at Email Lookup with empty Hunter fields. Usable verified email → Ready for Summary; no usable email → Failed (Brennan, Nov 18); Hunter never ran → leave for Ember's next scan. Never re-run Hunter or spend credits. Exact Evidence JSON: blueprints/cold-email.md.
