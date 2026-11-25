@@ -35,3 +35,6 @@ Record when it started and ended (America/Phoenix), the endpoint, the status or 
 
 ## Worked example (2026-11-24)
 Eight Ember Hunter jobs were paid for, then held without a Notion save (429, connection reset, and Notion allowance unavailable). Three failures around 2:47–2:48 PM America/Phoenix overlapped other bots' Notion queries and bulk row writes on the shared integration. Ember's `POST /api/marketing/hunter/workflow/jobs/{id}/reconcile` returned 409 `HUNTER_NO_WRITE_RECEIPT`, so it could not recover them. Grok Bot saved the already-paid results. Lasting fixes: `notion-shared-rate-limit` and `hunter-notion-save-recovery`. Requested Ember product fix (blueprints/cold-email.md): retry its own Notion save with backoff on 429 or connection errors instead of holding the job.
+
+## Worked example (2026-11-25): Reddit and box web search
+Public Reddit JSON from this box returns 403; RSS 404 or 429 (unsigned datacenter IP block, not auth — do not rotate keys). Current fix: cited web-search candidates; store the thread URL and quote in Owner Evidence (`/workspace/reddit-leads/README.md`). The box cannot do its own web search (DuckDuckGo captcha, Bing junk); website discovery needs an agent with web search. Official Reddit API pending Brennan's approval, not approved. Detail: blueprints/api-access-guide.md.

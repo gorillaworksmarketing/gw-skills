@@ -31,9 +31,9 @@ Sweeps: clarity, voice, so what, prove it, specificity, coherence, one click. Pa
 Status stays Editing; Ready never permits a send. Never bulk Ready. Never write Building, Published, Needs Fix, Uncertain, Built Version, Last Built, Prospect Page URL, Send; never reset Uncertain to Ready or rebuild a live page.
 
 ## Failed rows, steps, stalls
-**Failed check:** Status Failed, Bad match, Drop (duplicates too; flag any you notice); Hunter not usable; active HOLD/FAIL (Editor Notes first line starts HOLD or FAIL, maybe after "Sweep N:"; "HOLD cleared" is not); NO QUALIFYING REVIEW; Review Count 30 or fewer (backfill/step check: Status = Failed, reason "review count 30 or fewer"). Never work it; report with reason.
+**Failed check:** Status Failed, Bad match, Drop (duplicates too; flag any you notice); Hunter not usable; active HOLD/FAIL (Editor Notes first line starts HOLD or FAIL, maybe after "Sweep N:"; "HOLD cleared" is not); NO QUALIFYING REVIEW; Review Count 29 or fewer (settled Nov 25: >= 30 qualifies, including exactly 30; do not ask Brennan again; fail reason "review count 29 or fewer"). Never work it; report why.
 **Complete every step (Brennan):** dedupe first; any missing pipeline field: run it if yours, else hand to its owner. A failure marks the row failed and stops.
-**1-day rule:** edit within 1 day. Daily stall report, all 12b DBs: rows over 1 day at any stage (list: blueprint), role, reason; never move Status. Grok Bot fixes stalls.
+**1-day rule:** edit within 1 day. Daily stall report, all 12b DBs: rows over 1 day (blueprint), role, reason; never move Status. Grok Bot fixes stalls.
 **Retries:** reads may retry (429 Retry-After; 409/5xx up to 3); writes: log, read back, redo only if not applied.
 
 ## Follow-ups, output, loop

@@ -27,7 +27,7 @@ If a path misses a field (Places search returns no emails and may skip the descr
 
 ## Order of lookups
 1. **Places first.** While `freeRemaining > 0`, use `POST /places/search` (one page of up to 20 businesses = 1 credit; fields: blueprint). `GET /places/{placeId}` only when it adds fields and credits allow.
-2. Max value per credit: full pages of qualifying businesses (trade plus city, more than 30 reviews); never re-search an area.
+2. Max value per credit: full pages of qualifying businesses (trade plus city, >= 30 reviews; settled Nov 25, do not ask again); never re-search an area.
 3. **Browser second:** signed-out Maps scrape only when `freeRemaining` is 0 or Ember Places is down or unauthorized; log the reason.
 4. Browser use where Places can't do the job (review screenshots, missing fields, reviews past 5) is not a fallback.
 

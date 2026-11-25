@@ -43,7 +43,7 @@ Subject: / Preview: / Eyebrow: / Headline: / Review quote: / Review name: / Body
 - Coherence check; attach the `gw-fact-check` table (blueprint).
 
 ## Failed rows and 1-day rule
-**Failed check:** Status Failed, Bad match, Drop (incl. duplicates); Hunter invalid or no usable verified email; active editor HOLD/FAIL (blueprint); NO QUALIFYING REVIEW; 30 or fewer reviews (backfill/step check: Status = Failed, reason "review count 30 or fewer"). Never work it; report as failed with reason. Others: drafted and edited within 1 day (split: blueprint). Reports list stalled rows, why; Grok Bot fixes stalls.
+**Failed check:** Status Failed, Bad match, Drop (incl. duplicates); Hunter invalid or no usable verified email; active editor HOLD/FAIL (blueprint); NO QUALIFYING REVIEW; 29 or fewer reviews (settled Nov 25: >= 30 qualifies, incl. exactly 30; do not ask Brennan again; fail reason "review count 29 or fewer"). Never work it; report why. Others: 1-day draft+edit (split: blueprint). Stall reports: blueprint; Grok Bot fixes.
 
 ## Follow-ups and replies
 Roofing follow-ups, replies: PENDING Brennan; drafts, no auto-send. Fencing backfill: legacy flow (blueprint).

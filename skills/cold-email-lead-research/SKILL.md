@@ -12,21 +12,22 @@ Detail: blueprints/cold-email.md; contract: guide v3.22 §0. Lookups per `gw-goo
 
 ## Scope
 **Focus (Brennan):** new work only for the industry Brennan names (currently Roofing). **Exception:** one-time backfill of steps 2-9 on every past row in every 12b DB, Fencing too; skip failed rows. All-industry systems (12b; approved template, guide 0.1); never widens focus. **Order:** WA, AZ, OR, then west to east. DBs from **12b** only; if none: hold, flag, never write into Fencing or another industry.
+**New Cold Leads DBs (guide v4.0):** only via `/workspace/pp/notion_writer/cold_leads_schema.py`. Never add or write the 5 deleted columns (blueprint).
 
 ## Pipeline (later steps: blueprint)
-1. **Find** one listing at a time (sources: blueprint). No logins.
+1. **Find** one listing at a time (sources, including Reddit owner threads: blueprint). No logins.
 2. **Dedupe, immediately (Brennan):** before any other work, search every Cold Leads DB (root domain, then normalized name, then phone or Place ID; ignore shared platform domains: blueprint). Found: no row, no repeat work. One row, one location per company.
-2b. **Website + industry check (Brennan, Nov 20), before any row or Hunter:** Website from the Maps listing (another URL only if clearly the same business). Industry from the site vs 12b list, never from name, query, or substring (Roofing test: blueprint). Wrong industry: move to that 12b table and set Industry (not a fail). Moved out of an active industry (only Roofing): HOLD, no further work. **HOLD only** (never fail) for a mismatched Maps website or undetermined industry.
-3. **Qualify (Brennan):** 30+ Maps reviews; under 30 or unknown: skip; no row.
+2b. **Website + industry check (Brennan, Nov 20), before any row or Hunter:** Website from the Maps listing (other URL only if clearly the same business). Industry from the site vs 12b, never name, query, or substring (Roofing test: blueprint). Wrong industry: move to that 12b table and set Industry (not a fail). Moved off Roofing (only active industry): HOLD, no further work. **HOLD only** (never fail) for a mismatched Maps website or undetermined industry.
+3. **Qualify (settled Nov 25):** 30 or more Maps reviews (>= 30); fail only 29 or fewer or unknown: skip; no row. Do not ask Brennan again.
 4. **Row + Prospect Page Code:** 12-char code (alphabet: blueprint), unique across 12b; collision: hold, report, never re-code. Never change a code; none on failed rows.
 5. **Research:** required: Company, Website, Rating, Review Count, one complete ★5 review with proof, full site text (Source: url + date). Rest per `gw-google-places-budget`; not found: "not available". Fact labels and review pull: blueprint. None in 10: `NO QUALIFYING REVIEW (checked date)` = failed. Emails: verify per `cold-email-deliverability`; Hunter only via Ember.
 
 ## Failed rows
-**Failed check:** Status Failed, Bad match, Drop; Hunter not usable (Verified select = match flag, not Hunter); active HOLD/FAIL (blueprint); NO QUALIFYING REVIEW; under 30 reviews (backfill: Failed, "review count under 30"). Never work them; report why. **Duplicates (bulk Drop confirmed, Brennan 5:29 PM):** keep the most complete (edited copy, then furthest stage; tie: oldest); others Drop, "duplicate of <kept page id>"; never delete.
+**Failed check:** Status Failed, Bad match, Drop; Hunter not usable (Verified select = match flag, not Hunter); active HOLD/FAIL (blueprint); NO QUALIFYING REVIEW; 29 or fewer reviews (backfill: Failed, "review count 29 or fewer"). Never work them; report why. **Duplicates (bulk Drop confirmed, Brennan 5:29 PM):** keep the most complete (edited copy, then furthest stage; tie: oldest); others Drop, "duplicate of <kept page id>"; never delete.
 
 ## Complete every step (Brennan)
 On any touched row, dedupe first, then every pipeline field. Any missing, even if later ones are filled: run it or hand it to its owner first. A failure marks the row failed and stops.
-**Notion pacing (`notion-shared-rate-limit`):** one request at a time, ~350 ms pause (~3/sec shared with Ember); 429 uses Retry-After; targeted queries, not full scans; batch large row pushes so they don't flood the shared limit; no bulk work during Ember Hunter or copy/edit windows (steps 8-11) if avoidable; log counts. **Retries:** reads may retry (429 Retry-After; 409/5xx up to 3). Writes, paid calls: log, read back, redo only if not applied.
+**Notion pacing:** `notion-shared-rate-limit` (batch large row pushes; log counts). **Retries:** reads may retry (429 Retry-After; 409/5xx up to 3). Writes, paid calls: log, read back, redo only if not applied.
 
 ## Account brief
 3 layers, fit, dated signal, priority, 3-5 sourced hooks, angle, avoid (blueprint). Public professional facts only; no guesses; conflicting numbers [U]. **No strong hook: HOLD.**
