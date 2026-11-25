@@ -20,7 +20,7 @@ This file is in the public `gorillaworksmarketing/gw-skills` repo. It contains *
 
 ## Related guides and helpers (do not copy secrets out of them)
 
-- Notion Cold Leads guide: Notion page `40e92472-fef9-8109-8470-e9e6aa31c60d`; upkeep rule at `/cursor/stores/user/cold-email/notion-api-guide-upkeep.md`; a snapshot lives at `/workspace/api-guide-v317.md` (v3.17 snapshot — live guide may be newer).
+- Notion Cold Leads guide: Notion page `40e92472-fef9-8109-8470-e9e6aa31c60d`; upkeep rule at `/cursor/stores/user/cold-email/notion-api-guide-upkeep.md`; a snapshot lives at `/workspace/api-guide-v317.md` (v3.17 snapshot). Live guide is v4.0 as of Nov 24, 2026, 4:55 PM PT (five retired columns removed; new view column order; section 4 and the 12a template updated).
 - Ember helper and older README: `/workspace/ember/ember.sh`, `/workspace/ember/README.md` (last full write-up Oct 23 / Hunter section Nov 5; live OpenAPI is newer). Live docs: `https://ember-email.replit.app/api/marketing/llms-full.txt` and `/api/marketing/openapi.json`. Audit copy: `/workspace/api-audit-2026-11-24/ember-r2/`.
 - RGR Finance: working guide `/home/box/rgr-finance/api-guide.md`, helper `/home/box/rgr-finance/rgr.sh`, public docs `https://rgr-finance.replit.app/api/llms.txt`, `/api/llms-full.txt`, `/api/openapi.json`. Audit copy: `/workspace/api-audit-2026-11-24/rgr-r2/`.
 - Skills on the box: `/home/box/sand-data/workflows/<skill>/SKILL.md` (also reachable as `/home/box/agent-data/workflows/`, a symlink).
@@ -63,7 +63,7 @@ Prefer targeted, filtered queries over full-database scans. There is no dedicate
 
 **Owner:** Shared. GW Lead Research creates and researches rows; GW Email Copywriter and GW Email Editor write copy in their windows; Ember writes Hunter results; Grok Bot recovers held Hunter saves (step 0b of the 12:30 PM America/Phoenix check; skill `hunter-notion-save-recovery`) and keeps the Replit guide in sync.
 
-**Don'ts:** Never set `Status` = `Send` (only Brennan does). Never change a Prospect Page Code. Never overwrite filled research or copy fields with blanks. Never run bulk scans or bulk writes in parallel with Ember's Hunter worker or during copy/edit windows if it can be avoided. Don't put tokens on the Notion guide page.
+**Don'ts:** Never set `Status` = `Send` (only Brennan does). Never change a Prospect Page Code. Never overwrite filled research or copy fields with blanks. Never run bulk scans or bulk writes in parallel with Ember's Hunter worker or during copy/edit windows if it can be avoided. Don't put tokens on the Notion guide page. Never write or re-add Decision Maker Name, Decision Maker Title, Decision Maker Source, DM Note, or Legacy Page ID (deleted Nov 24, 2026, guide v4.0). New Cold Leads tables are built only through `/workspace/pp/notion_writer/cold_leads_schema.py` (`strip_deleted`, then `apply_view_order`); view column order and the nine held columns are in blueprints/cold-email.md.
 
 **IDs (from the all-hands guide; verify live if a write depends on them):** hub parent Cold Leads – US `40892472-fef9-81bd-ad87-d33ec80ff253`; default Fencing data source `a4454d83-7e9f-4e5c-8b81-31fd957e6180`. Active intake is Roofing (data source prefix `4f68dbd1…`). Full UUIDs are in the live guide, not repeated here from stale snapshots. These IDs are internal reference IDs, not secrets.
 
@@ -165,13 +165,13 @@ Prefer targeted, filtered queries over full-database scans. There is no dedicate
 
 **Where the key lives:** `EMBER_API_KEY` (Ember holds the Google server key). There is no separate Places key in the box env.
 
-**How to call it:** `/workspace/ember/ember.sh get /places/status` before any billed call. While `freeRemaining > 0`, use Ember search first. When `freeRemaining` is 0, GW Lead Research scrapes Google Maps in a signed-out browser and still captures the same field set (30+ reviews required).
+**How to call it:** `/workspace/ember/ember.sh get /places/status` before any billed call. While `freeRemaining > 0`, use Ember search first. When `freeRemaining` is 0, GW Lead Research scrapes Google Maps in a signed-out browser and still captures the same field set (30 or more reviews required, >= 30; fail only 29 or fewer).
 
 **Quotas (2:50 PM America/Phoenix, Nov 24):** `freeLimit` 800, `freeUsed` 800, `freeRemaining` 0, rolling window ~32 days, `perMinuteLimit` 10. 26 requests already that day at 2:50 PM. Exact reset date is **unverified** (parent briefing: about Nov 30). Browser scrape only until it resets. A failed or timed-out billed call still uses a credit — never retry it; only `/places/status` may retry.
 
 **Owner:** GW Lead Research for discovery. Other bots should not spend Places credits. While discovery is on the signed-out browser path, Lead Research has first priority on the shared computer (API calls from other bots are fine; extra browser windows are not).
 
-**Don'ts:** Never go over the free limit. Never buy Places credits or paid enrichment. Never invent a field. Never overwrite a filled field with a blank. Under 30 reviews: no row.
+**Don'ts:** Never go over the free limit. Never buy Places credits or paid enrichment. Never invent a field. Never overwrite a filled field with a blank. 29 or fewer reviews, or an unknown count: no row. Exactly 30 qualifies (settled Nov 25; do not ask Brennan again).
 
 ---
 
@@ -251,6 +251,14 @@ If a connector is disconnected or unauthorized, report it (`api-issue-handling`)
 
 ---
 
+
+## Known box and unsigned-IP limits (Nov 25, 2026)
+
+**Reddit:** Public JSON (`https://www.reddit.com/r/<sub>/search.json` and similar) returns a 403 HTML block page from this box; RSS returns 404 or 429. Reddit blocks unsigned datacenter IPs. This is not an auth or key issue. Current fix: do not call those endpoints for discovery; build candidate threads from cited web-search results of public Reddit threads and use `--source file` (`/workspace/reddit-leads/README.md`; `run.py --source reddit` detects the block and stops cleanly). Store the thread URL and put the quote in Owner Evidence (the comment permalink is not in those search results). Full fix: Reddit's official free API with an app ID and secret — only Brennan can approve; pending his decision, not approved.
+
+**Web search from the box:** The box cannot do its own web search (DuckDuckGo serves a captcha; Bing results from the box are junk). Website discovery and any search that needs a web index must be done by an agent with web search.
+
 ## Changelog
 
+- 2026-11-25 ~3:41 PM America/Phoenix: live Notion API guide noted as v4.0; never write or re-add the five deleted Cold Leads columns; new tables only via `cold_leads_schema.py`. Added known box limits: Reddit unsigned-IP block (current file-source workaround; official API pending Brennan) and no reliable web search from the box. Places qualify wording settled to 30 or more (>= 30); fail only 29 or fewer.
 - Created 2026-11-24 from Brennan all-hands Part A.
