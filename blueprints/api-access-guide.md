@@ -177,15 +177,15 @@ Prefer targeted, filtered queries over full-database scans. There is no dedicate
 
 ## 6. Semrush (free tier)
 
-**What it's for:** Keyword volume and KD, and occasional backlink / Authority Score sightings. Volume and KD come only from Semrush; otherwise write `n/a`. Never guess.
+**What it's for:** The **only** keyword/topic source for Gorilla Works blog posts (Brennan, Nov 24), plus keyword volume and KD, and occasional backlink / Authority Score sightings. All or almost all blog posts come from Semrush keywords plus GW Video Research. Volume and KD come only from Semrush; otherwise write `n/a`. Never guess. Google People Also Ask is not the topic source; it may only support question wording and AEO answers after the Semrush keyword is chosen. See `blog-keyword-research`, `blog-brief-writing`, `video-research`, and `longform-seo-article`.
 
 **How to call it:** MCP namespace `user-Semrush` (OAuth / connected Semrush account). There is **no** `SEMRUSH_API_KEY` (or similar) in the box environment. Do not put a Semrush key in a query string from this box. Generic Semrush REST (`https://api.semrush.com/`) is documented in third-party notes but is **not** the approved path here, and paid API units are parked.
 
 **Rate limits / quotas:** Brennan's **10 free Semrush web searches a day**. Log useful backlink / referring-domain numbers in `backlinks/semrush-sightings.md`. The Semrush MCP has often returned `no_api_units` (not retryable; more units would be a purchase — do not buy). Remaining searches on a given day: **unverified**. One Nov 10 note also mentioned “5 allowed lookups”; the standing backlinks rule is 10 free web searches a day — treat “5” as possibly stale.
 
-**Owner:** GW Blog Research (volume/KD) and GW Backlinks (sightings). All bots that use a free search must log it.
+**Owner:** GW Blog Research (the only blog keyword/topic source, plus volume/KD) and GW Backlinks (sightings). All bots that use a free search must log it. Any bot that sees backlink / referring-domain data must log it in `backlinks/semrush-sightings.md` (GW Backlinks reads this first).
 
-**Don'ts:** Never buy API units. If the MCP says `no_api_units`, stop, write `n/a`, and do not retry paid endpoints.
+**Don'ts:** Never buy API units. Use only the `user-Semrush` MCP connector and the free tier (10 web searches a day). If the MCP says `no_api_units`, stop, write `n/a`, and do not retry paid endpoints. Do not mine PAA or Google Trends to pick blog topics.
 
 ---
 
@@ -260,5 +260,6 @@ If a connector is disconnected or unauthorized, report it (`api-issue-handling`)
 
 ## Changelog
 
+- 2026-11-25 (America/Phoenix): Semrush is the only blog keyword/topic source (Brennan, Nov 24). Skill `api-access-guide` updated the same day; base URLs, helper paths (`ember.sh`, `rgr.sh`, `node /home/box/rgr-finance/renew-key.mjs`), and Notion ~3 rps / 350 ms / Retry-After numbers stay documented here so the skill can stay at or under 3,500 characters. Backlink sightings rule unchanged.
 - 2026-11-25 ~3:41 PM America/Phoenix: live Notion API guide noted as v4.0; never write or re-add the five deleted Cold Leads columns; new tables only via `cold_leads_schema.py`. Added known box limits: Reddit unsigned-IP block (current file-source workaround; official API pending Brennan) and no reliable web search from the box. Places qualify wording settled to 30 or more (>= 30); fail only 29 or fewer.
 - Created 2026-11-24 from Brennan all-hands Part A.
