@@ -11,6 +11,11 @@ SEO/GEO basics: blueprints/blog.md; email copy depth: blueprints/email-copy-fram
 ## Standing rule (6): source of truth
 Source of truth is `gorillaworksmarketing/gw-skills`, `skills/<slug>/SKILL.md`. GW Skill Builder pushes changes. Do not treat a local `/workspace` checkout as newer than `main` unless Skill Builder just pushed.
 
+## Blog and long-form (when-to-use)
+- `blog-keyword-research`: GW Blog Research. Find, qualify, and prioritize blog topics. Semrush is the only keyword research source (Brennan, Nov 24): use only the `user-Semrush` MCP connector, the free tier (10 web searches a day), and buy no units. All or almost all posts come from Semrush keywords plus GW Video Research. PAA is not the topic source; it may support question wording and AEO answers after the keyword is chosen. Depth: blueprints/blog.md.
+- `blog-brief-writing`: GW Blog Research / Copywriter. Turn a qualified Semrush keyword plus Video Research notes into a brief or refresh brief. Video Research is a main input for every brief, not an add-on.
+- `video-research`: GW Video Research / Blog Research. Main brief input. Transcripts to information-gain notes and briefs for a Semrush keyword (or a pasted link, or library building). Do not take topics from PAA or Google Trends.
+
 ## Shared: `gw-brand-guidelines`
 Every bot, every piece: input guard, persona reset, voice, words, inline citations, visuals, editor retry loop. Files: `brand/brand-guidelines.md`, `scripts/`.
 
